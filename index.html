@@ -1,2 +1,782 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Máquina de Pedidos — Encha seu WhatsApp de pedidos todo dia</title>
+<meta name="description" content="Sistema pronto para deliveries venderem direto no WhatsApp, sem comissão de aplicativo. Copie, adapte e ative.">
+<meta property="og:title" content="Máquina de Pedidos — Mais pedidos no WhatsApp">
+<meta property="og:description" content="Estrutura pronta para seu delivery gerar pedidos todos os dias.">
+<meta property="og:image" content="/og.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   CONFIG RÁPIDA — troque só isto:
+   1. Link de checkout: procure por  href="#CHECKOUT"
+   2. Vídeo VSL: procure por  <!-- VSL -->
+   3. Pixel Meta: procure por  <!-- PIXEL -->
+   ============================================================ */
+:root{
+  --bg:#0a0a0b;
+  --bg2:#0f0f11;
+  --card:#151517;
+  --card2:#1c1c1f;
+  --line:#26262b;
+  --txt:#f4f4f5;
+  --muted:#9c9ca6;
+  --amber:#ff7a00;
+  --amber2:#ffab2e;
+  --green:#22c55e;
+  --red:#ef4444;
+  --radius:18px;
+  --max:1080px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--txt);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  line-height:1.6;overflow-x:hidden;padding-bottom:78px;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:72px 0;position:relative}
+.eyebrow{
+  display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--amber2);
+  background:rgba(255,122,0,.09);border:1px solid rgba(255,122,0,.25);
+  padding:7px 14px;border-radius:100px;margin-bottom:18px;
+}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;font-weight:800}
+h1{font-size:clamp(30px,6.4vw,54px);font-weight:900}
+h2{font-size:clamp(25px,4.6vw,40px);margin-bottom:14px}
+h3{font-size:19px;font-weight:700}
+.lead{color:var(--muted);font-size:clamp(15px,2.2vw,18px);max-width:620px}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+.grad{background:linear-gradient(100deg,var(--amber),var(--amber2));-webkit-background-clip:text;background-clip:text;color:transparent}
 
-<!DOCTYPE html><html lang="pt-BR"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/styles-Dj6lNYKz.css" data-precedence="default"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Hind:wght@400;500;600;700&amp;display=swap" data-precedence="default"/><script src="https://cdn.utmify.com.br/scripts/utms/latest.js" async="" defer="" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids=""></script><title>Máquina de Pedidos — Mais pedidos no WhatsApp do seu delivery</title><meta name="author" content="Lovable"/><meta name="twitter:card" content="summary"/><meta name="twitter:site" content="@Lovable"/><meta name="twitter:title" content="A Maleta do Delivery"/><meta name="twitter:description" content="Transforme seu WhatsApp em uma máquina de pedidos para seu delivery, gerando clientes e vendas diárias."/><meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OWsSbjENb1UP9CGdpkD1dWXN0pF3/social-images/social-1780677270712-ChatGPT_Image_4_de_jun._de_2026,_19_19_35.webp"/><meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OWsSbjENb1UP9CGdpkD1dWXN0pF3/social-images/social-1780677270712-ChatGPT_Image_4_de_jun._de_2026,_19_19_35.webp"/><meta name="description" content="Transforme seu WhatsApp em uma fonte constante de pedidos. Estrutura pronta para deliveries venderem todos os dias sem depender de aplicativos."/><meta property="og:title" content="Máquina de Pedidos — Mais pedidos no WhatsApp"/><meta property="og:description" content="Estrutura pronta para seu delivery gerar pedidos todos os dias. Copie, adapte e ative."/><meta property="og:type" content="website"/><link rel="modulepreload" href="/assets/index-DXeJ2709.js"/><link rel="modulepreload" href="/assets/index-Bk7qtfo7.js"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="preconnect" href="https://www.youtube-nocookie.com"/><link rel="preconnect" href="https://www.youtube.com"/><link rel="preconnect" href="https://i.ytimg.com"/><link rel="preconnect" href="https://s.ytimg.com"/><link rel="preconnect" href="https://www.google.com"/><link rel="preconnect" href="https://googleads.g.doubleclick.net"/><link rel="dns-prefetch" href="https://googlevideo.com"/><script>window.pixelId = "6a25f0833b2ab268fb1183c5";var a = document.createElement("script");a.setAttribute("async", "");a.setAttribute("defer", "");a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");document.head.appendChild(a);</script><script defer src="/~flock.js" data-proxy-url="/~api/analytics"></script></head><body><!--$--><main class="min-h-screen bg-background text-foreground"><section class="relative overflow-hidden border-b-2 border-foreground"><div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,oklch(0.89_0.18_95/0.25),transparent_55%)]"></div><div class="mx-auto max-w-6xl px-5 pt-14 pb-12 sm:pt-20 sm:pb-16 text-center"><h1 class="font-display text-4xl sm:text-6xl md:text-7xl leading-[1.02] tracking-tight text-foreground">Receba de <span class="bg-accent px-2 text-accent-foreground">30 a 100 pedidos</span> por dia no WhatsApp</h1><p class="mt-5 mx-auto max-w-2xl text-base sm:text-xl text-muted-foreground">Sem depender de iFood, sorte ou indicação. Estrutura pronta para qualquer delivery que queira parar de depender de aplicativo e começar a vender direto.</p><div class="mt-10 mx-auto max-w-3xl"><div class="aspect-video w-full overflow-hidden rounded-3xl border-2 border-foreground bg-card" style="box-shadow:var(--shadow-cta)"><video class="h-full w-full bg-black" src="/__l5e/assets-v1/4f413126-fb8d-49f5-a51f-bb90fd0e0a06/vsl.mp4" poster="/__l5e/assets-v1/f91228ec-3930-4d50-8f28-15624e417c68/vsl-cover.png" controls="" playsInline="" preload="metadata"></video></div><div aria-live="polite" class="mt-4 mx-auto max-w-3xl rounded-2xl border-2 border-foreground bg-foreground px-5 py-4 text-background flex items-center justify-center gap-3" style="box-shadow:var(--shadow-cta-sm)"><p class="font-display text-sm sm:text-base uppercase tracking-wide text-accent">▶ Toque no vídeo para iniciar</p></div><p class="mt-4 text-center text-xs text-muted-foreground">Acesso imediato · Garantia de 7 dias</p><a href="#bonus" class="mt-4 inline-flex items-center gap-2 rounded-full border-2 border-foreground bg-card px-4 py-2 text-xs sm:text-sm font-bold uppercase tracking-wide text-foreground transition-all hover:-translate-y-0.5" style="box-shadow:var(--shadow-cta-sm)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift h-4 w-4 text-primary" aria-hidden="true"><path d="M12 7v14"></path><path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path><path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"></path><rect x="3" y="7" width="18" height="4" rx="1"></rect></svg>+ 11 bônus inclusos hoje</a></div></div></section><div aria-hidden="true" class="transition-all duration-700 ease-out opacity-0 max-h-0 overflow-hidden pointer-events-none"><section class="py-12 sm:py-16 bg-muted"><div class="mx-auto max-w-4xl px-5"><div class="text-center mb-8 sm:mb-10"><p class="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-primary mb-3">Por que você estagnou</p><h2 class="font-display text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight text-foreground">Você já tentou de tudo.<br class="hidden sm:block"/> E continua refém do aplicativo.</h2><p class="mt-3 text-base sm:text-lg text-muted-foreground">O problema não é falta de esforço — é <span class="text-foreground font-semibold">falta de sistema</span>.</p></div><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="rounded-2xl border-2 border-foreground bg-background p-5 sm:p-6"><p class="font-display text-xs tracking-[0.15em] uppercase text-primary mb-4">O que você já tentou (e travou)</p><ul class="space-y-3"><li class="flex items-start gap-3"><span aria-hidden="true" class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground text-xs font-bold">✕</span><span class="min-w-0 text-sm sm:text-base text-muted-foreground line-through decoration-primary decoration-[1.5px]">Refém do iFood e da comissão</span></li><li class="flex items-start gap-3"><span aria-hidden="true" class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground text-xs font-bold">✕</span><span class="min-w-0 text-sm sm:text-base text-muted-foreground line-through decoration-primary decoration-[1.5px]">Tráfego pago sem retorno</span></li><li class="flex items-start gap-3"><span aria-hidden="true" class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground text-xs font-bold">✕</span><span class="min-w-0 text-sm sm:text-base text-muted-foreground line-through decoration-primary decoration-[1.5px]">Promoção no Zap ignorada</span></li></ul></div><div class="rounded-2xl border-2 border-foreground bg-accent p-5 sm:p-6" style="box-shadow:var(--shadow-cta-sm)"><p class="font-display text-xs tracking-[0.15em] uppercase text-accent-foreground mb-4">O que muda com A Máquina de Pedidos</p><ul class="space-y-3"><li class="flex items-start gap-3"><span aria-hidden="true" class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-foreground text-accent text-xs font-bold">✓</span><span class="min-w-0 text-sm sm:text-base text-accent-foreground font-semibold">Robô vendendo no automático 24h</span></li><li class="flex items-start gap-3"><span aria-hidden="true" class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-foreground text-accent text-xs font-bold">✓</span><span class="min-w-0 text-sm sm:text-base text-accent-foreground font-semibold">Pedido direto no Zap, sem comissão</span></li><li class="flex items-start gap-3"><span aria-hidden="true" class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-foreground text-accent text-xs font-bold">✓</span><span class="min-w-0 text-sm sm:text-base text-accent-foreground font-semibold">Cliente voltando sozinho pra comprar</span></li></ul></div></div></div></section><section class="py-16 sm:py-24 bg-foreground text-background"><div class="mx-auto max-w-5xl px-5"><div class="text-center mx-auto max-w-3xl mb-12"><p class="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-accent mb-3">Conheça</p><h2 class="font-display text-3xl sm:text-4xl md:text-5xl leading-[1.05] tracking-tight">A Máquina de Pedidos</h2><p class="mt-4 text-base sm:text-lg opacity-80">Não é mais um curso. Não é teoria. É uma ferramenta prática — uma estrutura pronta para o seu delivery gerar mais pedidos.</p></div><div class="grid sm:grid-cols-3 gap-4"><div class="rounded-3xl border-2 border-accent/80 bg-background/5 p-6 text-center"><div class="font-display text-5xl text-primary mb-2">01</div><h3 class="font-display text-xl mb-1">Copie</h3><p class="text-sm opacity-70">Pegue a estrutura validada.</p></div><div class="rounded-3xl border-2 border-accent/80 bg-background/5 p-6 text-center"><div class="font-display text-5xl text-primary mb-2">02</div><h3 class="font-display text-xl mb-1">Adapte</h3><p class="text-sm opacity-70">Personalize para o seu delivery.</p></div><div class="rounded-3xl border-2 border-accent/80 bg-background/5 p-6 text-center"><div class="font-display text-5xl text-primary mb-2">03</div><h3 class="font-display text-xl mb-1">Receba pedidos</h3><p class="text-sm opacity-70">Ative e veja funcionar.</p></div></div></div></section><section class="py-16 sm:py-24"><div class="mx-auto max-w-6xl px-5"><div class="text-center mx-auto max-w-3xl mb-12"><p class="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-primary mb-3">Resultados reais</p><h2 class="font-display text-3xl sm:text-4xl md:text-5xl leading-[1.05] tracking-tight text-foreground">Quem já ativou a máquina</h2></div><div class="grid sm:grid-cols-2 gap-5"><div class="rounded-3xl border border-border bg-card p-6 flex flex-col" style="box-shadow:var(--shadow-soft)"><div class="aspect-video w-full rounded-2xl overflow-hidden mb-4 border border-border bg-muted flex items-center justify-center"><iframe class="h-full w-full" src="https://www.youtube.com/embed/P1ouICLNdcM?rel=0&amp;modestbranding=1" title="Depoimento" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen=""></iframe></div><p class="text-sm text-foreground leading-relaxed">“<!-- -->Antes eu dependia totalmente dos aplicativos. Hoje recebo pedidos todos os dias direto no meu WhatsApp.<!-- -->”</p></div><div class="rounded-3xl border border-border bg-card p-6 flex flex-col" style="box-shadow:var(--shadow-soft)"><div class="aspect-video w-full rounded-2xl overflow-hidden mb-4 border border-border bg-muted flex items-center justify-center"><iframe class="h-full w-full" src="https://www.youtube.com/embed/Z-vy6FabLmY?rel=0&amp;modestbranding=1" title="Depoimento" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen=""></iframe></div><p class="text-sm text-foreground leading-relaxed">“<!-- -->Mais de 200 pedidos por dia caindo direto na impressora. A máquina não para.<!-- -->”</p></div></div></div></section><section class="py-16 sm:py-24 bg-muted"><div class="mx-auto max-w-4xl px-5"><div class="text-center mx-auto max-w-3xl mb-12"><p class="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-primary mb-3">Veja em ação</p><h2 class="font-display text-3xl sm:text-4xl md:text-5xl leading-[1.05] tracking-tight text-foreground">Pedidos chegando<br class="hidden sm:block"/> no seu WhatsApp</h2><p class="mt-4 text-base sm:text-lg text-muted-foreground">É isso que acontece quando seu delivery tem uma estrutura ativa todos os dias.</p></div><div class="flex justify-center"><div class="relative w-[300px] sm:w-[340px]"><div class="relative rounded-[2.5rem] bg-foreground p-2 shadow-2xl"><div class="rounded-[2rem] overflow-hidden bg-[#ECE5DD] aspect-[9/19] flex flex-col"><div class="bg-[#075E54] text-white px-5 pt-3 pb-1 flex items-center justify-between text-[10px] font-semibold"><span>09:41</span><div class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-signal h-3 w-3" aria-hidden="true"><path d="M2 20h.01"></path><path d="M7 20v-4"></path><path d="M12 20v-8"></path><path d="M17 20V8"></path><path d="M22 4v16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi h-3 w-3" aria-hidden="true"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-battery h-3 w-3" aria-hidden="true"><path d="M 22 14 L 22 10"></path><rect x="2" y="6" width="16" height="12" rx="2"></rect></svg></div></div><div class="bg-[#075E54] text-white px-3 py-2 flex items-center gap-2"><div class="h-8 w-8 rounded-full bg-[#25D366] flex items-center justify-center text-white text-sm font-bold">🍔</div><div class="flex-1"><p class="text-sm font-semibold leading-tight">Meu Delivery</p><p class="text-[10px] opacity-80 leading-tight flex items-center gap-1"><span class="inline-block h-1.5 w-1.5 rounded-full bg-green-400 animate-pulse"></span>online · recebendo pedidos</p></div></div><div class="flex-1 px-3 py-3 overflow-hidden flex flex-col justify-end gap-2 bg-[#ECE5DD]" style="background-image:radial-gradient(circle at 1px 1px, rgba(0,0,0,0.04) 1px, transparent 0);background-size:16px 16px"><div class="flex items-end gap-1.5 animate-fade-in" style="animation-duration:0.5s;opacity:1"><div class="h-6 w-6 rounded-full bg-orange-500 flex items-center justify-center text-white text-[10px] font-bold shrink-0">J</div><div class="max-w-[78%] rounded-2xl rounded-bl-sm bg-white px-3 py-1.5 shadow-sm"><p class="text-[10px] font-semibold text-[#075E54] leading-tight">João</p><p class="text-[11px] text-foreground leading-snug">Oi! Quero 1 hambúrguer artesanal + batata 🍔</p><div class="flex items-center justify-end gap-1 mt-0.5"><span class="text-[10px] font-bold text-[#075E54]">R$ <!-- -->47,90</span><svg viewBox="0 0 16 11" class="h-2.5 w-3 fill-[#34B7F1]"><path d="M11.071.653a.5.5 0 01.146.691l-5.5 8.5a.5.5 0 01-.78.071L1.146 6.146a.5.5 0 11.708-.708l3.286 3.286 5.24-8.1a.5.5 0 01.691-.146z"></path></svg></div></div></div><div class="flex items-end gap-1.5 animate-fade-in" style="animation-duration:0.5s;opacity:1"><div class="h-6 w-6 rounded-full bg-pink-500 flex items-center justify-center text-white text-[10px] font-bold shrink-0">M</div><div class="max-w-[78%] rounded-2xl rounded-bl-sm bg-white px-3 py-1.5 shadow-sm"><p class="text-[10px] font-semibold text-[#075E54] leading-tight">Maria</p><p class="text-[11px] text-foreground leading-snug">Bom dia! Pizza calabresa grande + Coca 2L 🍕</p><div class="flex items-center justify-end gap-1 mt-0.5"><span class="text-[10px] font-bold text-[#075E54]">R$ <!-- -->72,00</span><svg viewBox="0 0 16 11" class="h-2.5 w-3 fill-[#34B7F1]"><path d="M11.071.653a.5.5 0 01.146.691l-5.5 8.5a.5.5 0 01-.78.071L1.146 6.146a.5.5 0 11.708-.708l3.286 3.286 5.24-8.1a.5.5 0 01.691-.146z"></path></svg></div></div></div><div class="flex items-end gap-1.5 animate-fade-in" style="animation-duration:0.5s;opacity:1"><div class="h-6 w-6 rounded-full bg-purple-500 flex items-center justify-center text-white text-[10px] font-bold shrink-0">P</div><div class="max-w-[78%] rounded-2xl rounded-bl-sm bg-white px-3 py-1.5 shadow-sm"><p class="text-[10px] font-semibold text-[#075E54] leading-tight">Pedro</p><p class="text-[11px] text-foreground leading-snug">Açaí 500ml com granola e morango 🍓</p><div class="flex items-center justify-end gap-1 mt-0.5"><span class="text-[10px] font-bold text-[#075E54]">R$ <!-- -->28,50</span><svg viewBox="0 0 16 11" class="h-2.5 w-3 fill-[#34B7F1]"><path d="M11.071.653a.5.5 0 01.146.691l-5.5 8.5a.5.5 0 01-.78.071L1.146 6.146a.5.5 0 11.708-.708l3.286 3.286 5.24-8.1a.5.5 0 01.691-.146z"></path></svg></div></div></div></div></div><div class="absolute top-2 left-1/2 -translate-x-1/2 h-5 w-24 bg-foreground rounded-b-2xl"></div></div></div></div><p class="mt-12 text-center text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">Imagine abrir seu WhatsApp <span class="font-bold text-foreground">amanhã de manhã</span> e ver isso acontecendo no <span class="font-bold text-foreground">seu</span> delivery.</p></div></section><section class="py-16 sm:py-24 bg-muted"><div class="mx-auto max-w-6xl px-5"><div class="text-center mx-auto max-w-3xl mb-12"><p class="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-primary mb-3">O que você recebe</p><h2 class="font-display text-3xl sm:text-4xl md:text-5xl leading-[1.05] tracking-tight text-foreground">Tudo que seu delivery precisa<br/> em um único lugar</h2></div><div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"><div class="rounded-3xl border-2 border-foreground bg-card p-6 sm:p-8 transition-all hover:-translate-y-1" style="box-shadow:var(--shadow-cta-sm)"><div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl mb-5 bg-foreground text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket h-7 w-7" aria-hidden="true"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"></path><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"></path></svg></div><h3 class="font-display text-xl text-foreground mb-2">Gerador de Clientes</h3><p class="text-sm text-muted-foreground mb-5">Atraia novas pessoas interessadas no seu delivery todos os dias.</p><ul class="space-y-2"><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Estrutura pronta</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Aplicação simples</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Clientes da sua região</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Mais pedidos no WhatsApp</span></li></ul></div><div class="rounded-3xl border-2 border-foreground bg-card p-6 sm:p-8 transition-all hover:-translate-y-1" style="box-shadow:var(--shadow-cta-sm)"><div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl mb-5 bg-foreground text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle h-7 w-7" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg></div><h3 class="font-display text-xl text-foreground mb-2">Robô de Pedidos</h3><p class="text-sm text-muted-foreground mb-5">Transforme seu WhatsApp em um canal constante de vendas.</p><ul class="space-y-2"><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Mais conversas</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Mais pedidos</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Mais recorrência</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Mais previsibilidade</span></li></ul></div><div class="rounded-3xl border-2 border-foreground bg-card p-6 sm:p-8 transition-all hover:-translate-y-1" style="box-shadow:var(--shadow-cta-sm)"><div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl mb-5 bg-foreground text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot h-7 w-7" aria-hidden="true"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg></div><h3 class="font-display text-xl text-foreground mb-2">Delivery Automático</h3><p class="text-sm text-muted-foreground mb-5">Organize sua operação para receber pedidos com eficiência.</p><ul class="space-y-2"><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Cardápio digital</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Fluxo automatizado</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Menos atendimento manual</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Operação organizada</span></li></ul></div><div class="rounded-3xl border-2 border-foreground bg-card p-6 sm:p-8 transition-all hover:-translate-y-1" style="box-shadow:var(--shadow-cta-sm)"><div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl mb-5 bg-foreground text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target h-7 w-7" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div><h3 class="font-display text-xl text-foreground mb-2">Banco de Ofertas</h3><p class="text-sm text-muted-foreground mb-5">Campanhas e promoções prontas para aumentar o movimento.</p><ul class="space-y-2"><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Combos</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Promoções</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Ofertas sazonais</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Campanhas validadas</span></li></ul></div><div class="rounded-3xl border-2 border-foreground bg-card p-6 sm:p-8 transition-all hover:-translate-y-1" style="box-shadow:var(--shadow-cta-sm)"><div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl mb-5 bg-foreground text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square h-7 w-7" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg></div><h3 class="font-display text-xl text-foreground mb-2">Atendente Digital</h3><p class="text-sm text-muted-foreground mb-5">Mensagens prontas para acelerar o atendimento e vender mais.</p><ul class="space-y-2"><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Primeiro contato</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Recuperação de clientes</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Confirmação de pedidos</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Pós-venda</span></li></ul></div><div class="rounded-3xl border-2 border-foreground bg-card p-6 sm:p-8 transition-all hover:-translate-y-1" style="box-shadow:var(--shadow-cta-sm)"><div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl mb-5 bg-foreground text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image h-7 w-7" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg></div><h3 class="font-display text-xl text-foreground mb-2">Galeria de Anúncios</h3><p class="text-sm text-muted-foreground mb-5">Modelos prontos para divulgar sem precisar criar do zero.</p><ul class="space-y-2"><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Hamburgueria</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Pizzaria</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Açaí</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Marmitaria e Sushi</span></li></ul></div><div class="rounded-3xl border-2 border-foreground bg-card p-6 sm:p-8 transition-all hover:-translate-y-1" style="box-shadow:var(--shadow-cta-sm)"><div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl mb-5 bg-foreground text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar h-7 w-7" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg></div><h3 class="font-display text-xl text-foreground mb-2">Calendário de Vendas</h3><p class="text-sm text-muted-foreground mb-5">Campanhas prontas para usar durante todo o ano.</p><ul class="space-y-2"><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Datas comemorativas</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Promoções especiais</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Campanhas de recorrência</span></li><li class="flex items-start gap-2 text-sm text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Ações sazonais</span></li></ul></div></div></div></section><section id="bonus" class="relative overflow-hidden py-16 sm:py-24 bg-foreground text-background"><div class="absolute inset-0 -z-0 bg-[radial-gradient(ellipse_at_center,oklch(0.89_0.18_95/0.18),transparent_65%)]"></div><div class="relative mx-auto max-w-6xl px-5"><div class="text-center mx-auto max-w-3xl mb-10"><span class="inline-flex items-center gap-2 rounded-full border-2 border-accent bg-accent/10 text-accent px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift h-4 w-4" aria-hidden="true"><path d="M12 7v14"></path><path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path><path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"></path><rect x="3" y="7" width="18" height="4" rx="1"></rect></svg>Bônus exclusivos</span><h2 class="font-display text-3xl sm:text-4xl md:text-5xl leading-[1.05] tracking-tight">Leve hoje <span class="bg-accent text-accent-foreground px-2 inline-block">+ 11 ferramentas prontas</span> pra aplicar e escalar</h2><p class="mt-4 text-base sm:text-lg opacity-80">Não é só o método. Você também destrava um arsenal de entregáveis pra usar amanhã no seu delivery.</p></div><div class="mx-auto max-w-2xl mb-10"><div class="rounded-3xl border-2 border-accent overflow-hidden bg-background/5" style="box-shadow:var(--shadow-cta)"><img src="/__l5e/assets-v1/6264addc-da30-4bbc-93e3-b7cf2a5c416f/bonus-mockup.png" alt="Pacote de bônus: 11 ferramentas e entregáveis para aplicar e escalar seu delivery" class="block w-full h-auto" loading="lazy"/></div></div><div class="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-4xl mx-auto mb-10"><div class="flex items-start gap-2 rounded-xl border border-accent/40 bg-background/5 px-3 py-2.5 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-accent" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span class="leading-tight">Copy prontas para anúncios</span></div><div class="flex items-start gap-2 rounded-xl border border-accent/40 bg-background/5 px-3 py-2.5 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-accent" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span class="leading-tight">Criativos de alto impacto</span></div><div class="flex items-start gap-2 rounded-xl border border-accent/40 bg-background/5 px-3 py-2.5 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-accent" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span class="leading-tight">Roteiros de vendas</span></div><div class="flex items-start gap-2 rounded-xl border border-accent/40 bg-background/5 px-3 py-2.5 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-accent" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span class="leading-tight">Ofertas irresistíveis</span></div><div class="flex items-start gap-2 rounded-xl border border-accent/40 bg-background/5 px-3 py-2.5 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-accent" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span class="leading-tight">Scripts para WhatsApp</span></div><div class="flex items-start gap-2 rounded-xl border border-accent/40 bg-background/5 px-3 py-2.5 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-accent" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span class="leading-tight">Calculadora de precificação</span></div><div class="flex items-start gap-2 rounded-xl border border-accent/40 bg-background/5 px-3 py-2.5 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-accent" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span class="leading-tight">Estratégias de promoções</span></div><div class="flex items-start gap-2 rounded-xl border border-accent/40 bg-background/5 px-3 py-2.5 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-accent" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span class="leading-tight">Plano de ação passo a passo</span></div><div class="flex items-start gap-2 rounded-xl border border-accent/40 bg-background/5 px-3 py-2.5 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-accent" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span class="leading-tight">Checklist da campanha</span></div><div class="flex items-start gap-2 rounded-xl border border-accent/40 bg-background/5 px-3 py-2.5 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-accent" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span class="leading-tight">Modelos de respostas rápidas</span></div><div class="flex items-start gap-2 rounded-xl border border-accent/40 bg-background/5 px-3 py-2.5 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 mt-0.5 shrink-0 text-accent" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span class="leading-tight">Painel de resultados</span></div></div><div class="mx-auto max-w-2xl rounded-2xl border-2 border-accent bg-accent/10 p-5 sm:p-6 text-center mb-8"><p class="font-display text-xs sm:text-sm tracking-[0.2em] uppercase text-accent mb-2">Atenção</p><p class="text-base sm:text-lg">Esse pacote de bônus está liberado <span class="font-bold text-accent">somente para quem ativar hoje</span>. Vale mais que o próprio produto — e entra junto, sem custo extra.</p></div><div class="flex flex-col items-center gap-3"><a href="https://checkout.wiven.com.br/checkout/cmq45crjg17es01q09t0i11rt?offer=SIAAUM5" class="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl border-2 border-foreground bg-accent px-8 py-5 font-display text-base sm:text-lg text-accent-foreground uppercase tracking-wide transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[2px] active:translate-y-[2px] active:shadow-none " style="box-shadow:var(--shadow-cta)">ATIVAR COM OS BÔNUS<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg></a><p class="text-xs opacity-70">Acesso imediato · Bônus liberados na hora do pagamento</p></div></div></section><section class="py-16 sm:py-24 bg-muted"><div class="mx-auto max-w-3xl px-5"><div class="text-center mx-auto max-w-3xl mb-12"><p class="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-primary mb-3">Valor real</p><h2 class="font-display text-3xl sm:text-4xl md:text-5xl leading-[1.05] tracking-tight text-foreground">Quanto valeria ter acesso a tudo isso?</h2></div><div class="rounded-3xl border-2 border-foreground bg-card overflow-hidden" style="box-shadow:var(--shadow-cta)"><div class="flex items-center justify-between px-5 sm:px-7 py-4 border-b border-border"><span class="text-sm sm:text-base font-semibold text-foreground">Gerador de Clientes</span><span class="font-display text-sm sm:text-base text-muted-foreground line-through decoration-primary decoration-[1.5px]">R$ 197</span></div><div class="flex items-center justify-between px-5 sm:px-7 py-4 border-b border-border"><span class="text-sm sm:text-base font-semibold text-foreground">Robô de Pedidos</span><span class="font-display text-sm sm:text-base text-muted-foreground line-through decoration-primary decoration-[1.5px]">R$ 197</span></div><div class="flex items-center justify-between px-5 sm:px-7 py-4 border-b border-border"><span class="text-sm sm:text-base font-semibold text-foreground">Delivery Automático</span><span class="font-display text-sm sm:text-base text-muted-foreground line-through decoration-primary decoration-[1.5px]">R$ 197</span></div><div class="flex items-center justify-between px-5 sm:px-7 py-4 border-b border-border"><span class="text-sm sm:text-base font-semibold text-foreground">Banco de Ofertas</span><span class="font-display text-sm sm:text-base text-muted-foreground line-through decoration-primary decoration-[1.5px]">R$ 97</span></div><div class="flex items-center justify-between px-5 sm:px-7 py-4 border-b border-border"><span class="text-sm sm:text-base font-semibold text-foreground">Atendente Digital</span><span class="font-display text-sm sm:text-base text-muted-foreground line-through decoration-primary decoration-[1.5px]">R$ 67</span></div><div class="flex items-center justify-between px-5 sm:px-7 py-4 border-b border-border"><span class="text-sm sm:text-base font-semibold text-foreground">Galeria de Anúncios</span><span class="font-display text-sm sm:text-base text-muted-foreground line-through decoration-primary decoration-[1.5px]">R$ 97</span></div><div class="flex items-center justify-between px-5 sm:px-7 py-4 border-b border-border"><span class="text-sm sm:text-base font-semibold text-foreground">Calendário de Vendas</span><span class="font-display text-sm sm:text-base text-muted-foreground line-through decoration-primary decoration-[1.5px]">R$ 97</span></div><div class="flex items-center justify-between px-5 sm:px-7 py-4 "><span class="text-sm sm:text-base font-semibold text-foreground">+ Pacote de Bônus (11 entregáveis)</span><span class="font-display text-sm sm:text-base text-muted-foreground line-through decoration-primary decoration-[1.5px]">R$ 497</span></div><div class="flex items-center justify-between px-5 sm:px-7 py-5 bg-foreground text-background"><span class="font-display text-base sm:text-lg uppercase tracking-wide">Valor total</span><span class="font-display text-xl sm:text-2xl line-through decoration-primary decoration-[1.5px]">R$ 1.446</span></div></div><div class="mt-10 text-center space-y-2"><p class="text-lg text-muted-foreground">Mas você não vai investir <span class="line-through decoration-primary decoration-[1.5px] text-foreground font-semibold">R$ 1.446</span>.</p><p class="text-lg text-muted-foreground">Nem <span class="line-through decoration-primary decoration-[1.5px] text-foreground font-semibold">R$ 497</span>.</p><p class="text-lg text-muted-foreground">Nem <span class="line-through decoration-primary decoration-[1.5px] text-foreground font-semibold">R$ 97</span>.</p></div><div class="mt-10 mx-auto max-w-2xl rounded-2xl border-2 border-foreground bg-card p-6 text-center" style="box-shadow:var(--shadow-cta-sm)"><p class="font-display text-xs tracking-[0.2em] uppercase text-primary mb-2">Por que tão acessível?</p><p class="text-base text-foreground">Porque a gente prefere <span class="font-bold">1.000 deliveries ativando</span> do que 100 pagando caro. Quando o seu delivery crescer, você vai lembrar de quem te ajudou no começo.</p></div></div></section><section id="ativar" class="py-16 sm:py-24"><div class="mx-auto max-w-3xl px-5"><div class="rounded-3xl border-2 border-foreground bg-card p-8 sm:p-12 text-center relative overflow-hidden" style="box-shadow:var(--shadow-cta)"><span class="inline-flex items-center rounded-full border-2 border-foreground bg-accent text-accent-foreground px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">Oferta de lançamento</span><p class="text-xs font-bold tracking-[0.2em] uppercase text-primary mb-3">Ative hoje</p><h2 class="font-display text-3xl sm:text-5xl leading-tight mb-6">Sua Máquina de Pedidos completa</h2><ul class="grid sm:grid-cols-2 gap-2 text-left max-w-md mx-auto mb-8"><li class="flex items-center gap-2 text-sm font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Gerador de Clientes</li><li class="flex items-center gap-2 text-sm font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Robô de Pedidos</li><li class="flex items-center gap-2 text-sm font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Delivery Automático</li><li class="flex items-center gap-2 text-sm font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Banco de Ofertas</li><li class="flex items-center gap-2 text-sm font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Atendente Digital</li><li class="flex items-center gap-2 text-sm font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Galeria de Anúncios</li><li class="flex items-center gap-2 text-sm font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Calendário de Vendas</li><li class="flex items-center gap-2 text-sm font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>+ Pacote de Bônus (11 entregáveis)</li><li class="flex items-center gap-2 text-sm font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary shrink-0" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Acesso imediato</li></ul><div class="mb-6"><p class="text-sm text-muted-foreground">Por apenas</p><p class="font-display text-6xl sm:text-7xl text-foreground leading-none my-2"><span class="bg-accent px-3 py-1 inline-block">R$ 37</span></p><p class="text-sm text-muted-foreground">Pagamento único · Sem mensalidade · Sem taxas ocultas</p></div><a href="https://checkout.wiven.com.br/checkout/cmq45crjg17es01q09t0i11rt?offer=SIAAUM5" class="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl border-2 border-foreground bg-accent px-8 py-5 font-display text-base sm:text-lg text-accent-foreground uppercase tracking-wide transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[2px] active:translate-y-[2px] active:shadow-none " style="box-shadow:var(--shadow-cta)">Ativar minha máquina<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg></a><div class="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground"><span class="inline-flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock h-3.5 w-3.5" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Acesso imediato</span><span class="inline-flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check h-3.5 w-3.5" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg> Garantia 7 dias</span><span class="inline-flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone h-3.5 w-3.5" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg> Qualquer delivery</span></div></div></div></section><section class="py-16 sm:py-24 bg-muted"><div class="mx-auto max-w-4xl px-5"><div class="rounded-3xl border-2 border-foreground bg-card p-8 sm:p-12 flex flex-col sm:flex-row items-center gap-8" style="box-shadow:var(--shadow-cta)"><div class="h-28 w-28 sm:h-36 sm:w-36 shrink-0 rounded-full border-4 border-foreground bg-accent flex flex-col items-center justify-center text-center text-accent-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check h-7 w-7 mb-1" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg><span class="text-xs font-bold uppercase tracking-wider">Garantia</span><span class="font-display text-2xl">7 dias</span></div><div class="text-center sm:text-left"><h3 class="font-display text-2xl sm:text-3xl mb-2">Teste sem risco</h3><p class="text-muted-foreground">Instale a Máquina. Veja tudo por dentro. Implemente a estrutura. Se em 7 dias você concluir que ela não faz sentido para o seu delivery, basta solicitar o reembolso e você recebe 100% do seu dinheiro de volta. Simples assim.</p></div></div></div></section><section class="py-16 sm:py-24"><div class="mx-auto max-w-5xl px-5"><div class="text-center mx-auto max-w-3xl mb-12"><p class="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-primary mb-3">Para quem é</p><h2 class="font-display text-3xl sm:text-4xl md:text-5xl leading-[1.05] tracking-tight text-foreground">Feito para todo tipo de delivery</h2></div><div class="flex flex-wrap justify-center gap-3"><span class="inline-flex items-center gap-2 rounded-full border-2 border-foreground bg-card px-5 py-2.5 text-sm font-bold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Hamburguerias</span><span class="inline-flex items-center gap-2 rounded-full border-2 border-foreground bg-card px-5 py-2.5 text-sm font-bold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Pizzarias</span><span class="inline-flex items-center gap-2 rounded-full border-2 border-foreground bg-card px-5 py-2.5 text-sm font-bold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Açaíterias</span><span class="inline-flex items-center gap-2 rounded-full border-2 border-foreground bg-card px-5 py-2.5 text-sm font-bold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Marmitarias</span><span class="inline-flex items-center gap-2 rounded-full border-2 border-foreground bg-card px-5 py-2.5 text-sm font-bold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Restaurantes</span><span class="inline-flex items-center gap-2 rounded-full border-2 border-foreground bg-card px-5 py-2.5 text-sm font-bold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Lanchonetes</span><span class="inline-flex items-center gap-2 rounded-full border-2 border-foreground bg-card px-5 py-2.5 text-sm font-bold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-4 w-4 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Qualquer delivery</span></div></div></section><section class="py-16 sm:py-24 bg-foreground text-background"><div class="mx-auto max-w-3xl px-5 text-center"><h2 class="font-display text-3xl sm:text-5xl leading-tight mb-5">Pare de esperar o<br/> WhatsApp tocar.<br/><span class="bg-accent text-accent-foreground px-2 inline-block mt-2">Faça ele tocar.</span></h2><p class="text-lg sm:text-xl opacity-80 mb-8">Copiar. Aplicar. Receber pedidos todos os dias.</p><div class="flex justify-center"><a href="https://checkout.wiven.com.br/checkout/cmq45crjg17es01q09t0i11rt?offer=SIAAUM5" class="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl border-2 border-foreground bg-accent px-8 py-5 font-display text-base sm:text-lg text-accent-foreground uppercase tracking-wide transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[2px] active:translate-y-[2px] active:shadow-none " style="box-shadow:var(--shadow-cta)">Ativar minha máquina de pedidos<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg></a></div><div class="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs opacity-70"><span class="inline-flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock h-3.5 w-3.5" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Acesso imediato após o pagamento</span><span class="inline-flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check h-3.5 w-3.5" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg> Garantia incondicional de 7 dias</span><span class="inline-flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone h-3.5 w-3.5" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg> Compatível com qualquer delivery</span></div></div></section></div><footer class="py-8 text-center text-xs text-muted-foreground">© <!-- -->2026<!-- --> Máquina de Pedidos · Todos os direitos reservados</footer></main><script>(function(t){let s;try{s=JSON.parse(sessionStorage.getItem(t.storageKey)||"{}")}catch(e){console.error(e);return}const c=t.key||window.history.state?.__TSR_key,r=c?s[c]:void 0;if(t.shouldScrollRestoration&&r&&typeof r=="object"&&Object.keys(r).length>0){for(const e in r){const o=r[e];if(!o||typeof o!="object")continue;const l=o.scrollX,i=o.scrollY;if(!(!Number.isFinite(l)||!Number.isFinite(i))){if(e==="window")window.scrollTo({top:i,left:l,behavior:t.behavior});else if(e){let n;try{n=document.querySelector(e)}catch{continue}n&&(n.scrollLeft=l,n.scrollTop=i)}}}return}const a=window.location.hash.split("#",2)[1];if(a){const e=window.history.state?.__hashScrollIntoViewOptions??!0;if(e){const o=document.getElementById(a);o&&o.scrollIntoView(e)}return}window.scrollTo({top:0,left:0,behavior:t.behavior})})({"storageKey":"tsr-scroll-restoration-v1_3","shouldScrollRestoration":true});document.currentScript.remove()</script><!--/$--><script class="$tsr" id="$tsr-stream-barrier">(self.$R=self.$R||{})["tsr"]=[];self.$_TSR={h(){this.hydrated=!0,this.c()},e(){this.streamEnded=!0,this.c()},c(){this.hydrated&&this.streamEnded&&(delete self.$_TSR,delete self.$R.tsr)},p(e){this.initialized?e():this.buffer.push(e)},buffer:[]};$_TSR.router=($R=>$R[0]={manifest:$R[1]={routes:$R[2]={__root__:$R[3]={preloads:$R[4]=["/assets/index-DXeJ2709.js"],assets:$R[5]=[$R[6]={tag:"script",attrs:$R[7]={type:"module",async:!0},children:"import(\"/assets/index-DXeJ2709.js\")"}]},"/":$R[8]={preloads:$R[9]=["/assets/index-Bk7qtfo7.js"]}}},matches:$R[10]=[$R[11]={i:"__root__",u:1787268949687,s:"success",ssr:!0},$R[12]={i:"",u:1787268949687,s:"success",ssr:!0}],lastMatchId:""})($R["tsr"]);$_TSR.e();document.currentScript.remove()</script><script type="module" async="">import("/assets/index-DXeJ2709.js")</script></body></html>
+/* ---------- BOTÕES ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(100deg,var(--amber),var(--amber2));
+  color:#0a0a0b;font-weight:800;font-size:16px;letter-spacing:.01em;
+  padding:18px 34px;border-radius:100px;border:0;cursor:pointer;
+  box-shadow:0 10px 34px rgba(255,122,0,.32);
+  transition:transform .18s ease, box-shadow .18s ease;
+  text-align:center;width:100%;max-width:420px;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(255,122,0,.45)}
+.btn:active{transform:translateY(0)}
+.btn.pulse{animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 10px 34px rgba(255,122,0,.32)}50%{box-shadow:0 10px 34px rgba(255,122,0,.32),0 0 0 14px rgba(255,122,0,0)}}
+.btn-sub{font-size:13px;color:var(--muted);margin-top:12px}
+
+/* ---------- HERO ---------- */
+.hero{
+  padding:56px 0 64px;text-align:center;
+  background:
+    radial-gradient(900px 420px at 50% -80px,rgba(255,122,0,.16),transparent 70%),
+    radial-gradient(600px 300px at 90% 20%,rgba(255,171,46,.07),transparent 70%);
+}
+.hero h1{margin-bottom:18px}
+.hero .lead{margin:0 auto 30px}
+.vsl{
+  position:relative;max-width:760px;margin:0 auto 26px;aspect-ratio:16/9;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;cursor:pointer;box-shadow:0 24px 70px rgba(0,0,0,.6);
+}
+.vsl video,.vsl iframe{width:100%;height:100%;display:block;border:0;object-fit:cover}
+.vsl-overlay{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:14px;
+  background:rgba(10,10,11,.5);backdrop-filter:blur(2px);transition:opacity .3s;
+}
+.vsl-overlay.hide{opacity:0;pointer-events:none}
+.play{
+  width:76px;height:76px;border-radius:50%;
+  background:linear-gradient(100deg,var(--amber),var(--amber2));
+  display:grid;place-items:center;box-shadow:0 0 0 12px rgba(255,122,0,.16);
+  animation:pulse2 2s infinite;
+}
+@keyframes pulse2{0%,100%{box-shadow:0 0 0 12px rgba(255,122,0,.16)}50%{box-shadow:0 0 0 22px rgba(255,122,0,0)}}
+.play svg{margin-left:5px}
+.vsl-overlay span{font-size:14px;font-weight:600;color:#fff}
+.badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px}
+.badge{
+  display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);
+  background:var(--card);border:1px solid var(--line);padding:8px 14px;border-radius:100px;
+}
+.badge svg{flex:0 0 auto}
+
+/* ---------- DOR: 2 COLUNAS ---------- */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:36px}
+.col{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.col.bad{border-color:rgba(239,68,68,.22)}
+.col.good{border-color:rgba(34,197,94,.24);background:linear-gradient(180deg,rgba(34,197,94,.05),var(--card))}
+.col h4{font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px;font-weight:700}
+.col.bad h4{color:#f87171}
+.col.good h4{color:#4ade80}
+.col ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+.col li{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.5}
+.ico{flex:0 0 22px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:800;margin-top:1px}
+.ico.x{background:rgba(239,68,68,.14);color:#f87171}
+.ico.v{background:rgba(34,197,94,.14);color:#4ade80}
+
+/* ---------- 3 PASSOS ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;counter-reset:s}
+.step{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 24px;text-align:center;position:relative;transition:.25s;
+}
+.step:hover{border-color:rgba(255,122,0,.35);transform:translateY(-4px)}
+.step .n{
+  font-size:13px;font-weight:900;color:var(--amber2);letter-spacing:.14em;
+  display:block;margin-bottom:12px;
+}
+.step h3{margin-bottom:8px}
+.step p{color:var(--muted);font-size:14.5px}
+
+/* ---------- DEPOIMENTOS ---------- */
+.depos{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
+.depo{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.depo .vid{aspect-ratio:16/9;background:var(--bg2)}
+.depo .vid iframe{width:100%;height:100%;border:0;display:block}
+.depo .txt{padding:20px 22px}
+.depo blockquote{font-size:15px;line-height:1.6;color:#e4e4e7;font-style:italic}
+.depo .who{display:flex;align-items:center;gap:10px;margin-top:14px}
+.av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--amber2));display:grid;place-items:center;font-weight:800;color:#0a0a0b;font-size:14px}
+.who b{font-size:14px;display:block}
+.who small{color:var(--muted);font-size:12.5px}
+.stars{color:var(--amber2);font-size:14px;letter-spacing:2px;margin-bottom:10px}
+
+/* ---------- MOCKUP WHATSAPP ---------- */
+.phone{
+  max-width:340px;margin:36px auto 0;background:#0b141a;border:9px solid #1c1c20;
+  border-radius:36px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.7);
+}
+.ph-top{background:#1f2c34;padding:12px 14px;display:flex;align-items:center;gap:10px}
+.ph-av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--amber2));display:grid;place-items:center;font-size:19px}
+.ph-top b{font-size:14.5px;display:block;color:#fff}
+.ph-top small{font-size:11.5px;color:#7fd97f;display:flex;align-items:center;gap:5px}
+.dot{width:6px;height:6px;border-radius:50%;background:#7fd97f;display:inline-block;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+.ph-body{
+  padding:16px 12px;min-height:330px;display:flex;flex-direction:column;gap:10px;
+  background:#0b141a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='10' cy='10' r='1' fill='%23ffffff08'/%3E%3Ccircle cx='40' cy='35' r='1' fill='%23ffffff08'/%3E%3C/svg%3E");
+}
+.msg{
+  max-width:82%;background:#1f2c34;padding:9px 12px;border-radius:10px;
+  font-size:13.5px;color:#e9edef;opacity:0;transform:translateY(10px);
+  animation:pop .45s forwards;line-height:1.45;
+}
+.msg .price{display:block;margin-top:5px;font-size:12.5px;color:#7fd97f;font-weight:700}
+.msg .nm{display:block;font-size:11.5px;color:var(--amber2);font-weight:700;margin-bottom:3px}
+.msg.me{background:#005c4b;align-self:flex-end}
+@keyframes pop{to{opacity:1;transform:translateY(0)}}
+.ph-note{text-align:center;color:var(--muted);font-size:14.5px;margin-top:26px;max-width:520px;margin-left:auto;margin-right:auto}
+
+/* ---------- ENTREGÁVEIS ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.mod{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 22px;transition:.25s;
+}
+.mod:hover{border-color:rgba(255,122,0,.35);background:var(--card2);transform:translateY(-4px)}
+.mod .emo{
+  width:46px;height:46px;border-radius:12px;background:rgba(255,122,0,.1);
+  border:1px solid rgba(255,122,0,.2);display:grid;place-items:center;font-size:22px;margin-bottom:16px;
+}
+.mod h3{margin-bottom:8px;font-size:17.5px}
+.mod>p{color:var(--muted);font-size:14px;margin-bottom:14px}
+.mod ul{list-style:none;display:flex;flex-direction:column;gap:7px;border-top:1px solid var(--line);padding-top:14px}
+.mod li{font-size:13.5px;color:#c9c9d1;display:flex;gap:8px;align-items:center}
+.mod li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--amber);flex:0 0 auto}
+
+/* ---------- BÔNUS ---------- */
+.bonus-box{
+  background:linear-gradient(180deg,rgba(255,122,0,.08),var(--card));
+  border:1px solid rgba(255,122,0,.28);border-radius:24px;padding:36px 28px;margin-top:36px;
+}
+.bonus-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}
+.bonus-item{
+  display:flex;gap:10px;align-items:center;background:var(--bg2);
+  border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:14px;
+}
+.bonus-item span{color:var(--green);font-weight:800;flex:0 0 auto}
+.warn{
+  background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.28);
+  border-radius:14px;padding:16px 18px;font-size:14.5px;color:#fca5a5;
+  display:flex;gap:12px;align-items:flex-start;
+}
+.warn b{color:#fff}
+
+/* ---------- ANCORAGEM ---------- */
+.stack{max-width:560px;margin:36px auto 0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px 22px}
+.stack .row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.stack .row:last-child{border-bottom:0}
+.stack .row span:last-child{color:var(--muted);text-decoration:line-through}
+.stack .row.total{font-weight:800;font-size:18px}
+.stack .row.total span:last-child{color:#f87171;font-size:20px}
+.drop{text-align:center;margin-top:30px}
+.drop p{font-size:clamp(18px,3.4vw,24px);font-weight:700;color:var(--muted);margin:8px 0;text-decoration:line-through;opacity:.55}
+.drop p:last-child{color:var(--txt);text-decoration:none;opacity:1}
+
+/* ---------- OFERTA ---------- */
+.offer{
+  max-width:520px;margin:40px auto 0;background:linear-gradient(180deg,var(--card2),var(--card));
+  border:1.5px solid rgba(255,122,0,.4);border-radius:26px;padding:34px 28px;text-align:center;
+  box-shadow:0 30px 80px rgba(0,0,0,.55);
+}
+.offer .tag{
+  display:inline-block;background:linear-gradient(100deg,var(--amber),var(--amber2));
+  color:#0a0a0b;font-size:11.5px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;
+  padding:6px 14px;border-radius:100px;margin-bottom:18px;
+}
+.offer ul{list-style:none;text-align:left;display:flex;flex-direction:column;gap:11px;margin:22px 0 26px}
+.offer li{display:flex;gap:11px;align-items:center;font-size:15px}
+.offer li svg{flex:0 0 auto}
+.price-lbl{font-size:14px;color:var(--muted)}
+.price{font-size:clamp(52px,11vw,72px);font-weight:900;line-height:1;letter-spacing:-.04em;margin:4px 0 6px}
+.price small{font-size:26px;font-weight:700;vertical-align:super;margin-right:4px}
+.price-note{font-size:13.5px;color:var(--muted);margin-bottom:24px}
+
+/* ---------- GARANTIA ---------- */
+.guar{
+  display:flex;gap:24px;align-items:center;background:var(--card);
+  border:1px solid var(--line);border-radius:var(--radius);padding:30px;margin-top:40px;
+}
+.seal{
+  flex:0 0 110px;width:110px;height:110px;border-radius:50%;
+  background:linear-gradient(135deg,var(--amber),var(--amber2));
+  display:grid;place-items:center;text-align:center;color:#0a0a0b;font-weight:900;line-height:1.1;
+}
+.seal b{font-size:13px;display:block}
+.seal i{font-size:26px;font-style:normal;display:block}
+.guar p{color:var(--muted);font-size:15px;margin-top:8px}
+
+/* ---------- PARA QUEM ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;margin-top:32px}
+.chip{
+  background:var(--card);border:1px solid var(--line);border-radius:100px;
+  padding:12px 22px;font-size:15px;font-weight:600;transition:.2s;
+}
+.chip:hover{border-color:rgba(255,122,0,.4);color:var(--amber2)}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:720px;margin:36px auto 0;display:flex;flex-direction:column;gap:12px}
+.q{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.q button{
+  width:100%;background:none;border:0;color:var(--txt);text-align:left;cursor:pointer;
+  padding:19px 22px;font-size:15.5px;font-weight:600;font-family:inherit;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.q button i{font-style:normal;color:var(--amber2);font-size:22px;transition:.25s;flex:0 0 auto}
+.q.open button i{transform:rotate(45deg)}
+.q .a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.q .a p{padding:0 22px 20px;color:var(--muted);font-size:14.5px}
+
+/* ---------- CTA FINAL ---------- */
+.final{
+  text-align:center;
+  background:radial-gradient(700px 340px at 50% 40%,rgba(255,122,0,.14),transparent 70%);
+}
+.final h2{max-width:720px;margin:0 auto 16px}
+
+/* ---------- BARRA FIXA ---------- */
+.sticky{
+  position:fixed;bottom:0;left:0;right:0;z-index:99;
+  background:rgba(10,10,11,.94);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);padding:12px 16px;
+  display:flex;align-items:center;justify-content:center;gap:16px;
+  transform:translateY(110%);transition:transform .35s ease;
+}
+.sticky.show{transform:translateY(0)}
+.sticky .info{text-align:right;line-height:1.2}
+.sticky .info b{font-size:20px;display:block}
+.sticky .info small{font-size:11.5px;color:var(--muted)}
+.sticky .btn{width:auto;max-width:none;padding:14px 26px;font-size:15px}
+
+/* ---------- FOOTER ---------- */
+footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:#63636d;font-size:13px}
+footer a{color:#8a8a94;text-decoration:underline;margin:0 8px}
+
+/* ---------- REVEAL ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- RESPONSIVO ---------- */
+@media(max-width:880px){
+  .grid,.bonus-list{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}
+  .depos{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  section{padding:54px 0}
+  .cols,.grid,.bonus-list{grid-template-columns:1fr}
+  .guar{flex-direction:column;text-align:center;padding:26px 20px}
+  .sticky .info{display:none}
+  .sticky .btn{width:100%;max-width:none}
+  .stack{padding:6px 16px}
+}
+</style>
+</head>
+<body>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Para donos de delivery</span>
+    <h1>Encha seu WhatsApp de pedidos<br><span class="grad">sem depender de aplicativo</span></h1>
+    <p class="lead">Uma estrutura pronta para hamburguerias, pizzarias, açaiterias e marmitarias venderem direto, todos os dias — e pararem de entregar 27% do faturamento pro app.</p>
+
+    <!-- VSL — troque o src pelo seu vídeo ou embed -->
+    <div class="vsl" id="vsl">
+      <video id="vslVideo" playsinline preload="metadata" poster="/capa-vsl.jpg">
+        <source src="/vsl.mp4" type="video/mp4">
+      </video>
+      <div class="vsl-overlay" id="vslOverlay">
+        <div class="play">
+          <svg width="26" height="30" viewBox="0 0 26 30" fill="#0a0a0b"><path d="M25 13.27a2 2 0 0 1 0 3.46L3 29.46A2 2 0 0 1 0 27.73V2.27A2 2 0 0 1 3 .54l22 12.73Z"/></svg>
+        </div>
+        <span>Toque para assistir</span>
+      </div>
+    </div>
+
+    <a class="btn pulse" href="#CHECKOUT">QUERO MINHA MÁQUINA DE PEDIDOS</a>
+    <div class="badges">
+      <span class="badge">⚡ Acesso imediato</span>
+      <span class="badge">🔒 Compra 100% segura</span>
+      <span class="badge">↩️ Garantia de 7 dias</span>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= DOR ======================= -->
+<section class="rv">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Por que você travou</span>
+      <h2>Não é falta de esforço.<br>É falta de <span class="grad">sistema</span>.</h2>
+      <p class="lead">Você já fez promoção, já impulsionou post, já baixou preço. O movimento até sobe — e cai de novo na semana seguinte. Porque nada disso é estrutura, é tentativa.</p>
+    </div>
+
+    <div class="cols">
+      <div class="col bad">
+        <h4>Como está hoje</h4>
+        <ul>
+          <li><span class="ico x">✕</span> Comissão do app comendo a margem</li>
+          <li><span class="ico x">✕</span> Impulsionar post e não gerar pedido</li>
+          <li><span class="ico x">✕</span> Cliente compra uma vez e some</li>
+          <li><span class="ico x">✕</span> Responder tudo na mão, o dia inteiro</li>
+          <li><span class="ico x">✕</span> Terça e quarta com o salão vazio</li>
+        </ul>
+      </div>
+      <div class="col good">
+        <h4>Com a Máquina de Pedidos</h4>
+        <ul>
+          <li><span class="ico v">✓</span> Pedido cai direto no seu Zap, sem taxa</li>
+          <li><span class="ico v">✓</span> Anúncio validado, feito pra converter</li>
+          <li><span class="ico v">✓</span> Cliente reativado sozinho toda semana</li>
+          <li><span class="ico v">✓</span> Atendimento no automático 24h</li>
+          <li><span class="ico v">✓</span> Campanha pronta pros dias fracos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MECANISMO ======================= -->
+<section class="rv" style="background:var(--bg2)">
+  <div class="wrap center">
+    <span class="eyebrow">Conheça</span>
+    <h2>A Máquina de Pedidos</h2>
+    <p class="lead">Não é curso. Não é aula gravada de 8 horas. É um pacote de estruturas prontas: você abre, troca o nome do seu delivery e coloca pra rodar hoje.</p>
+
+    <div class="steps">
+      <div class="step">
+        <span class="n">PASSO 01</span>
+        <h3>Copie</h3>
+        <p>Baixe as estruturas já testadas em deliveries reais.</p>
+      </div>
+      <div class="step">
+        <span class="n">PASSO 02</span>
+        <h3>Adapte</h3>
+        <p>Troque nome, cardápio e preço. Leva menos de uma hora.</p>
+      </div>
+      <div class="step">
+        <span class="n">PASSO 03</span>
+        <h3>Ative</h3>
+        <p>Publique e comece a receber pedido direto no WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROVA SOCIAL ======================= -->
+<section class="rv">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Resultados reais</span>
+      <h2>Quem já ativou</h2>
+    </div>
+    <div class="depos">
+      <div class="depo">
+        <div class="vid"><iframe src="https://www.youtube.com/embed/VIDEO_ID_1?rel=0&modestbranding=1" title="Depoimento 1" allowfullscreen loading="lazy"></iframe></div>
+        <div class="txt">
+          <div class="stars">★★★★★</div>
+          <blockquote>“Eu vivia refém do aplicativo. Hoje mais da metade dos meus pedidos entram direto no WhatsApp e a margem melhorou de verdade.”</blockquote>
+          <div class="who"><div class="av">R</div><div><b>Rafael M.</b><small>Hamburgueria · Uberlândia/MG</small></div></div>
+        </div>
+      </div>
+      <div class="depo">
+        <div class="vid"><iframe src="https://www.youtube.com/embed/VIDEO_ID_2?rel=0&modestbranding=1" title="Depoimento 2" allowfullscreen loading="lazy"></iframe></div>
+        <div class="txt">
+          <div class="stars">★★★★★</div>
+          <blockquote>“Coloquei o robô pra rodar numa sexta. No fim de semana a impressora não parou. Foi o melhor mês desde que abri.”</blockquote>
+          <div class="who"><div class="av">C</div><div><b>Carla S.</b><small>Pizzaria · Goiânia/GO</small></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MOCKUP WHATSAPP ======================= -->
+<section class="rv" style="background:var(--bg2)">
+  <div class="wrap center">
+    <span class="eyebrow">Veja em ação</span>
+    <h2>Assim que fica o seu<br><span class="grad">WhatsApp às 20h</span></h2>
+
+    <div class="phone">
+      <div class="ph-top">
+        <div class="ph-av">🍔</div>
+        <div><b>Meu Delivery</b><small><i class="dot"></i> online · recebendo pedidos</small></div>
+      </div>
+      <div class="ph-body" id="chat"></div>
+    </div>
+
+    <p class="ph-note">Agora imagine abrir o celular amanhã de manhã e encontrar essa fila de pedidos esperando por você.</p>
+  </div>
+</section>
+
+<!-- ======================= ENTREGÁVEIS ======================= -->
+<section class="rv">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">O que você recebe</span>
+      <h2>Tudo que seu delivery precisa<br>em um <span class="grad">único lugar</span></h2>
+    </div>
+
+    <div class="grid">
+      <div class="mod">
+        <div class="emo">🎯</div>
+        <h3>Gerador de Clientes</h3>
+        <p>Traga gente nova da sua região todo dia, sem depender de indicação.</p>
+        <ul><li>Campanha pronta</li><li>Segmentação por bairro</li><li>Orçamento baixo</li><li>Passo a passo</li></ul>
+      </div>
+      <div class="mod">
+        <div class="emo">🤖</div>
+        <h3>Robô de Pedidos</h3>
+        <p>Seu WhatsApp atendendo e fechando pedido enquanto você produz.</p>
+        <ul><li>Atende 24h</li><li>Fecha sozinho</li><li>Sem comissão</li><li>Fácil de instalar</li></ul>
+      </div>
+      <div class="mod">
+        <div class="emo">📱</div>
+        <h3>Cardápio Digital</h3>
+        <p>Link único, bonito e rápido, que manda o pedido pronto pro Zap.</p>
+        <ul><li>Editável</li><li>Abre no celular</li><li>Foto dos produtos</li><li>Sem mensalidade</li></ul>
+      </div>
+      <div class="mod">
+        <div class="emo">🔥</div>
+        <h3>Banco de Ofertas</h3>
+        <p>Combos e promoções já testados para levantar os dias fracos.</p>
+        <ul><li>Combos</li><li>Promoções</li><li>Ofertas sazonais</li><li>Campanhas validadas</li></ul>
+      </div>
+      <div class="mod">
+        <div class="emo">💬</div>
+        <h3>Atendente Digital</h3>
+        <p>Mensagens prontas pra copiar e colar em cada etapa do atendimento.</p>
+        <ul><li>Primeiro contato</li><li>Confirmação</li><li>Recuperação</li><li>Pós-venda</li></ul>
+      </div>
+      <div class="mod">
+        <div class="emo">🎨</div>
+        <h3>Galeria de Anúncios</h3>
+        <p>Criativos editáveis por segmento, prontos pra subir sem designer.</p>
+        <ul><li>Hamburgueria</li><li>Pizzaria</li><li>Açaí</li><li>Marmitaria e sushi</li></ul>
+      </div>
+      <div class="mod">
+        <div class="emo">📅</div>
+        <h3>Calendário de Vendas</h3>
+        <p>O ano inteiro planejado: o que postar e o que promover em cada data.</p>
+        <ul><li>Datas comemorativas</li><li>Ações sazonais</li><li>Recorrência</li><li>Roteiro mensal</li></ul>
+      </div>
+      <div class="mod">
+        <div class="emo">📊</div>
+        <h3>Painel de Resultados</h3>
+        <p>Planilha simples pra saber quanto entrou, quanto gastou e quanto sobrou.</p>
+        <ul><li>Custo por pedido</li><li>Ticket médio</li><li>Retorno do anúncio</li><li>Automática</li></ul>
+      </div>
+      <div class="mod">
+        <div class="emo">🧮</div>
+        <h3>Calculadora de Preço</h3>
+        <p>Descubra o preço certo pra parar de vender no prejuízo sem perceber.</p>
+        <ul><li>Custo real</li><li>Margem alvo</li><li>Preço de combo</li><li>Pronta pra usar</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= BÔNUS ======================= -->
+<section class="rv" id="bonus" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Bônus exclusivos</span>
+      <h2>Ative hoje e leve<br><span class="grad">+ 11 entregáveis</span></h2>
+      <p class="lead">Não é só a estrutura. Você destrava um arsenal que dá pra aplicar já no próximo turno.</p>
+    </div>
+
+    <div class="bonus-box">
+      <div class="bonus-list">
+        <div class="bonus-item"><span>✓</span> Copys prontas para anúncio</div>
+        <div class="bonus-item"><span>✓</span> Criativos editáveis</div>
+        <div class="bonus-item"><span>✓</span> Roteiros de venda</div>
+        <div class="bonus-item"><span>✓</span> Estrutura de oferta irresistível</div>
+        <div class="bonus-item"><span>✓</span> Scripts de WhatsApp</div>
+        <div class="bonus-item"><span>✓</span> Calculadora de precificação</div>
+        <div class="bonus-item"><span>✓</span> Guia de promoções</div>
+        <div class="bonus-item"><span>✓</span> Plano de ação de 7 dias</div>
+        <div class="bonus-item"><span>✓</span> Checklist de campanha</div>
+        <div class="bonus-item"><span>✓</span> Respostas rápidas prontas</div>
+        <div class="bonus-item"><span>✓</span> Painel de acompanhamento</div>
+      </div>
+
+      <div class="warn">
+        <span>⚠️</span>
+        <div><b>Atenção:</b> esse pacote de bônus está liberado apenas para quem ativar nesta página. Ele vale mais que o próprio produto — e entra junto, sem custo extra.</div>
+      </div>
+
+      <div class="center" style="margin-top:28px">
+        <a class="btn" href="#CHECKOUT">ATIVAR COM OS 11 BÔNUS</a>
+        <div class="btn-sub">Bônus liberados na hora da confirmação do pagamento</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ANCORAGEM ======================= -->
+<section class="rv">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Valor real</span>
+      <h2>Quanto valeria montar<br>tudo isso do zero?</h2>
+    </div>
+
+    <div class="stack">
+      <div class="row"><span>Gerador de Clientes</span><span>R$ 197</span></div>
+      <div class="row"><span>Robô de Pedidos</span><span>R$ 197</span></div>
+      <div class="row"><span>Cardápio Digital</span><span>R$ 197</span></div>
+      <div class="row"><span>Banco de Ofertas</span><span>R$ 97</span></div>
+      <div class="row"><span>Atendente Digital</span><span>R$ 67</span></div>
+      <div class="row"><span>Galeria de Anúncios</span><span>R$ 97</span></div>
+      <div class="row"><span>Calendário de Vendas</span><span>R$ 97</span></div>
+      <div class="row"><span>Pacote com 11 bônus</span><span>R$ 497</span></div>
+      <div class="row total"><span>Valor total</span><span>R$ 1.446</span></div>
+    </div>
+
+    <div class="drop">
+      <p>Você não vai investir R$ 1.446.</p>
+      <p>Nem R$ 497.</p>
+      <p>Nem R$ 97.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= OFERTA ======================= -->
+<section class="rv" id="oferta" style="background:var(--bg2)">
+  <div class="wrap center">
+    <span class="eyebrow">Oferta de lançamento</span>
+    <h2>Ative sua máquina hoje</h2>
+    <p class="lead">Preço de entrada porque a gente prefere mil deliveries rodando do que cem pagando caro.</p>
+
+    <div class="offer">
+      <span class="tag">Acesso vitalício</span>
+      <ul>
+        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#22c55e"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Gerador de Clientes</li>
+        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#22c55e"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Robô de Pedidos</li>
+        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#22c55e"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Cardápio Digital</li>
+        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#22c55e"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Banco de Ofertas</li>
+        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#22c55e"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Atendente Digital</li>
+        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#22c55e"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Galeria de Anúncios</li>
+        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#22c55e"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Calendário de Vendas</li>
+        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#ff8a00"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> <b>+ 11 bônus exclusivos</b></li>
+      </ul>
+
+      <div class="price-lbl">De <s>R$ 1.446</s> por apenas</div>
+      <div class="price"><small>R$</small>37</div>
+      <div class="price-note">Pagamento único · Sem mensalidade · Sem taxa escondida</div>
+
+      <a class="btn pulse" href="#CHECKOUT">ATIVAR MINHA MÁQUINA AGORA</a>
+      <div class="btn-sub">Acesso liberado em segundos, direto no seu e-mail</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= GARANTIA ======================= -->
+<section class="rv">
+  <div class="wrap">
+    <div class="guar">
+      <div class="seal"><b>GARANTIA</b><i>7</i><b>DIAS</b></div>
+      <div>
+        <h3>Teste sem risco nenhum</h3>
+        <p>Entre, veja tudo por dentro, aplique a estrutura no seu delivery. Se em 7 dias você achar que não faz sentido pro seu negócio, é só pedir o reembolso e você recebe 100% do valor de volta. Sem enrolação e sem precisar justificar nada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PARA QUEM ======================= -->
+<section class="rv" style="background:var(--bg2)">
+  <div class="wrap center">
+    <span class="eyebrow">Para quem é</span>
+    <h2>Funciona em qualquer delivery</h2>
+    <div class="chips">
+      <span class="chip">🍔 Hamburguerias</span>
+      <span class="chip">🍕 Pizzarias</span>
+      <span class="chip">🍧 Açaiterias</span>
+      <span class="chip">🍱 Marmitarias</span>
+      <span class="chip">🍣 Sushi</span>
+      <span class="chip">🍰 Doceria</span>
+      <span class="chip">🥤 Lanchonetes</span>
+      <span class="chip">🍽️ Restaurantes</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section class="rv">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Dúvidas</span>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq">
+      <div class="q"><button>Preciso entender de tecnologia? <i>+</i></button><div class="a"><p>Não. Tudo vem pronto e com passo a passo em português. Se você sabe usar WhatsApp, consegue instalar.</p></div></div>
+      <div class="q"><button>Em quanto tempo começo a ver pedido? <i>+</i></button><div class="a"><p>A estrutura pode ficar no ar no mesmo dia. O volume depende do seu cardápio, região e do quanto você investe em divulgação — não existe garantia de faturamento.</p></div></div>
+      <div class="q"><button>Serve pra delivery pequeno, que tá começando? <i>+</i></button><div class="a"><p>Serve — e é justamente onde faz mais diferença, porque você já começa sem depender de comissão de aplicativo.</p></div></div>
+      <div class="q"><button>Tem mensalidade? <i>+</i></button><div class="a"><p>Não. É pagamento único e o acesso fica liberado, incluindo as atualizações.</p></div></div>
+      <div class="q"><button>E se eu não gostar? <i>+</i></button><div class="a"><p>Você tem 7 dias para pedir reembolso integral, sem precisar explicar o motivo.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA FINAL ======================= -->
+<section class="final rv">
+  <div class="wrap">
+    <h2>Pare de esperar o WhatsApp tocar.<br><span class="grad">Faça ele tocar.</span></h2>
+    <p class="lead center" style="margin-bottom:30px">Copie, adapte e ative. Amanhã seu delivery pode estar recebendo pedido direto, sem comissão.</p>
+    <a class="btn pulse" href="#CHECKOUT">ATIVAR MINHA MÁQUINA DE PEDIDOS — R$ 37</a>
+    <div class="badges">
+      <span class="badge">⚡ Acesso imediato</span>
+      <span class="badge">↩️ Garantia de 7 dias</span>
+      <span class="badge">✅ Serve pra qualquer delivery</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= BARRA FIXA ======================= -->
+<div class="sticky" id="sticky">
+  <div class="info"><b>R$ 37</b><small>pagamento único</small></div>
+  <a class="btn" href="#CHECKOUT">QUERO ATIVAR AGORA</a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Máquina de Pedidos · Todos os direitos reservados</p>
+    <p style="margin-top:10px">
+      <a href="/termos">Termos de uso</a>·<a href="/privacidade">Política de privacidade</a>·<a href="/suporte">Suporte</a>
+    </p>
+    <p style="margin-top:14px;max-width:640px;margin-left:auto;margin-right:auto;font-size:11.5px;line-height:1.5">
+      Este site não é afiliado ao Facebook, Meta, Google ou a qualquer aplicativo de delivery. Os resultados citados são individuais e dependem de aplicação, região e investimento — não representam promessa de faturamento.
+    </p>
+  </div>
+</footer>
+
+<script>
+/* ---------- VSL: play ao tocar ---------- */
+(function(){
+  var box=document.getElementById('vsl'),
+      vid=document.getElementById('vslVideo'),
+      ov=document.getElementById('vslOverlay');
+  if(!box) return;
+  box.addEventListener('click',function(){
+    if(vid.paused){ vid.play(); vid.controls=true; ov.classList.add('hide'); }
+  });
+})();
+
+/* ---------- Reveal on scroll ---------- */
+(function(){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+
+/* ---------- Barra fixa após o hero ---------- */
+(function(){
+  var bar=document.getElementById('sticky');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>620) bar.classList.add('show'); else bar.classList.remove('show');
+  },{passive:true});
+})();
+
+/* ---------- Animação do chat ---------- */
+(function(){
+  var chat=document.getElementById('chat');
+  if(!chat) return;
+  var msgs=[
+    {nome:'João',txt:'Boa noite! Quero 1 artesanal duplo + fritas 🍔',valor:'R$ 52,90'},
+    {nome:'',txt:'Fechado, João! Pedido confirmado ✅ Sai em 35 min.',me:true},
+    {nome:'Maria',txt:'Oi! Pizza calabresa grande e uma Coca 2L 🍕',valor:'R$ 74,00'},
+    {nome:'Pedro',txt:'Açaí 500ml com granola e morango 🍓',valor:'R$ 29,50'},
+    {nome:'',txt:'Anotado, Pedro! Já entrou na produção 🚀',me:true},
+    {nome:'Bia',txt:'Vocês têm combo pra 2 pessoas hoje?',valor:''}
+  ];
+  var started=false;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting && !started){
+        started=true;
+        msgs.forEach(function(m,i){
+          setTimeout(function(){
+            var d=document.createElement('div');
+            d.className='msg'+(m.me?' me':'');
+            d.innerHTML=(m.nome?'<span class="nm">'+m.nome+'</span>':'')+m.txt+(m.valor?'<span class="price">'+m.valor+'</span>':'');
+            chat.appendChild(d);
+            chat.scrollTop=chat.scrollHeight;
+          }, i*750);
+        });
+      }
+    });
+  },{threshold:.4});
+  io.observe(chat);
+})();
+
+/* ---------- FAQ ---------- */
+document.querySelectorAll('.q button').forEach(function(b){
+  b.addEventListener('click',function(){
+    var q=b.parentElement, a=q.querySelector('.a');
+    var open=q.classList.contains('open');
+    document.querySelectorAll('.q').forEach(function(o){ o.classList.remove('open'); o.querySelector('.a').style.maxHeight=null; });
+    if(!open){ q.classList.add('open'); a.style.maxHeight=a.scrollHeight+'px'; }
+  });
+});
+</script>
+
+<!-- PIXEL — cole aqui o código do Meta Pixel / GA4 -->
+
+</body>
+</html>
