@@ -3,780 +3,681 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Máquina de Pedidos — Encha seu WhatsApp de pedidos todo dia</title>
-<meta name="description" content="Sistema pronto para deliveries venderem direto no WhatsApp, sem comissão de aplicativo. Copie, adapte e ative.">
+<title>Receba de 30 a 100 pedidos por dia no WhatsApp</title>
+<meta name="description" content="Estrutura pronta para seu delivery gerar pedidos todos os dias. Copie, adapte e ative.">
 <meta property="og:title" content="Máquina de Pedidos — Mais pedidos no WhatsApp">
 <meta property="og:description" content="Estrutura pronta para seu delivery gerar pedidos todos os dias.">
 <meta property="og:image" content="/og.jpg">
-<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   CONFIG RÁPIDA — troque só isto:
-   1. Link de checkout: procure por  href="#CHECKOUT"
-   2. Vídeo VSL: procure por  <!-- VSL -->
-   3. Pixel Meta: procure por  <!-- PIXEL -->
-   ============================================================ */
 :root{
-  --bg:#0a0a0b;
-  --bg2:#0f0f11;
-  --card:#151517;
-  --card2:#1c1c1f;
-  --line:#26262b;
-  --txt:#f4f4f5;
-  --muted:#9c9ca6;
-  --amber:#ff7a00;
-  --amber2:#ffab2e;
-  --green:#22c55e;
-  --red:#ef4444;
-  --radius:18px;
-  --max:1080px;
+  --bg:#ffffff;
+  --bg2:#f7f7f8;
+  --txt:#0a0a0a;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --black:#0a0a0a;
+  --yellow:#ffe500;
+  --yellow2:#ffd60a;
+  --green:#16a34a;
+  --green-l:#dcfce7;
+  --red:#dc2626;
+  --red-l:#fee2e2;
+  --radius:16px;
+  --max:960px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%}
 body{
   background:var(--bg);color:var(--txt);
   font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-  line-height:1.6;overflow-x:hidden;padding-bottom:78px;
+  line-height:1.55;overflow-x:hidden;
 }
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
-section{padding:72px 0;position:relative}
-.eyebrow{
-  display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--amber2);
-  background:rgba(255,122,0,.09);border:1px solid rgba(255,122,0,.25);
-  padding:7px 14px;border-radius:100px;margin-bottom:18px;
-}
-h1,h2,h3{line-height:1.15;letter-spacing:-.02em;font-weight:800}
-h1{font-size:clamp(30px,6.4vw,54px);font-weight:900}
-h2{font-size:clamp(25px,4.6vw,40px);margin-bottom:14px}
-h3{font-size:19px;font-weight:700}
-.lead{color:var(--muted);font-size:clamp(15px,2.2vw,18px);max-width:620px}
+section{padding:62px 0}
+h1,h2,h3{line-height:1.1;letter-spacing:-.03em;font-weight:900}
+h1{font-size:clamp(32px,7.4vw,58px)}
+h2{font-size:clamp(26px,5vw,42px);margin-bottom:14px}
+h3{font-size:19px;font-weight:800;letter-spacing:-.02em}
+.lead{color:var(--muted);font-size:clamp(14.5px,2.1vw,17px);max-width:600px;font-weight:500}
 .center{text-align:center}
 .center .lead{margin-left:auto;margin-right:auto}
-.grad{background:linear-gradient(100deg,var(--amber),var(--amber2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hl{background:var(--yellow);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.eyebrow{
+  display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;color:#000;background:var(--yellow);
+  padding:6px 13px;border-radius:100px;margin-bottom:16px;
+}
 
 /* ---------- BOTÕES ---------- */
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  background:linear-gradient(100deg,var(--amber),var(--amber2));
-  color:#0a0a0b;font-weight:800;font-size:16px;letter-spacing:.01em;
-  padding:18px 34px;border-radius:100px;border:0;cursor:pointer;
-  box-shadow:0 10px 34px rgba(255,122,0,.32);
-  transition:transform .18s ease, box-shadow .18s ease;
-  text-align:center;width:100%;max-width:420px;
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  background:var(--black);color:var(--yellow);
+  font-weight:800;font-size:15px;letter-spacing:.04em;text-transform:uppercase;
+  padding:19px 28px;border-radius:100px;border:0;cursor:pointer;
+  width:100%;max-width:470px;margin:0 auto;text-align:center;line-height:1.3;
+  transition:transform .16s ease,box-shadow .16s ease;
 }
-.btn:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(255,122,0,.45)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.22)}
 .btn:active{transform:translateY(0)}
-.btn.pulse{animation:pulse 2.4s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 10px 34px rgba(255,122,0,.32)}50%{box-shadow:0 10px 34px rgba(255,122,0,.32),0 0 0 14px rgba(255,122,0,0)}}
-.btn-sub{font-size:13px;color:var(--muted);margin-top:12px}
+.btn.buy{background:var(--green);color:#fff;animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(22,163,74,.42)}70%{box-shadow:0 0 0 16px rgba(22,163,74,0)}}
+.btn-sub{font-size:12.5px;color:var(--muted);margin-top:11px;text-align:center;font-weight:500}
+.pill{
+  display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);
+  border-radius:100px;padding:11px 20px;font-size:12.5px;font-weight:800;
+  letter-spacing:.06em;text-transform:uppercase;margin-top:14px;transition:.2s;
+}
+.pill:hover{border-color:var(--black)}
 
 /* ---------- HERO ---------- */
-.hero{
-  padding:56px 0 64px;text-align:center;
-  background:
-    radial-gradient(900px 420px at 50% -80px,rgba(255,122,0,.16),transparent 70%),
-    radial-gradient(600px 300px at 90% 20%,rgba(255,171,46,.07),transparent 70%);
-}
-.hero h1{margin-bottom:18px}
-.hero .lead{margin:0 auto 30px}
+.hero{padding:52px 0 46px;text-align:center}
+.hero h1{margin-bottom:16px}
+.hero .lead{margin:0 auto 26px;max-width:490px;font-size:15px}
 .vsl{
-  position:relative;max-width:760px;margin:0 auto 26px;aspect-ratio:16/9;
-  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  overflow:hidden;cursor:pointer;box-shadow:0 24px 70px rgba(0,0,0,.6);
+  position:relative;max-width:700px;margin:0 auto 20px;aspect-ratio:16/9;
+  background:#000;border:5px solid var(--black);border-radius:14px;overflow:hidden;
 }
-.vsl video,.vsl iframe{width:100%;height:100%;display:block;border:0;object-fit:cover}
-.vsl-overlay{
-  position:absolute;inset:0;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;gap:14px;
-  background:rgba(10,10,11,.5);backdrop-filter:blur(2px);transition:opacity .3s;
+.vsl video{width:100%;height:100%;display:block;object-fit:cover;background:#000}
+.vsl-ov{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:12px;background:rgba(0,0,0,.35);cursor:pointer;transition:opacity .3s;
 }
-.vsl-overlay.hide{opacity:0;pointer-events:none}
+.vsl-ov.hide{opacity:0;pointer-events:none}
 .play{
-  width:76px;height:76px;border-radius:50%;
-  background:linear-gradient(100deg,var(--amber),var(--amber2));
-  display:grid;place-items:center;box-shadow:0 0 0 12px rgba(255,122,0,.16);
-  animation:pulse2 2s infinite;
+  width:74px;height:74px;border-radius:50%;background:var(--yellow);
+  display:grid;place-items:center;animation:p2 2s infinite;
 }
-@keyframes pulse2{0%,100%{box-shadow:0 0 0 12px rgba(255,122,0,.16)}50%{box-shadow:0 0 0 22px rgba(255,122,0,0)}}
-.play svg{margin-left:5px}
-.vsl-overlay span{font-size:14px;font-weight:600;color:#fff}
-.badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px}
-.badge{
-  display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);
-  background:var(--card);border:1px solid var(--line);padding:8px 14px;border-radius:100px;
-}
-.badge svg{flex:0 0 auto}
+@keyframes p2{0%,100%{box-shadow:0 0 0 0 rgba(255,229,0,.5)}70%{box-shadow:0 0 0 20px rgba(255,229,0,0)}}
+.vsl-ov span{color:#fff;font-size:13.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.micro{font-size:11.5px;color:var(--muted);letter-spacing:.03em;margin-top:12px;font-weight:600}
 
-/* ---------- DOR: 2 COLUNAS ---------- */
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:36px}
-.col{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
-.col.bad{border-color:rgba(239,68,68,.22)}
-.col.good{border-color:rgba(34,197,94,.24);background:linear-gradient(180deg,rgba(34,197,94,.05),var(--card))}
-.col h4{font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px;font-weight:700}
-.col.bad h4{color:#f87171}
-.col.good h4{color:#4ade80}
-.col ul{list-style:none;display:flex;flex-direction:column;gap:14px}
-.col li{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.5}
-.ico{flex:0 0 22px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:800;margin-top:1px}
-.ico.x{background:rgba(239,68,68,.14);color:#f87171}
-.ico.v{background:rgba(34,197,94,.14);color:#4ade80}
+/* ---------- GATE ---------- */
+#gated{display:none}
+#gated.on{display:block;animation:fadeUp .7s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+#skip{
+  display:none;margin:18px auto 0;font-size:12.5px;color:var(--muted);
+  text-decoration:underline;cursor:pointer;background:none;border:0;font-family:inherit;
+}
+#skip.on{display:block;animation:fadeUp .5s ease}
+#progWrap{max-width:700px;margin:0 auto 18px;display:none}
+#progWrap.on{display:block}
+#progBar{height:5px;background:var(--line);border-radius:100px;overflow:hidden}
+#progFill{height:100%;width:0;background:var(--yellow2);transition:width .3s linear}
+#progTxt{font-size:11.5px;color:var(--muted);margin-top:7px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
 
-/* ---------- 3 PASSOS ---------- */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;counter-reset:s}
-.step{
-  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:30px 24px;text-align:center;position:relative;transition:.25s;
-}
-.step:hover{border-color:rgba(255,122,0,.35);transform:translateY(-4px)}
-.step .n{
-  font-size:13px;font-weight:900;color:var(--amber2);letter-spacing:.14em;
-  display:block;margin-bottom:12px;
-}
-.step h3{margin-bottom:8px}
-.step p{color:var(--muted);font-size:14.5px}
+/* ---------- DOR ---------- */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.col{border:1.5px solid var(--line);border-radius:var(--radius);padding:24px}
+.col.bad{background:#fff8f8;border-color:#fecaca}
+.col.good{background:#f6fdf8;border-color:#bbf7d0}
+.col h4{font-size:11.5px;text-transform:uppercase;letter-spacing:.11em;margin-bottom:16px;font-weight:800}
+.col.bad h4{color:var(--red)}
+.col.good h4{color:var(--green)}
+.col ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+.col li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;font-weight:500}
+.ico{flex:0 0 21px;width:21px;height:21px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:900;margin-top:1px}
+.ico.x{background:var(--red-l);color:var(--red)}
+.ico.v{background:var(--green-l);color:var(--green)}
+
+/* ---------- PASSOS ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.step{border:1.5px solid var(--line);border-radius:var(--radius);padding:28px 22px;text-align:center;transition:.22s}
+.step:hover{border-color:var(--black);transform:translateY(-3px)}
+.step .n{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--yellow);font-size:15px;font-weight:900;margin:0 auto 14px}
+.step p{color:var(--muted);font-size:14px;margin-top:7px;font-weight:500}
 
 /* ---------- DEPOIMENTOS ---------- */
-.depos{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
-.depo{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.depo .vid{aspect-ratio:16/9;background:var(--bg2)}
+.depos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+.depo{border:1.5px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+.depo .vid{aspect-ratio:16/9;background:#000}
 .depo .vid iframe{width:100%;height:100%;border:0;display:block}
-.depo .txt{padding:20px 22px}
-.depo blockquote{font-size:15px;line-height:1.6;color:#e4e4e7;font-style:italic}
-.depo .who{display:flex;align-items:center;gap:10px;margin-top:14px}
-.av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--amber2));display:grid;place-items:center;font-weight:800;color:#0a0a0b;font-size:14px}
-.who b{font-size:14px;display:block}
-.who small{color:var(--muted);font-size:12.5px}
-.stars{color:var(--amber2);font-size:14px;letter-spacing:2px;margin-bottom:10px}
+.depo .txt{padding:20px}
+.stars{color:#f59e0b;font-size:14px;letter-spacing:2px;margin-bottom:9px}
+.depo blockquote{font-size:14.5px;font-style:italic;color:#27272a;font-weight:500}
+.who{display:flex;align-items:center;gap:10px;margin-top:14px}
+.av{width:34px;height:34px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:900;font-size:14px}
+.who b{font-size:13.5px;display:block}
+.who small{color:var(--muted);font-size:12px}
 
-/* ---------- MOCKUP WHATSAPP ---------- */
-.phone{
-  max-width:340px;margin:36px auto 0;background:#0b141a;border:9px solid #1c1c20;
-  border-radius:36px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.7);
-}
-.ph-top{background:#1f2c34;padding:12px 14px;display:flex;align-items:center;gap:10px}
-.ph-av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--amber2));display:grid;place-items:center;font-size:19px}
-.ph-top b{font-size:14.5px;display:block;color:#fff}
-.ph-top small{font-size:11.5px;color:#7fd97f;display:flex;align-items:center;gap:5px}
+/* ---------- WHATSAPP ---------- */
+.phone{max-width:330px;margin:34px auto 0;background:#0b141a;border:8px solid #111;border-radius:32px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+.ph-top{background:#1f2c34;padding:11px 13px;display:flex;align-items:center;gap:10px}
+.ph-av{width:36px;height:36px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-size:18px}
+.ph-top b{font-size:14px;color:#fff;display:block}
+.ph-top small{font-size:11px;color:#7fd97f;display:flex;align-items:center;gap:5px}
 .dot{width:6px;height:6px;border-radius:50%;background:#7fd97f;display:inline-block;animation:blink 1.6s infinite}
 @keyframes blink{50%{opacity:.25}}
-.ph-body{
-  padding:16px 12px;min-height:330px;display:flex;flex-direction:column;gap:10px;
-  background:#0b141a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='10' cy='10' r='1' fill='%23ffffff08'/%3E%3Ccircle cx='40' cy='35' r='1' fill='%23ffffff08'/%3E%3C/svg%3E");
-}
-.msg{
-  max-width:82%;background:#1f2c34;padding:9px 12px;border-radius:10px;
-  font-size:13.5px;color:#e9edef;opacity:0;transform:translateY(10px);
-  animation:pop .45s forwards;line-height:1.45;
-}
-.msg .price{display:block;margin-top:5px;font-size:12.5px;color:#7fd97f;font-weight:700}
-.msg .nm{display:block;font-size:11.5px;color:var(--amber2);font-weight:700;margin-bottom:3px}
+.ph-body{padding:15px 11px;min-height:310px;display:flex;flex-direction:column;gap:9px;background:#0b141a}
+.msg{max-width:83%;background:#1f2c34;padding:9px 12px;border-radius:10px;font-size:13px;color:#e9edef;opacity:0;transform:translateY(10px);animation:pop .45s forwards;line-height:1.45}
 .msg.me{background:#005c4b;align-self:flex-end}
-@keyframes pop{to{opacity:1;transform:translateY(0)}}
-.ph-note{text-align:center;color:var(--muted);font-size:14.5px;margin-top:26px;max-width:520px;margin-left:auto;margin-right:auto}
+.msg .nm{display:block;font-size:11px;color:#ffd60a;font-weight:800;margin-bottom:3px}
+.msg .pr{display:block;margin-top:5px;font-size:12px;color:#7fd97f;font-weight:800}
+@keyframes pop{to{opacity:1;transform:none}}
 
-/* ---------- ENTREGÁVEIS ---------- */
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
-.mod{
-  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:26px 22px;transition:.25s;
-}
-.mod:hover{border-color:rgba(255,122,0,.35);background:var(--card2);transform:translateY(-4px)}
-.mod .emo{
-  width:46px;height:46px;border-radius:12px;background:rgba(255,122,0,.1);
-  border:1px solid rgba(255,122,0,.2);display:grid;place-items:center;font-size:22px;margin-bottom:16px;
-}
-.mod h3{margin-bottom:8px;font-size:17.5px}
-.mod>p{color:var(--muted);font-size:14px;margin-bottom:14px}
-.mod ul{list-style:none;display:flex;flex-direction:column;gap:7px;border-top:1px solid var(--line);padding-top:14px}
-.mod li{font-size:13.5px;color:#c9c9d1;display:flex;gap:8px;align-items:center}
-.mod li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--amber);flex:0 0 auto}
+/* ---------- MÓDULOS ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.mod{border:1.5px solid var(--line);border-radius:var(--radius);padding:24px 20px;transition:.22s;background:#fff}
+.mod:hover{border-color:var(--black);transform:translateY(-3px)}
+.mod .emo{width:44px;height:44px;border-radius:11px;background:var(--yellow);display:grid;place-items:center;font-size:21px;margin-bottom:14px}
+.mod h3{margin-bottom:7px;font-size:17px}
+.mod>p{color:var(--muted);font-size:13.5px;margin-bottom:13px;font-weight:500}
+.mod ul{list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line);padding-top:13px}
+.mod li{font-size:13px;display:flex;gap:8px;align-items:center;font-weight:500}
+.mod li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--black);flex:0 0 auto}
 
 /* ---------- BÔNUS ---------- */
-.bonus-box{
-  background:linear-gradient(180deg,rgba(255,122,0,.08),var(--card));
-  border:1px solid rgba(255,122,0,.28);border-radius:24px;padding:36px 28px;margin-top:36px;
-}
-.bonus-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}
-.bonus-item{
-  display:flex;gap:10px;align-items:center;background:var(--bg2);
-  border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:14px;
-}
-.bonus-item span{color:var(--green);font-weight:800;flex:0 0 auto}
-.warn{
-  background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.28);
-  border-radius:14px;padding:16px 18px;font-size:14.5px;color:#fca5a5;
-  display:flex;gap:12px;align-items:flex-start;
-}
-.warn b{color:#fff}
+.bonus-box{background:var(--bg2);border:1.5px solid var(--line);border-radius:22px;padding:34px 26px;margin-top:34px}
+.bonus-list{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:26px 0}
+.bonus-item{display:flex;gap:9px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:11px;padding:13px 14px;font-size:13.5px;font-weight:600}
+.bonus-item span{color:var(--green);font-weight:900}
+.warn{background:#fffbe6;border:1.5px solid #fde68a;border-radius:13px;padding:16px 18px;font-size:14px;display:flex;gap:11px;align-items:flex-start;font-weight:500}
 
 /* ---------- ANCORAGEM ---------- */
-.stack{max-width:560px;margin:36px auto 0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px 22px}
-.stack .row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.stack{max-width:520px;margin:34px auto 0;border:1.5px solid var(--line);border-radius:var(--radius);padding:8px 22px}
+.stack .row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:14.5px;font-weight:500}
 .stack .row:last-child{border-bottom:0}
-.stack .row span:last-child{color:var(--muted);text-decoration:line-through}
-.stack .row.total{font-weight:800;font-size:18px}
-.stack .row.total span:last-child{color:#f87171;font-size:20px}
-.drop{text-align:center;margin-top:30px}
-.drop p{font-size:clamp(18px,3.4vw,24px);font-weight:700;color:var(--muted);margin:8px 0;text-decoration:line-through;opacity:.55}
+.stack .row span:last-child{color:var(--muted);text-decoration:line-through;flex:0 0 auto}
+.stack .row.total{font-weight:900;font-size:17px}
+.stack .row.total span:last-child{color:var(--red);text-decoration:line-through;font-size:19px}
+.drop{text-align:center;margin-top:26px}
+.drop p{font-size:clamp(17px,3.2vw,22px);font-weight:800;color:var(--muted);margin:7px 0;text-decoration:line-through;opacity:.5}
 .drop p:last-child{color:var(--txt);text-decoration:none;opacity:1}
 
 /* ---------- OFERTA ---------- */
-.offer{
-  max-width:520px;margin:40px auto 0;background:linear-gradient(180deg,var(--card2),var(--card));
-  border:1.5px solid rgba(255,122,0,.4);border-radius:26px;padding:34px 28px;text-align:center;
-  box-shadow:0 30px 80px rgba(0,0,0,.55);
-}
-.offer .tag{
-  display:inline-block;background:linear-gradient(100deg,var(--amber),var(--amber2));
-  color:#0a0a0b;font-size:11.5px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;
-  padding:6px 14px;border-radius:100px;margin-bottom:18px;
-}
-.offer ul{list-style:none;text-align:left;display:flex;flex-direction:column;gap:11px;margin:22px 0 26px}
-.offer li{display:flex;gap:11px;align-items:center;font-size:15px}
+.offer{max-width:490px;margin:36px auto 0;background:#fff;border:3px solid var(--black);border-radius:24px;padding:32px 26px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.1)}
+.offer .tag{display:inline-block;background:var(--yellow);font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:6px 13px;border-radius:100px;margin-bottom:16px}
+.offer ul{list-style:none;text-align:left;display:flex;flex-direction:column;gap:10px;margin:20px 0 24px}
+.offer li{display:flex;gap:10px;align-items:center;font-size:14.5px;font-weight:600}
 .offer li svg{flex:0 0 auto}
-.price-lbl{font-size:14px;color:var(--muted)}
-.price{font-size:clamp(52px,11vw,72px);font-weight:900;line-height:1;letter-spacing:-.04em;margin:4px 0 6px}
-.price small{font-size:26px;font-weight:700;vertical-align:super;margin-right:4px}
-.price-note{font-size:13.5px;color:var(--muted);margin-bottom:24px}
+.price-lbl{font-size:13.5px;color:var(--muted);font-weight:600}
+.price{font-size:clamp(54px,12vw,74px);font-weight:900;line-height:1;letter-spacing:-.05em;margin:4px 0 6px}
+.price small{font-size:26px;font-weight:800;vertical-align:super;margin-right:3px}
+.price-note{font-size:12.5px;color:var(--muted);margin-bottom:22px;font-weight:600}
 
 /* ---------- GARANTIA ---------- */
-.guar{
-  display:flex;gap:24px;align-items:center;background:var(--card);
-  border:1px solid var(--line);border-radius:var(--radius);padding:30px;margin-top:40px;
-}
-.seal{
-  flex:0 0 110px;width:110px;height:110px;border-radius:50%;
-  background:linear-gradient(135deg,var(--amber),var(--amber2));
-  display:grid;place-items:center;text-align:center;color:#0a0a0b;font-weight:900;line-height:1.1;
-}
-.seal b{font-size:13px;display:block}
-.seal i{font-size:26px;font-style:normal;display:block}
-.guar p{color:var(--muted);font-size:15px;margin-top:8px}
+.guar{display:flex;gap:22px;align-items:center;border:1.5px solid var(--line);border-radius:var(--radius);padding:28px;margin-top:36px;background:var(--bg2)}
+.seal{flex:0 0 104px;width:104px;height:104px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;text-align:center;font-weight:900;line-height:1.05}
+.seal b{font-size:12px;display:block}
+.seal i{font-size:28px;font-style:normal;display:block}
+.guar p{color:var(--muted);font-size:14.5px;margin-top:7px;font-weight:500}
 
-/* ---------- PARA QUEM ---------- */
-.chips{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;margin-top:32px}
-.chip{
-  background:var(--card);border:1px solid var(--line);border-radius:100px;
-  padding:12px 22px;font-size:15px;font-weight:600;transition:.2s;
-}
-.chip:hover{border-color:rgba(255,122,0,.4);color:var(--amber2)}
+/* ---------- CHIPS ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px}
+.chip{border:1.5px solid var(--line);border-radius:100px;padding:11px 20px;font-size:14.5px;font-weight:700;transition:.2s}
+.chip:hover{border-color:var(--black)}
 
 /* ---------- FAQ ---------- */
-.faq{max-width:720px;margin:36px auto 0;display:flex;flex-direction:column;gap:12px}
-.q{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.q button{
-  width:100%;background:none;border:0;color:var(--txt);text-align:left;cursor:pointer;
-  padding:19px 22px;font-size:15.5px;font-weight:600;font-family:inherit;
-  display:flex;justify-content:space-between;align-items:center;gap:14px;
-}
-.q button i{font-style:normal;color:var(--amber2);font-size:22px;transition:.25s;flex:0 0 auto}
+.faq{max-width:680px;margin:32px auto 0;display:flex;flex-direction:column;gap:10px}
+.q{border:1.5px solid var(--line);border-radius:13px;overflow:hidden;background:#fff}
+.q button{width:100%;background:none;border:0;text-align:left;cursor:pointer;padding:18px 20px;font-size:15px;font-weight:700;font-family:inherit;display:flex;justify-content:space-between;gap:14px;align-items:center;color:var(--txt)}
+.q button i{font-style:normal;font-size:21px;transition:.25s;flex:0 0 auto}
 .q.open button i{transform:rotate(45deg)}
 .q .a{max-height:0;overflow:hidden;transition:max-height .3s ease}
-.q .a p{padding:0 22px 20px;color:var(--muted);font-size:14.5px}
+.q .a p{padding:0 20px 18px;color:var(--muted);font-size:14px;font-weight:500}
 
-/* ---------- CTA FINAL ---------- */
-.final{
-  text-align:center;
-  background:radial-gradient(700px 340px at 50% 40%,rgba(255,122,0,.14),transparent 70%);
-}
-.final h2{max-width:720px;margin:0 auto 16px}
-
-/* ---------- BARRA FIXA ---------- */
-.sticky{
-  position:fixed;bottom:0;left:0;right:0;z-index:99;
-  background:rgba(10,10,11,.94);backdrop-filter:blur(14px);
-  border-top:1px solid var(--line);padding:12px 16px;
-  display:flex;align-items:center;justify-content:center;gap:16px;
-  transform:translateY(110%);transition:transform .35s ease;
-}
-.sticky.show{transform:translateY(0)}
-.sticky .info{text-align:right;line-height:1.2}
-.sticky .info b{font-size:20px;display:block}
-.sticky .info small{font-size:11.5px;color:var(--muted)}
-.sticky .btn{width:auto;max-width:none;padding:14px 26px;font-size:15px}
+/* ---------- STICKY ---------- */
+.sticky{position:fixed;bottom:0;left:0;right:0;z-index:99;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:1.5px solid var(--line);padding:11px 16px;display:flex;align-items:center;justify-content:center;gap:14px;transform:translateY(120%);transition:transform .35s ease}
+.sticky.show{transform:none}
+.sticky .info{text-align:right;line-height:1.15}
+.sticky .info b{font-size:19px;display:block;font-weight:900}
+.sticky .info small{font-size:11px;color:var(--muted);font-weight:600}
+.sticky .btn{width:auto;padding:14px 24px;font-size:13.5px;margin:0}
 
 /* ---------- FOOTER ---------- */
-footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:#63636d;font-size:13px}
-footer a{color:#8a8a94;text-decoration:underline;margin:0 8px}
+footer{border-top:1.5px solid var(--line);padding:30px 0;text-align:center;color:#9ca3af;font-size:12px;font-weight:500}
+footer a{text-decoration:underline;margin:0 7px}
 
 /* ---------- REVEAL ---------- */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
 
-/* ---------- RESPONSIVO ---------- */
-@media(max-width:880px){
+@media(max-width:860px){
   .grid,.bonus-list{grid-template-columns:1fr 1fr}
-  .steps{grid-template-columns:1fr}
-  .depos{grid-template-columns:1fr}
+  .steps,.depos{grid-template-columns:1fr}
 }
-@media(max-width:620px){
-  section{padding:54px 0}
+@media(max-width:600px){
+  section{padding:48px 0}
   .cols,.grid,.bonus-list{grid-template-columns:1fr}
   .guar{flex-direction:column;text-align:center;padding:26px 20px}
   .sticky .info{display:none}
-  .sticky .btn{width:100%;max-width:none}
-  .stack{padding:6px 16px}
+  .sticky .btn{width:100%}
+  body.gated-on{padding-bottom:76px}
 }
 </style>
 </head>
 <body>
 
-<!-- ======================= HERO ======================= -->
+<!-- ===================== HERO (sempre visível) ===================== -->
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Para donos de delivery</span>
-    <h1>Encha seu WhatsApp de pedidos<br><span class="grad">sem depender de aplicativo</span></h1>
-    <p class="lead">Uma estrutura pronta para hamburguerias, pizzarias, açaiterias e marmitarias venderem direto, todos os dias — e pararem de entregar 27% do faturamento pro app.</p>
+    <h1>Receba de <span class="hl">30 a 100 pedidos</span> por dia no WhatsApp</h1>
+    <p class="lead">Sem depender de iFood, sorte ou indicação. Estrutura pronta para qualquer delivery que queira parar de depender de aplicativo e começar a vender direto.</p>
 
-    <!-- VSL — troque o src pelo seu vídeo ou embed -->
+    <!-- VSL -->
     <div class="vsl" id="vsl">
-      <video id="vslVideo" playsinline preload="metadata" poster="/capa-vsl.jpg">
+      <video id="vid" playsinline preload="metadata" poster="/capa-vsl.jpg">
         <source src="/vsl.mp4" type="video/mp4">
       </video>
-      <div class="vsl-overlay" id="vslOverlay">
+      <div class="vsl-ov" id="ov">
         <div class="play">
-          <svg width="26" height="30" viewBox="0 0 26 30" fill="#0a0a0b"><path d="M25 13.27a2 2 0 0 1 0 3.46L3 29.46A2 2 0 0 1 0 27.73V2.27A2 2 0 0 1 3 .54l22 12.73Z"/></svg>
+          <svg width="25" height="29" viewBox="0 0 26 30" fill="#0a0a0a"><path d="M25 13.27a2 2 0 0 1 0 3.46L3 29.46A2 2 0 0 1 0 27.73V2.27A2 2 0 0 1 3 .54l22 12.73Z"/></svg>
         </div>
-        <span>Toque para assistir</span>
+        <span>Toque para iniciar</span>
       </div>
     </div>
 
-    <a class="btn pulse" href="#CHECKOUT">QUERO MINHA MÁQUINA DE PEDIDOS</a>
-    <div class="badges">
-      <span class="badge">⚡ Acesso imediato</span>
-      <span class="badge">🔒 Compra 100% segura</span>
-      <span class="badge">↩️ Garantia de 7 dias</span>
+    <!-- Barra de progresso do gate -->
+    <div id="progWrap">
+      <div id="progBar"><div id="progFill"></div></div>
+      <div id="progTxt">Assista até o fim para liberar a oferta</div>
     </div>
+
+    <div class="btn" id="playBtn">▶ Toque no vídeo para iniciar</div>
+    <div class="micro">Acesso imediato · Garantia de 7 dias</div>
+    <a class="pill" href="#bonus">🎁 + 11 bônus inclusos hoje</a>
+
+    <button id="skip">Já assisti ao vídeo — liberar conteúdo</button>
   </div>
 </header>
 
-<!-- ======================= DOR ======================= -->
-<section class="rv">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow">Por que você travou</span>
-      <h2>Não é falta de esforço.<br>É falta de <span class="grad">sistema</span>.</h2>
-      <p class="lead">Você já fez promoção, já impulsionou post, já baixou preço. O movimento até sobe — e cai de novo na semana seguinte. Porque nada disso é estrutura, é tentativa.</p>
-    </div>
+<!-- ===================== CONTEÚDO BLOQUEADO ===================== -->
+<div id="gated">
 
-    <div class="cols">
-      <div class="col bad">
-        <h4>Como está hoje</h4>
-        <ul>
-          <li><span class="ico x">✕</span> Comissão do app comendo a margem</li>
-          <li><span class="ico x">✕</span> Impulsionar post e não gerar pedido</li>
-          <li><span class="ico x">✕</span> Cliente compra uma vez e some</li>
-          <li><span class="ico x">✕</span> Responder tudo na mão, o dia inteiro</li>
-          <li><span class="ico x">✕</span> Terça e quarta com o salão vazio</li>
-        </ul>
+  <!-- DOR -->
+  <section class="rv">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">Por que você estagnou</span>
+        <h2>Não é falta de esforço.<br>É falta de <span class="hl">sistema</span>.</h2>
+        <p class="lead">Você já fez promoção, já impulsionou post, já baixou preço. O movimento sobe e cai de novo na semana seguinte — porque nada disso é estrutura, é tentativa.</p>
       </div>
-      <div class="col good">
-        <h4>Com a Máquina de Pedidos</h4>
-        <ul>
-          <li><span class="ico v">✓</span> Pedido cai direto no seu Zap, sem taxa</li>
-          <li><span class="ico v">✓</span> Anúncio validado, feito pra converter</li>
-          <li><span class="ico v">✓</span> Cliente reativado sozinho toda semana</li>
-          <li><span class="ico v">✓</span> Atendimento no automático 24h</li>
-          <li><span class="ico v">✓</span> Campanha pronta pros dias fracos</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======================= MECANISMO ======================= -->
-<section class="rv" style="background:var(--bg2)">
-  <div class="wrap center">
-    <span class="eyebrow">Conheça</span>
-    <h2>A Máquina de Pedidos</h2>
-    <p class="lead">Não é curso. Não é aula gravada de 8 horas. É um pacote de estruturas prontas: você abre, troca o nome do seu delivery e coloca pra rodar hoje.</p>
-
-    <div class="steps">
-      <div class="step">
-        <span class="n">PASSO 01</span>
-        <h3>Copie</h3>
-        <p>Baixe as estruturas já testadas em deliveries reais.</p>
-      </div>
-      <div class="step">
-        <span class="n">PASSO 02</span>
-        <h3>Adapte</h3>
-        <p>Troque nome, cardápio e preço. Leva menos de uma hora.</p>
-      </div>
-      <div class="step">
-        <span class="n">PASSO 03</span>
-        <h3>Ative</h3>
-        <p>Publique e comece a receber pedido direto no WhatsApp.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======================= PROVA SOCIAL ======================= -->
-<section class="rv">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow">Resultados reais</span>
-      <h2>Quem já ativou</h2>
-    </div>
-    <div class="depos">
-      <div class="depo">
-        <div class="vid"><iframe src="https://www.youtube.com/embed/VIDEO_ID_1?rel=0&modestbranding=1" title="Depoimento 1" allowfullscreen loading="lazy"></iframe></div>
-        <div class="txt">
-          <div class="stars">★★★★★</div>
-          <blockquote>“Eu vivia refém do aplicativo. Hoje mais da metade dos meus pedidos entram direto no WhatsApp e a margem melhorou de verdade.”</blockquote>
-          <div class="who"><div class="av">R</div><div><b>Rafael M.</b><small>Hamburgueria · Uberlândia/MG</small></div></div>
+      <div class="cols">
+        <div class="col bad">
+          <h4>Como está hoje</h4>
+          <ul>
+            <li><span class="ico x">✕</span> Comissão do app comendo a margem</li>
+            <li><span class="ico x">✕</span> Impulsionar post e não gerar pedido</li>
+            <li><span class="ico x">✕</span> Cliente compra uma vez e some</li>
+            <li><span class="ico x">✕</span> Responder tudo na mão, o dia inteiro</li>
+            <li><span class="ico x">✕</span> Terça e quarta com o salão vazio</li>
+          </ul>
         </div>
-      </div>
-      <div class="depo">
-        <div class="vid"><iframe src="https://www.youtube.com/embed/VIDEO_ID_2?rel=0&modestbranding=1" title="Depoimento 2" allowfullscreen loading="lazy"></iframe></div>
-        <div class="txt">
-          <div class="stars">★★★★★</div>
-          <blockquote>“Coloquei o robô pra rodar numa sexta. No fim de semana a impressora não parou. Foi o melhor mês desde que abri.”</blockquote>
-          <div class="who"><div class="av">C</div><div><b>Carla S.</b><small>Pizzaria · Goiânia/GO</small></div></div>
+        <div class="col good">
+          <h4>Com a Máquina de Pedidos</h4>
+          <ul>
+            <li><span class="ico v">✓</span> Pedido direto no Zap, sem comissão</li>
+            <li><span class="ico v">✓</span> Anúncio validado, feito pra converter</li>
+            <li><span class="ico v">✓</span> Cliente reativado sozinho toda semana</li>
+            <li><span class="ico v">✓</span> Atendimento no automático 24h</li>
+            <li><span class="ico v">✓</span> Campanha pronta pros dias fracos</li>
+          </ul>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- MECANISMO -->
+  <section class="rv" style="background:var(--bg2)">
+    <div class="wrap center">
+      <span class="eyebrow">Conheça</span>
+      <h2>A Máquina de Pedidos</h2>
+      <p class="lead">Não é curso nem aula de 8 horas. É um pacote de estruturas prontas: você abre, troca o nome do seu delivery e coloca pra rodar hoje.</p>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Copie</h3><p>Baixe as estruturas já testadas em deliveries reais.</p></div>
+        <div class="step"><div class="n">2</div><h3>Adapte</h3><p>Troque nome, cardápio e preço. Leva menos de uma hora.</p></div>
+        <div class="step"><div class="n">3</div><h3>Ative</h3><p>Publique e comece a receber pedido direto no WhatsApp.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="rv">
+    <div class="wrap">
+      <div class="center"><span class="eyebrow">Resultados reais</span><h2>Quem já ativou</h2></div>
+      <div class="depos">
+        <div class="depo">
+          <div class="vid"><iframe src="https://www.youtube.com/embed/VIDEO_ID_1?rel=0&modestbranding=1" title="Depoimento 1" allowfullscreen loading="lazy"></iframe></div>
+          <div class="txt">
+            <div class="stars">★★★★★</div>
+            <blockquote>“Eu vivia refém do aplicativo. Hoje mais da metade dos pedidos entra direto no WhatsApp e a margem melhorou de verdade.”</blockquote>
+            <div class="who"><div class="av">R</div><div><b>Rafael M.</b><small>Hamburgueria · Uberlândia/MG</small></div></div>
+          </div>
+        </div>
+        <div class="depo">
+          <div class="vid"><iframe src="https://www.youtube.com/embed/VIDEO_ID_2?rel=0&modestbranding=1" title="Depoimento 2" allowfullscreen loading="lazy"></iframe></div>
+          <div class="txt">
+            <div class="stars">★★★★★</div>
+            <blockquote>“Coloquei o robô pra rodar numa sexta. No fim de semana a impressora não parou. Melhor mês desde que abri.”</blockquote>
+            <div class="who"><div class="av">C</div><div><b>Carla S.</b><small>Pizzaria · Goiânia/GO</small></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHATSAPP -->
+  <section class="rv" style="background:var(--bg2)">
+    <div class="wrap center">
+      <span class="eyebrow">Veja em ação</span>
+      <h2>Assim fica o seu<br>WhatsApp <span class="hl">às 20h</span></h2>
+      <div class="phone">
+        <div class="ph-top">
+          <div class="ph-av">🍔</div>
+          <div><b>Meu Delivery</b><small><i class="dot"></i> online · recebendo pedidos</small></div>
+        </div>
+        <div class="ph-body" id="chat"></div>
+      </div>
+      <p class="lead center" style="margin-top:24px">Imagine abrir o celular amanhã de manhã e encontrar essa fila de pedidos esperando por você.</p>
+    </div>
+  </section>
+
+  <!-- MÓDULOS -->
+  <section class="rv">
+    <div class="wrap">
+      <div class="center"><span class="eyebrow">O que você recebe</span><h2>Tudo que seu delivery precisa<br>em um <span class="hl">único lugar</span></h2></div>
+      <div class="grid">
+        <div class="mod"><div class="emo">🎯</div><h3>Gerador de Clientes</h3><p>Traga gente nova da sua região todo dia.</p><ul><li>Campanha pronta</li><li>Segmentação por bairro</li><li>Orçamento baixo</li><li>Passo a passo</li></ul></div>
+        <div class="mod"><div class="emo">🤖</div><h3>Robô de Pedidos</h3><p>WhatsApp atendendo enquanto você produz.</p><ul><li>Atende 24h</li><li>Fecha sozinho</li><li>Sem comissão</li><li>Fácil de instalar</li></ul></div>
+        <div class="mod"><div class="emo">📱</div><h3>Cardápio Digital</h3><p>Link único que manda o pedido pronto pro Zap.</p><ul><li>Editável</li><li>Abre no celular</li><li>Foto dos produtos</li><li>Sem mensalidade</li></ul></div>
+        <div class="mod"><div class="emo">🔥</div><h3>Banco de Ofertas</h3><p>Combos testados pra levantar os dias fracos.</p><ul><li>Combos</li><li>Promoções</li><li>Ofertas sazonais</li><li>Campanhas validadas</li></ul></div>
+        <div class="mod"><div class="emo">💬</div><h3>Atendente Digital</h3><p>Mensagens prontas pra copiar e colar.</p><ul><li>Primeiro contato</li><li>Confirmação</li><li>Recuperação</li><li>Pós-venda</li></ul></div>
+        <div class="mod"><div class="emo">🎨</div><h3>Galeria de Anúncios</h3><p>Criativos editáveis, prontos pra subir.</p><ul><li>Hamburgueria</li><li>Pizzaria</li><li>Açaí</li><li>Marmitaria e sushi</li></ul></div>
+        <div class="mod"><div class="emo">📅</div><h3>Calendário de Vendas</h3><p>O ano inteiro planejado, data por data.</p><ul><li>Datas comemorativas</li><li>Ações sazonais</li><li>Recorrência</li><li>Roteiro mensal</li></ul></div>
+        <div class="mod"><div class="emo">📊</div><h3>Painel de Resultados</h3><p>Quanto entrou, quanto gastou, quanto sobrou.</p><ul><li>Custo por pedido</li><li>Ticket médio</li><li>Retorno do anúncio</li><li>Automático</li></ul></div>
+        <div class="mod"><div class="emo">🧮</div><h3>Calculadora de Preço</h3><p>Pare de vender no prejuízo sem perceber.</p><ul><li>Custo real</li><li>Margem alvo</li><li>Preço de combo</li><li>Pronta pra usar</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BÔNUS -->
+  <section class="rv" id="bonus" style="background:var(--bg2)">
+    <div class="wrap">
+      <div class="center"><span class="eyebrow">Bônus exclusivos</span><h2>Ative hoje e leve<br><span class="hl">+ 11 entregáveis</span></h2></div>
+      <div class="bonus-box">
+        <div class="bonus-list">
+          <div class="bonus-item"><span>✓</span> Copys prontas para anúncio</div>
+          <div class="bonus-item"><span>✓</span> Criativos editáveis</div>
+          <div class="bonus-item"><span>✓</span> Roteiros de venda</div>
+          <div class="bonus-item"><span>✓</span> Estrutura de oferta</div>
+          <div class="bonus-item"><span>✓</span> Scripts de WhatsApp</div>
+          <div class="bonus-item"><span>✓</span> Calculadora de preço</div>
+          <div class="bonus-item"><span>✓</span> Guia de promoções</div>
+          <div class="bonus-item"><span>✓</span> Plano de ação de 7 dias</div>
+          <div class="bonus-item"><span>✓</span> Checklist de campanha</div>
+          <div class="bonus-item"><span>✓</span> Respostas rápidas</div>
+          <div class="bonus-item"><span>✓</span> Painel de acompanhamento</div>
+        </div>
+        <div class="warn"><span>⚠️</span><div><b>Atenção:</b> o pacote de bônus está liberado apenas para quem ativar nesta página. Vale mais que o próprio produto — e entra junto, sem custo extra.</div></div>
+        <div style="margin-top:26px">
+          <a class="btn buy" href="#CHECKOUT">Ativar com os 11 bônus</a>
+          <div class="btn-sub">Bônus liberados na hora da confirmação do pagamento</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANCORAGEM -->
+  <section class="rv">
+    <div class="wrap">
+      <div class="center"><span class="eyebrow">Valor real</span><h2>Quanto valeria montar<br>tudo isso do zero?</h2></div>
+      <div class="stack">
+        <div class="row"><span>Gerador de Clientes</span><span>R$ 197</span></div>
+        <div class="row"><span>Robô de Pedidos</span><span>R$ 197</span></div>
+        <div class="row"><span>Cardápio Digital</span><span>R$ 197</span></div>
+        <div class="row"><span>Banco de Ofertas</span><span>R$ 97</span></div>
+        <div class="row"><span>Atendente Digital</span><span>R$ 67</span></div>
+        <div class="row"><span>Galeria de Anúncios</span><span>R$ 97</span></div>
+        <div class="row"><span>Calendário de Vendas</span><span>R$ 97</span></div>
+        <div class="row"><span>Pacote com 11 bônus</span><span>R$ 497</span></div>
+        <div class="row total"><span>Valor total</span><span>R$ 1.446</span></div>
+      </div>
+      <div class="drop"><p>Você não vai investir R$ 1.446.</p><p>Nem R$ 497.</p><p>Nem R$ 97.</p></div>
+    </div>
+  </section>
+
+  <!-- OFERTA -->
+  <section class="rv" id="oferta" style="background:var(--bg2)">
+    <div class="wrap center">
+      <span class="eyebrow">Oferta de lançamento</span>
+      <h2>Ative sua máquina hoje</h2>
+      <div class="offer">
+        <span class="tag">Acesso vitalício</span>
+        <ul>
+          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#16a34a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Gerador de Clientes</li>
+          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#16a34a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Robô de Pedidos</li>
+          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#16a34a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Cardápio Digital</li>
+          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#16a34a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Banco de Ofertas</li>
+          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#16a34a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Atendente Digital</li>
+          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#16a34a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Galeria de Anúncios</li>
+          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#16a34a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Calendário de Vendas</li>
+          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#0a0a0a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> <b>+ 11 bônus exclusivos</b></li>
+        </ul>
+        <div class="price-lbl">De <s>R$ 1.446</s> por apenas</div>
+        <div class="price"><small>R$</small>37</div>
+        <div class="price-note">Pagamento único · Sem mensalidade · Sem taxa oculta</div>
+        <a class="btn buy" href="#CHECKOUT">Ativar minha máquina agora</a>
+        <div class="btn-sub">Acesso liberado em segundos no seu e-mail</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTIA -->
+  <section class="rv">
+    <div class="wrap">
+      <div class="guar">
+        <div class="seal"><b>GARANTIA</b><i>7</i><b>DIAS</b></div>
+        <div>
+          <h3>Teste sem risco nenhum</h3>
+          <p>Entre, veja tudo por dentro, aplique no seu delivery. Se em 7 dias achar que não faz sentido, é só pedir o reembolso e você recebe 100% do valor de volta — sem precisar justificar nada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM -->
+  <section class="rv" style="background:var(--bg2)">
+    <div class="wrap center">
+      <span class="eyebrow">Para quem é</span>
+      <h2>Funciona em qualquer delivery</h2>
+      <div class="chips">
+        <span class="chip">🍔 Hamburguerias</span><span class="chip">🍕 Pizzarias</span>
+        <span class="chip">🍧 Açaiterias</span><span class="chip">🍱 Marmitarias</span>
+        <span class="chip">🍣 Sushi</span><span class="chip">🍰 Doceria</span>
+        <span class="chip">🥤 Lanchonetes</span><span class="chip">🍽️ Restaurantes</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="rv">
+    <div class="wrap">
+      <div class="center"><span class="eyebrow">Dúvidas</span><h2>Perguntas frequentes</h2></div>
+      <div class="faq">
+        <div class="q"><button>Preciso entender de tecnologia? <i>+</i></button><div class="a"><p>Não. Tudo vem pronto, com passo a passo em português. Se você usa WhatsApp, consegue instalar.</p></div></div>
+        <div class="q"><button>Em quanto tempo vejo pedido? <i>+</i></button><div class="a"><p>A estrutura fica no ar no mesmo dia. O volume depende do seu cardápio, região e investimento em divulgação — não existe garantia de faturamento.</p></div></div>
+        <div class="q"><button>Serve pra delivery que está começando? <i>+</i></button><div class="a"><p>Serve, e é onde faz mais diferença: você já começa sem depender de comissão de aplicativo.</p></div></div>
+        <div class="q"><button>Tem mensalidade? <i>+</i></button><div class="a"><p>Não. Pagamento único, acesso liberado, atualizações incluídas.</p></div></div>
+        <div class="q"><button>E se eu não gostar? <i>+</i></button><div class="a"><p>Você tem 7 dias para pedir reembolso integral, sem precisar explicar o motivo.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="rv center">
+    <div class="wrap">
+      <h2>Pare de esperar o WhatsApp tocar.<br><span class="hl">Faça ele tocar.</span></h2>
+      <p class="lead center" style="margin:14px auto 28px">Copie, adapte e ative. Amanhã seu delivery pode estar recebendo pedido direto, sem comissão.</p>
+      <a class="btn buy" href="#CHECKOUT">Ativar minha máquina — R$ 37</a>
+      <div class="btn-sub">Acesso imediato · Garantia de 7 dias</div>
+    </div>
+  </section>
+
+  <!-- STICKY -->
+  <div class="sticky" id="sticky">
+    <div class="info"><b>R$ 37</b><small>pagamento único</small></div>
+    <a class="btn buy" href="#CHECKOUT">Quero ativar agora</a>
   </div>
-</section>
 
-<!-- ======================= MOCKUP WHATSAPP ======================= -->
-<section class="rv" style="background:var(--bg2)">
-  <div class="wrap center">
-    <span class="eyebrow">Veja em ação</span>
-    <h2>Assim que fica o seu<br><span class="grad">WhatsApp às 20h</span></h2>
-
-    <div class="phone">
-      <div class="ph-top">
-        <div class="ph-av">🍔</div>
-        <div><b>Meu Delivery</b><small><i class="dot"></i> online · recebendo pedidos</small></div>
-      </div>
-      <div class="ph-body" id="chat"></div>
-    </div>
-
-    <p class="ph-note">Agora imagine abrir o celular amanhã de manhã e encontrar essa fila de pedidos esperando por você.</p>
-  </div>
-</section>
-
-<!-- ======================= ENTREGÁVEIS ======================= -->
-<section class="rv">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow">O que você recebe</span>
-      <h2>Tudo que seu delivery precisa<br>em um <span class="grad">único lugar</span></h2>
-    </div>
-
-    <div class="grid">
-      <div class="mod">
-        <div class="emo">🎯</div>
-        <h3>Gerador de Clientes</h3>
-        <p>Traga gente nova da sua região todo dia, sem depender de indicação.</p>
-        <ul><li>Campanha pronta</li><li>Segmentação por bairro</li><li>Orçamento baixo</li><li>Passo a passo</li></ul>
-      </div>
-      <div class="mod">
-        <div class="emo">🤖</div>
-        <h3>Robô de Pedidos</h3>
-        <p>Seu WhatsApp atendendo e fechando pedido enquanto você produz.</p>
-        <ul><li>Atende 24h</li><li>Fecha sozinho</li><li>Sem comissão</li><li>Fácil de instalar</li></ul>
-      </div>
-      <div class="mod">
-        <div class="emo">📱</div>
-        <h3>Cardápio Digital</h3>
-        <p>Link único, bonito e rápido, que manda o pedido pronto pro Zap.</p>
-        <ul><li>Editável</li><li>Abre no celular</li><li>Foto dos produtos</li><li>Sem mensalidade</li></ul>
-      </div>
-      <div class="mod">
-        <div class="emo">🔥</div>
-        <h3>Banco de Ofertas</h3>
-        <p>Combos e promoções já testados para levantar os dias fracos.</p>
-        <ul><li>Combos</li><li>Promoções</li><li>Ofertas sazonais</li><li>Campanhas validadas</li></ul>
-      </div>
-      <div class="mod">
-        <div class="emo">💬</div>
-        <h3>Atendente Digital</h3>
-        <p>Mensagens prontas pra copiar e colar em cada etapa do atendimento.</p>
-        <ul><li>Primeiro contato</li><li>Confirmação</li><li>Recuperação</li><li>Pós-venda</li></ul>
-      </div>
-      <div class="mod">
-        <div class="emo">🎨</div>
-        <h3>Galeria de Anúncios</h3>
-        <p>Criativos editáveis por segmento, prontos pra subir sem designer.</p>
-        <ul><li>Hamburgueria</li><li>Pizzaria</li><li>Açaí</li><li>Marmitaria e sushi</li></ul>
-      </div>
-      <div class="mod">
-        <div class="emo">📅</div>
-        <h3>Calendário de Vendas</h3>
-        <p>O ano inteiro planejado: o que postar e o que promover em cada data.</p>
-        <ul><li>Datas comemorativas</li><li>Ações sazonais</li><li>Recorrência</li><li>Roteiro mensal</li></ul>
-      </div>
-      <div class="mod">
-        <div class="emo">📊</div>
-        <h3>Painel de Resultados</h3>
-        <p>Planilha simples pra saber quanto entrou, quanto gastou e quanto sobrou.</p>
-        <ul><li>Custo por pedido</li><li>Ticket médio</li><li>Retorno do anúncio</li><li>Automática</li></ul>
-      </div>
-      <div class="mod">
-        <div class="emo">🧮</div>
-        <h3>Calculadora de Preço</h3>
-        <p>Descubra o preço certo pra parar de vender no prejuízo sem perceber.</p>
-        <ul><li>Custo real</li><li>Margem alvo</li><li>Preço de combo</li><li>Pronta pra usar</li></ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======================= BÔNUS ======================= -->
-<section class="rv" id="bonus" style="background:var(--bg2)">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow">Bônus exclusivos</span>
-      <h2>Ative hoje e leve<br><span class="grad">+ 11 entregáveis</span></h2>
-      <p class="lead">Não é só a estrutura. Você destrava um arsenal que dá pra aplicar já no próximo turno.</p>
-    </div>
-
-    <div class="bonus-box">
-      <div class="bonus-list">
-        <div class="bonus-item"><span>✓</span> Copys prontas para anúncio</div>
-        <div class="bonus-item"><span>✓</span> Criativos editáveis</div>
-        <div class="bonus-item"><span>✓</span> Roteiros de venda</div>
-        <div class="bonus-item"><span>✓</span> Estrutura de oferta irresistível</div>
-        <div class="bonus-item"><span>✓</span> Scripts de WhatsApp</div>
-        <div class="bonus-item"><span>✓</span> Calculadora de precificação</div>
-        <div class="bonus-item"><span>✓</span> Guia de promoções</div>
-        <div class="bonus-item"><span>✓</span> Plano de ação de 7 dias</div>
-        <div class="bonus-item"><span>✓</span> Checklist de campanha</div>
-        <div class="bonus-item"><span>✓</span> Respostas rápidas prontas</div>
-        <div class="bonus-item"><span>✓</span> Painel de acompanhamento</div>
-      </div>
-
-      <div class="warn">
-        <span>⚠️</span>
-        <div><b>Atenção:</b> esse pacote de bônus está liberado apenas para quem ativar nesta página. Ele vale mais que o próprio produto — e entra junto, sem custo extra.</div>
-      </div>
-
-      <div class="center" style="margin-top:28px">
-        <a class="btn" href="#CHECKOUT">ATIVAR COM OS 11 BÔNUS</a>
-        <div class="btn-sub">Bônus liberados na hora da confirmação do pagamento</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======================= ANCORAGEM ======================= -->
-<section class="rv">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow">Valor real</span>
-      <h2>Quanto valeria montar<br>tudo isso do zero?</h2>
-    </div>
-
-    <div class="stack">
-      <div class="row"><span>Gerador de Clientes</span><span>R$ 197</span></div>
-      <div class="row"><span>Robô de Pedidos</span><span>R$ 197</span></div>
-      <div class="row"><span>Cardápio Digital</span><span>R$ 197</span></div>
-      <div class="row"><span>Banco de Ofertas</span><span>R$ 97</span></div>
-      <div class="row"><span>Atendente Digital</span><span>R$ 67</span></div>
-      <div class="row"><span>Galeria de Anúncios</span><span>R$ 97</span></div>
-      <div class="row"><span>Calendário de Vendas</span><span>R$ 97</span></div>
-      <div class="row"><span>Pacote com 11 bônus</span><span>R$ 497</span></div>
-      <div class="row total"><span>Valor total</span><span>R$ 1.446</span></div>
-    </div>
-
-    <div class="drop">
-      <p>Você não vai investir R$ 1.446.</p>
-      <p>Nem R$ 497.</p>
-      <p>Nem R$ 97.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ======================= OFERTA ======================= -->
-<section class="rv" id="oferta" style="background:var(--bg2)">
-  <div class="wrap center">
-    <span class="eyebrow">Oferta de lançamento</span>
-    <h2>Ative sua máquina hoje</h2>
-    <p class="lead">Preço de entrada porque a gente prefere mil deliveries rodando do que cem pagando caro.</p>
-
-    <div class="offer">
-      <span class="tag">Acesso vitalício</span>
-      <ul>
-        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#22c55e"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Gerador de Clientes</li>
-        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#22c55e"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Robô de Pedidos</li>
-        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#22c55e"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Cardápio Digital</li>
-        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#22c55e"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Banco de Ofertas</li>
-        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#22c55e"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Atendente Digital</li>
-        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#22c55e"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Galeria de Anúncios</li>
-        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#22c55e"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Calendário de Vendas</li>
-        <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#ff8a00"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> <b>+ 11 bônus exclusivos</b></li>
-      </ul>
-
-      <div class="price-lbl">De <s>R$ 1.446</s> por apenas</div>
-      <div class="price"><small>R$</small>37</div>
-      <div class="price-note">Pagamento único · Sem mensalidade · Sem taxa escondida</div>
-
-      <a class="btn pulse" href="#CHECKOUT">ATIVAR MINHA MÁQUINA AGORA</a>
-      <div class="btn-sub">Acesso liberado em segundos, direto no seu e-mail</div>
-    </div>
-  </div>
-</section>
-
-<!-- ======================= GARANTIA ======================= -->
-<section class="rv">
-  <div class="wrap">
-    <div class="guar">
-      <div class="seal"><b>GARANTIA</b><i>7</i><b>DIAS</b></div>
-      <div>
-        <h3>Teste sem risco nenhum</h3>
-        <p>Entre, veja tudo por dentro, aplique a estrutura no seu delivery. Se em 7 dias você achar que não faz sentido pro seu negócio, é só pedir o reembolso e você recebe 100% do valor de volta. Sem enrolação e sem precisar justificar nada.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======================= PARA QUEM ======================= -->
-<section class="rv" style="background:var(--bg2)">
-  <div class="wrap center">
-    <span class="eyebrow">Para quem é</span>
-    <h2>Funciona em qualquer delivery</h2>
-    <div class="chips">
-      <span class="chip">🍔 Hamburguerias</span>
-      <span class="chip">🍕 Pizzarias</span>
-      <span class="chip">🍧 Açaiterias</span>
-      <span class="chip">🍱 Marmitarias</span>
-      <span class="chip">🍣 Sushi</span>
-      <span class="chip">🍰 Doceria</span>
-      <span class="chip">🥤 Lanchonetes</span>
-      <span class="chip">🍽️ Restaurantes</span>
-    </div>
-  </div>
-</section>
-
-<!-- ======================= FAQ ======================= -->
-<section class="rv">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow">Dúvidas</span>
-      <h2>Perguntas frequentes</h2>
-    </div>
-    <div class="faq">
-      <div class="q"><button>Preciso entender de tecnologia? <i>+</i></button><div class="a"><p>Não. Tudo vem pronto e com passo a passo em português. Se você sabe usar WhatsApp, consegue instalar.</p></div></div>
-      <div class="q"><button>Em quanto tempo começo a ver pedido? <i>+</i></button><div class="a"><p>A estrutura pode ficar no ar no mesmo dia. O volume depende do seu cardápio, região e do quanto você investe em divulgação — não existe garantia de faturamento.</p></div></div>
-      <div class="q"><button>Serve pra delivery pequeno, que tá começando? <i>+</i></button><div class="a"><p>Serve — e é justamente onde faz mais diferença, porque você já começa sem depender de comissão de aplicativo.</p></div></div>
-      <div class="q"><button>Tem mensalidade? <i>+</i></button><div class="a"><p>Não. É pagamento único e o acesso fica liberado, incluindo as atualizações.</p></div></div>
-      <div class="q"><button>E se eu não gostar? <i>+</i></button><div class="a"><p>Você tem 7 dias para pedir reembolso integral, sem precisar explicar o motivo.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ======================= CTA FINAL ======================= -->
-<section class="final rv">
-  <div class="wrap">
-    <h2>Pare de esperar o WhatsApp tocar.<br><span class="grad">Faça ele tocar.</span></h2>
-    <p class="lead center" style="margin-bottom:30px">Copie, adapte e ative. Amanhã seu delivery pode estar recebendo pedido direto, sem comissão.</p>
-    <a class="btn pulse" href="#CHECKOUT">ATIVAR MINHA MÁQUINA DE PEDIDOS — R$ 37</a>
-    <div class="badges">
-      <span class="badge">⚡ Acesso imediato</span>
-      <span class="badge">↩️ Garantia de 7 dias</span>
-      <span class="badge">✅ Serve pra qualquer delivery</span>
-    </div>
-  </div>
-</section>
-
-<!-- ======================= BARRA FIXA ======================= -->
-<div class="sticky" id="sticky">
-  <div class="info"><b>R$ 37</b><small>pagamento único</small></div>
-  <a class="btn" href="#CHECKOUT">QUERO ATIVAR AGORA</a>
-</div>
+</div><!-- /#gated -->
 
 <footer>
   <div class="wrap">
     <p>© 2026 Máquina de Pedidos · Todos os direitos reservados</p>
-    <p style="margin-top:10px">
-      <a href="/termos">Termos de uso</a>·<a href="/privacidade">Política de privacidade</a>·<a href="/suporte">Suporte</a>
-    </p>
-    <p style="margin-top:14px;max-width:640px;margin-left:auto;margin-right:auto;font-size:11.5px;line-height:1.5">
-      Este site não é afiliado ao Facebook, Meta, Google ou a qualquer aplicativo de delivery. Os resultados citados são individuais e dependem de aplicação, região e investimento — não representam promessa de faturamento.
+    <p style="margin-top:9px"><a href="/termos">Termos de uso</a>·<a href="/privacidade">Privacidade</a>·<a href="/suporte">Suporte</a></p>
+    <p style="margin-top:12px;max-width:620px;margin-left:auto;margin-right:auto;font-size:11px;line-height:1.5">
+      Este site não é afiliado ao Facebook, Meta, Google ou a qualquer aplicativo de delivery. Resultados são individuais e dependem de aplicação, região e investimento — não representam promessa de faturamento.
     </p>
   </div>
 </footer>
 
 <script>
-/* ---------- VSL: play ao tocar ---------- */
+/* =========================================================
+   CONFIG DO GATE — mexa só aqui
+   ========================================================= */
+var CONFIG = {
+  liberarAos: null,      // null = só no FIM do vídeo. Ou número em segundos (ex: 420 = 7 min)
+  mostrarProgresso: true,// barra "assista até o fim para liberar"
+  botaoPular: true,      // link de escape (RECOMENDADO deixar true)
+  pularApos: 90,         // segundos até o link "já assisti" aparecer
+  bloquearAvanco: true,  // impede arrastar o vídeo pra frente
+  lembrarSessao: true,   // não obriga rever o vídeo após F5
+  rolarAoLiberar: true   // desce a tela suavemente quando libera
+};
+/* ========================================================= */
+
 (function(){
-  var box=document.getElementById('vsl'),
-      vid=document.getElementById('vslVideo'),
-      ov=document.getElementById('vslOverlay');
-  if(!box) return;
-  box.addEventListener('click',function(){
-    if(vid.paused){ vid.play(); vid.controls=true; ov.classList.add('hide'); }
+  var vid=document.getElementById('vid'),
+      ov=document.getElementById('ov'),
+      box=document.getElementById('vsl'),
+      playBtn=document.getElementById('playBtn'),
+      gated=document.getElementById('gated'),
+      skip=document.getElementById('skip'),
+      progWrap=document.getElementById('progWrap'),
+      progFill=document.getElementById('progFill'),
+      liberado=false, maxTime=0;
+
+  function store(k,v){ try{ if(CONFIG.lembrarSessao) sessionStorage.setItem(k,v); }catch(e){} }
+  function read(k){ try{ return CONFIG.lembrarSessao ? sessionStorage.getItem(k) : null; }catch(e){ return null; } }
+
+  function liberar(rolar){
+    if(liberado) return;
+    liberado=true;
+    gated.classList.add('on');
+    document.body.classList.add('gated-on');
+    if(progWrap) progWrap.classList.remove('on');
+    if(skip) skip.classList.remove('on');
+    store('vsl_ok','1');
+    observarReveal();
+    if(rolar && CONFIG.rolarAoLiberar){
+      setTimeout(function(){ gated.scrollIntoView({behavior:'smooth',block:'start'}); },350);
+    }
+    if(window.fbq) fbq('trackCustom','VSL_Completa');
+  }
+
+  // já liberado nesta sessão
+  if(read('vsl_ok')==='1'){ liberar(false); }
+
+  // --- play ---
+  function play(){
+    if(!vid) return;
+    vid.play();
+    vid.controls=true;
+    ov.classList.add('hide');
+    if(CONFIG.mostrarProgresso && !liberado) progWrap.classList.add('on');
+    playBtn.textContent='▶ Assistindo…';
+  }
+  box.addEventListener('click',function(){ if(vid.paused) play(); });
+  playBtn.addEventListener('click',play);
+
+  // --- progresso + gatilho ---
+  vid.addEventListener('timeupdate',function(){
+    var d=vid.duration||0, t=vid.currentTime;
+
+    if(CONFIG.bloquearAvanco){
+      if(t>maxTime+1.6){ vid.currentTime=maxTime; return; }
+      if(t>maxTime) maxTime=t;
+    }
+
+    var alvo = (CONFIG.liberarAos!==null) ? CONFIG.liberarAos : (d?d-0.6:99999);
+    if(progFill && d) progFill.style.width=Math.min(100,(t/(CONFIG.liberarAos||d))*100)+'%';
+    if(t>=alvo) liberar(true);
   });
-})();
 
-/* ---------- Reveal on scroll ---------- */
-(function(){
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  },{threshold:.12});
-  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
-})();
+  vid.addEventListener('ended',function(){ if(progFill) progFill.style.width='100%'; liberar(true); });
 
-/* ---------- Barra fixa após o hero ---------- */
-(function(){
-  var bar=document.getElementById('sticky');
+  // --- botão pular ---
+  if(CONFIG.botaoPular && skip){
+    setTimeout(function(){ if(!liberado) skip.classList.add('on'); }, CONFIG.pularApos*1000);
+    skip.addEventListener('click',function(){ liberar(true); });
+  }
+
+  // --- fallback: vídeo quebrado ---
+  vid.addEventListener('error',function(){ liberar(false); });
+  setTimeout(function(){ if(!liberado && vid.readyState===0) liberar(false); },12000);
+
+  // --- sticky ---
   window.addEventListener('scroll',function(){
-    if(window.scrollY>620) bar.classList.add('show'); else bar.classList.remove('show');
+    var s=document.getElementById('sticky');
+    if(s) s.classList.toggle('show', liberado && window.scrollY>700);
   },{passive:true});
-})();
 
-/* ---------- Animação do chat ---------- */
-(function(){
-  var chat=document.getElementById('chat');
-  if(!chat) return;
-  var msgs=[
-    {nome:'João',txt:'Boa noite! Quero 1 artesanal duplo + fritas 🍔',valor:'R$ 52,90'},
-    {nome:'',txt:'Fechado, João! Pedido confirmado ✅ Sai em 35 min.',me:true},
-    {nome:'Maria',txt:'Oi! Pizza calabresa grande e uma Coca 2L 🍕',valor:'R$ 74,00'},
-    {nome:'Pedro',txt:'Açaí 500ml com granola e morango 🍓',valor:'R$ 29,50'},
-    {nome:'',txt:'Anotado, Pedro! Já entrou na produção 🚀',me:true},
-    {nome:'Bia',txt:'Vocês têm combo pra 2 pessoas hoje?',valor:''}
-  ];
-  var started=false;
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      if(e.isIntersecting && !started){
-        started=true;
-        msgs.forEach(function(m,i){
-          setTimeout(function(){
-            var d=document.createElement('div');
-            d.className='msg'+(m.me?' me':'');
-            d.innerHTML=(m.nome?'<span class="nm">'+m.nome+'</span>':'')+m.txt+(m.valor?'<span class="price">'+m.valor+'</span>':'');
-            chat.appendChild(d);
-            chat.scrollTop=chat.scrollHeight;
-          }, i*750);
-        });
-      }
-    });
-  },{threshold:.4});
-  io.observe(chat);
-})();
+  // --- reveal ---
+  function observarReveal(){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.1});
+    document.querySelectorAll('.rv:not(.in)').forEach(function(el){ io.observe(el); });
+    iniciarChat();
+  }
 
-/* ---------- FAQ ---------- */
-document.querySelectorAll('.q button').forEach(function(b){
-  b.addEventListener('click',function(){
-    var q=b.parentElement, a=q.querySelector('.a');
-    var open=q.classList.contains('open');
-    document.querySelectorAll('.q').forEach(function(o){ o.classList.remove('open'); o.querySelector('.a').style.maxHeight=null; });
+  // --- chat WhatsApp ---
+  var chatOn=false;
+  function iniciarChat(){
+    var chat=document.getElementById('chat');
+    if(!chat||chatOn) return;
+    var msgs=[
+      {n:'João',t:'Boa noite! Quero 1 artesanal duplo + fritas 🍔',p:'R$ 52,90'},
+      {n:'',t:'Fechado, João! Pedido confirmado ✅ Sai em 35 min.',me:1},
+      {n:'Maria',t:'Oi! Pizza calabresa grande e uma Coca 2L 🍕',p:'R$ 74,00'},
+      {n:'Pedro',t:'Açaí 500ml com granola e morango 🍓',p:'R$ 29,50'},
+      {n:'',t:'Anotado, Pedro! Já entrou na produção 🚀',me:1},
+      {n:'Bia',t:'Vocês têm combo pra 2 pessoas hoje?',p:''}
+    ];
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting&&!chatOn){
+          chatOn=true;
+          msgs.forEach(function(m,i){
+            setTimeout(function(){
+              var d=document.createElement('div');
+              d.className='msg'+(m.me?' me':'');
+              d.innerHTML=(m.n?'<span class="nm">'+m.n+'</span>':'')+m.t+(m.p?'<span class="pr">'+m.p+'</span>':'');
+              chat.appendChild(d); chat.scrollTop=chat.scrollHeight;
+            }, i*750);
+          });
+        }
+      });
+    },{threshold:.4});
+    io.observe(chat);
+  }
+
+  // --- FAQ ---
+  document.addEventListener('click',function(ev){
+    var b=ev.target.closest('.q button'); if(!b) return;
+    var q=b.parentElement,a=q.querySelector('.a'),open=q.classList.contains('open');
+    document.querySelectorAll('.q').forEach(function(o){o.classList.remove('open');o.querySelector('.a').style.maxHeight=null;});
     if(!open){ q.classList.add('open'); a.style.maxHeight=a.scrollHeight+'px'; }
   });
-});
+})();
 </script>
 
-<!-- PIXEL — cole aqui o código do Meta Pixel / GA4 -->
+<!-- PIXEL — cole aqui o Meta Pixel / GA4 -->
 
 </body>
 </html>
