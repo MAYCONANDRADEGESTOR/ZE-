@@ -1,534 +1,815 @@
 <!DOCTYPE html>
 <html lang="pt-br" translate="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="google" content="notranslate">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Zé Delivery - Faça seu pedido!</title>
-    <meta name="description" content="Faça seu pedido online no Zé Delivery. Acesse e peça agora pelo delivery food!">
-    <meta name="theme-color" content="#ffcc01">
-    <meta name="apple-mobile-web-app-capacity" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar" content="#ffcc01">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#ffcc01">
-    <meta name="apple-mobile-web-app-title" content="Zé Delivery">
-    
-    <link rel="shortcut icon" type="image/jpg" href="images/Ze%cc%81_Delivery.jpg">
-    <link type="text/css" href="css/DWTy1hlbbW56.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <!-- Meta Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1556112729223844');
-        fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1556112729223844&ev=PageView&noscript=1"/>
-    </noscript>
-
-    <!-- UTMify Pixel -->
-    <script>
-        window.pixelId = "6a55a89513c562d5a1b8934f";
-        var a = document.createElement("script");
-        a.setAttribute("async", "");
-        a.setAttribute("defer", "");
-        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-        document.head.appendChild(a);
-    </script>
-
-    <!-- SweetAlert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <style type="text/css">
-        h1, h2 { color: #ffcc01; }
-        header#topo .cover { background-color: #ffcc01; }
-        header#topo .info h1 { color: #ffcc01; }
-        header#topo .info .icones a { color: #ffcc01; border-color: #ffcc01; }
-        header#topo .cover .logo { background: #ffcc01; }
-        header#topo #menuCategorias { background: #ffcc01; }
-        header#topo .categorias a { border-top-color: #ffcc01; }
-        footer { background: #ffcc01; padding: 20px 0; text-align: center; margin-top: 30px;}
-        .footer-content { max-width: 1200px; margin: 0 auto; padding: 0 15px; color: #333; font-size: 14px; }
-        .footer-content a { color: #333; text-decoration: none; font-weight: bold; margin: 0 10px; }
-        .footer-content a:hover { text-decoration: underline; }
-        footer#carrinho .container .icone span { color: #ffcc01; }
-        .btn, a.voltar, .btnSair, .btnFidelidade, .btnGoogle, .btnEmail, .btnSemCadastro { background: #ffcc01; }
-        .qtdeProduto i:hover { color: #ffcc01; }
-        .lista .item .col .nomeProduto { color: #ffcc01; }
-        main#lista .produtos .item a:hover { border: 2px solid #ffcc01; }
-        #pedido .entrega .radio label input[type="radio"]:checked, 
-        #pedido .entrega .radio label:hover { background: #ffcc01; }
-        #pedido .pagamentos input[type="radio"]:checked+label::before, 
-        #detalhesProduto .info2 .opcoes input[type="checkbox"]:checked+label::before, 
-        #pedido .trocarPontos input[type="checkbox"]:checked+label::before { background-color: #ffcc01; border: 2px solid #ffcc01; }
-        .selecionado { border: 2px solid #ffcc01; }
-        #meuCarrinho button.fechar, #rastreamento .registro span.passou { background: #ffcc01; }
-        span.estoque i { color: #ffcc01; }
-    </style>
+	<meta charset="UTF-8">
+	<!-- Meta Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '1556112729223844');
+		fbq('track', 'PageView');
+	</script>
+	<noscript>
+		<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1556112729223844&ev=PageView&noscript=1"/>
+	</noscript>
+	<!-- End Meta Pixel Code -->
+	
+	<script>
+		window.pixelId = "6a55a89513c562d5a1b8934f";
+		var a = document.createElement("script");
+		a.setAttribute("async", "");
+		a.setAttribute("defer", "");
+		a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+		document.head.appendChild(a);
+	</script>
+	
+	<meta name="google" content="notranslate">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/jpg" href="images/Ze%cc%81_Delivery.jpg">
+	<title>Zé Delivery - Faça seu pedido!</title>
+	<meta name="description" content="Faça seu pedido online no Zé Delivery . Acesse e peça agora pelo delivery food!">
+	<link type="text/css" href="css/DWTy1hlbbW56.css" rel="stylesheet">
+	
+	<style type="text/css">
+		h1, h2 { color: #ffcc01; }
+		header#topo .cover { background-color: #ffcc01; }
+		header#topo .info h1 { color: #ffcc01; }
+		header#topo .info .icones a { color: #ffcc01; border-color: #ffcc01; }
+		header#topo .cover .logo { background: #ffcc01; }
+		header#topo #menuCategorias { background: #ffcc01; }
+		header#topo .categorias a { border-top-color: #ffcc01; }
+		footer { background: #ffcc01; }
+		footer#carrinho .container .icone span { color: #ffcc01; }
+		.btn, a.voltar, .btnSair, .btnFidelidade, .btnGoogle, .btnEmail, .btnSemCadastro { background: #ffcc01; }
+		.qtdeProduto i:hover { color: #ffcc01; }
+		.lista .item .col .nomeProduto { color: #ffcc01; }
+		main#lista .produtos .item a:hover { border: 2px solid #ffcc01; }
+		#pedido .entrega .radio label input[type="radio"]:checked,
+		#pedido .entrega .radio label:hover { background: #ffcc01; }
+		#pedido .pagamentos input[type="radio"]:checked+label::before,
+		#detalhesProduto .info2 .opcoes input[type="checkbox"]:checked+label::before,
+		#pedido .trocarPontos input[type="checkbox"]:checked+label::before { background-color: #ffcc01; border: 2px solid #ffcc01; }
+		.selecionado { border: 2px solid #ffcc01; }
+		#meuCarrinho button.fechar, #rastreamento .registro span.passou { background: #ffcc01; }
+		span.estoque i { color: #ffcc01; }
+	</style>
+	
+	<meta name="theme-color" content="#ffcc01">
+	<meta name="apple-mobile-web-app-capacity" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar" content="#ffcc01">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#ffcc01">
+	<meta name="apple-mobile-web-app-title" content="Zé Delivery">
+	
+	<!-- SweetAlert2 -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <div id="opacidade" class="fechar"></div>
-    <div>
-        <!-- CABEÇALHO -->
-        <header id="topo">
-            <div class="cover main" style="background-image: url('images/unnamed-62-2940803311-e1726255279197.jpg');">
-                <div class="logo">
-                    <figure>
-                        <img src="images/Ze%cc%81_Delivery.jpg" alt="Zé Delivery" title="Zé Delivery">
-                    </figure>
-                </div>
-                <div class="borda"></div>
-            </div>
-            
-            <div class="container">
-                <div class="info">
-                    <h1>Zé Delivery</h1>
-                    <div class="icones">
-                        <a href="https://www.instagram.com/" title="Instagram" target="_blank">
-                            <i class="fab fa-instagram"></i> 
-                        </a>
-                        <a class="informacoes" href="#info" title="Info">
-                            <i class="fa-solid fa-info"></i>
-                        </a>
-                    </div>
-                    
-                    <div class="detalhe">
-                        <span><i class="fa-solid fa-coins"></i> Pedido Mínimo <b>R$ 10,00</b></span>
-                        <div>
-                            <span><i class="fa-solid fa-motorcycle"></i> <b>30-50</b> min</span> • <span style="color: #077c22">Grátis</span>
-                        </div>
-                    </div>
-                    
-                    <div class="detalhe" style="gap: 3px;">
-                        <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
-                        <span id="localCidade">Cidade</span> - <span id="localEstado">UF</span> • 1,6km de você
-                    </div>
-                    
-                    <div class="detalhe">
-                        <i class="fa fa-star" aria-hidden="true"></i><b>4,8</b> (2.226 avaliações)
-                    </div>
-                    
-                    <div class="aberto">
-                        <i class="fa-solid fa-circle btn-pisca"></i> 
-                        <span id="status-loja">ABERTO</span> 
-                        <i class="fa-regular fa-clock horario" id="icone-relogio" style="display: none;"></i> 
-                        <span class="horario" id="horario-fechamento" style="display: none;"></span>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="menuCategorias">
-                <div class="container">
-                    <div class="categorias">
-                        <a href="#pague-1-leve-2" title="Mais Vendidos"> Promoções apenas aqui no Site! 💛 </a>
-                    </div>
-                </div>
-            </div>
-        </header>
+	<div id="opacidade" class="fechar"></div>
+	<div>
+		<header id="topo">
+			<div class="cover main" style="background-image: url(images/unnamed-62-2940803311-e1726255279197.jpg);">
+				<div class="logo">
+					<figure>
+						<img src="images/Ze%cc%81_Delivery.jpg" alt="Zé Delivery" title="Zé Delivery">
+					</figure>
+				</div>
+				<div class="borda"></div>
+			</div>
+			<div class="container">
+				<div class="info">
+					<h1>Zé Delivery</h1>
+					<div class="icones">
+						<a href="https://www.instagram.com/" title="Instagram" target="_blank">
+							<i class="fab fa-instagram"></i>
+						</a>
+						<a class="informacoes" href="#info" title="Info">
+							<i class="fa-solid fa-info"></i>
+						</a>
+					</div>
+					<div class="detalhe">
+						<span><i class="fa-solid fa-coins"></i> Pedido Mínimo <b>R$ 10,00</b></span>
+						<div>
+							<span><i class="fa-solid fa-motorcycle"></i> <b>30-50</b> min</span> • <span style="color: #077c22">Grátis</span>
+						</div>
+					</div>
+					<div class="detalhe" style="gap: 3px;">
+						<i class="fa fa-map-marker-alt" aria-hidden="true"></i><span id="localCidade">Cidade</span> -
+						<span id="localEstado">UF</span> • 1,6km de você
+					</div>
+					<div class="detalhe">
+						<i class="fa fa-star" aria-hidden="true"></i><b>4,8</b> (2.226 avaliações)
+					</div>
+					<div class="aberto">
+						<i class="fa-solid fa-circle btn-pisca"></i>
+						<span id="status-loja">ABERTO</span>
+						<i class="fa-regular fa-clock horario" id="icone-relogio" style="display: none;"></i>
+						<span class="horario" id="horario-fechamento" style="display: none;"></span>
+					</div>
 
-        <!-- PRODUTOS -->
-        <main id="lista" style="padding-bottom: 0;">
-            <div class="container">
-                <div class="alert alert-success">
-                    <b>Entrega Grátis</b> para <b id="localCidade">sua região</b>!
-                </div>
-                <div class="alert alert-success" style="color: #ffcc01; outline: 2px solid #ffcc01;">
-                    Aproveite nossa <b>promoção com preços irresistíveis</b> igual cerveja gelada 🍻💛
-                </div>
+					<script>
+						function atualizarStatusLoja() {
+							const agora = new Date();
+							const horas = agora.getHours();
+							const statusLoja = document.getElementById("status-loja");
+							const iconeRelogio = document.getElementById("icone-relogio");
+							const horarioFechamento = document.getElementById("horario-fechamento");
 
-                <!-- CATEGORIA: MAIS VENDIDOS -->
-                <div id="Mais Vendidos" class="categoria">
-                    <h2>Combos Mais Vendidos</h2>
-                    <div class="produtos">
-                        <div class="item">
-                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SD6KW">
-                                <div class="texto">
-                                    <h3>Combo Tanqueray</h3>
-                                    <span>1 garrafa de tanqueray 750ml, 4 gelos saborizados e 4 energéticos!</span>
-                                    de <span class="precoPromocao">R$ 207,86</span> por <span class="preco">R$ 89,90</span>
-                                </div>
-                                <div class="fotoProduto">
-                                    <figure><img src="images/6.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="item">
-                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMAS">
-                                <div class="texto">
-                                    <h3>Combo Jack Daniels</h3>
-                                    <span>1 garrafa de Jack Daniels 700ml, 4 gelos saborizados e 4 energéticos!</span>
-                                    de <span class="precoPromocao">R$ 198,69</span> por <span class="preco">R$ 98,90</span>
-                                </div>
-                                <div class="fotoProduto">
-                                    <figure><img src="images/1.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
-                                </div>
-                            </a>
-                        </div>
+							if (horas >= 0 && horas < 2) {
+								statusLoja.textContent = "ABERTO";
+								horarioFechamento.textContent = "até 02:00";
+								iconeRelogio.style.display = "inline";
+								horarioFechamento.style.display = "inline";
+							} else if (horas >= 8 && horas < 23) {
+								statusLoja.textContent = "ABERTO";
+								iconeRelogio.style.display = "none";
+								horarioFechamento.style.display = "none";
+							} else {
+								statusLoja.textContent = "ABERTO";
+								iconeRelogio.style.display = "none";
+								horarioFechamento.style.display = "none";
+							}
+						}
+						atualizarStatusLoja();
+					</script>
+				</div>
+			</div>
+			<div id="menuCategorias">
+				<div class="container">
+					<div class="categorias">
+						<a href="#pague-1-leve-2" title="Mais Vendidos">
+							Promoções apenas aqui no Site! 💛
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main id="lista" style="padding-bottom: 0;">
+			<div class="container">
+				<div class="alert alert-success">
+					<b>Entrega Grátis</b> para <b id="localCidade">sua região</b>!
+				</div>
+				<div class="alert alert-success" style="color: #ffcc01;outline: 2px solid #ffcc01;">
+					Aproveite nossa <b>promoção com preços irresistíveis</b> igual cerveja gelada 🍻💛
+				</div>
+				
+				<div id="Mais Vendidos" class="categoria">
+					<h2>Combos Mais Vendidos</h2>
+					<div class="produtos">
+						<div class="item">
+							<a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SD6KW">
+								<div class="texto">
+									<h3>Combo Tanqueray</h3>
+									<span>1 garrafa de tanqueray 750ml, 4 gelos saborizados e 4 energéticos!</span>
+									de <span class="precoPromocao">R$ 207,86</span> por
+									<span class="preco"> R$ 89,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/6.png" width="110px" height="110px" loading="lazy" alt="Combo Tanqueray">
+									</figure>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMAS">
+								<div class="texto">
+									<h3>Combo Jack Daniels</h3>
+									<span>1 garrafa de Jack Daniels 700ml, 4 gelos saborizados e 4 energéticos!</span>
+									de <span class="precoPromocao">R$ 198,69</span> por
+									<span class="preco"> R$ 98,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/1.png" width="110px" height="110px" loading="lazy" alt="Combo Jack Daniels">
+									</figure>
+								</div>
+							</a>
+						</div>
+					</div>
+					
+					<div class="produtos">
+						<div class="item">
+							<a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMAT">
+								<div class="texto">
+									<h3>Combo Absolut</h3>
+									<span>1 garrafa de Absolut 750ml, 4 gelos saborizados e 4 energéticos!</span>
+									de <span class="precoPromocao">R$ 136,67</span> por
+									<span class="preco"> R$ 79,99 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/2.png" width="110px" height="110px" loading="lazy" alt="Combo Absolut">
+									</figure>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SD6PA">
+								<div class="texto">
+									<h3>Fardo de Heineken</h3>
+									<span>Fardo com 12 unidades de 474ml</span>
+									de <span class="precoPromocao">R$ 94,99</span> por
+									<span class="preco"> R$ 44,99 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/9.png" width="110px" height="110px" loading="lazy" alt="Fardo Heineken">
+									</figure>
+								</div>
+							</a>
+						</div>
+					</div>
+					
+					<div class="produtos">
+						<div class="item">
+							<a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMAX">
+								<div class="texto">
+									<h3>Fardo de budweiser</h3>
+									<span>Fardo com 12 unidades de 474ml</span>
+									de <span class="precoPromocao">R$ 74,76</span> por
+									<span class="preco"> R$ 39,99 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/10.png" width="110px" height="110px" loading="lazy" alt="Fardo Budweiser">
+									</figure>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMB0">
+								<div class="texto">
+									<h3>Fardo de Corona</h3>
+									<span>Fardo com 24 unidades de 330ml</span>
+									de <span class="precoPromocao">R$ 160,43</span> por
+									<span class="preco"> R$ 69,99 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/14.png" width="110px" height="110px" loading="lazy" alt="Fardo Corona">
+									</figure>
+								</div>
+							</a>
+						</div>
+						
+						<div class="item">
+							<a class="disponivel pulsar" href="https://checkout.comprereceba.store/VCCL1O8SCMB1" style="border: 2px solid #077c22;">
+								<div class="texto">
+									<span style="color: #ffffff; background: #ffcc01; padding: 2px 2px; margin-bottom: 2px; border-radius: 8px; text-align: center;"><b>MAIS VENDIDO 🧡</b></span>
+									<h3>Barril 5L - Chopp Heineken</h3>
+									<span>Barril 5L - Chopp Heineken para você poder aproveitar com a galera!</span>
+									<span style="color: #474747; background: #e8e8e8; padding: 10px 10px; margin-bottom: 2px; margin-top: 2px; border-radius: 8px; text-align: left; display: block;">Promoção valida enquanto durar o estoque! <b>Oferta ilimitada</b>!</span>
+									de <span class="precoPromocao">R$ 98,32</span> por
+									<span class="preco" style="font-size: 20px;"> <b style="background: #077c22; color: white; border-radius: 8px; padding: 0px 4px;">R$ 69,99</b> </span>
+									<span><i>Um dos combos mais pedidos da casa pelo seu custo-benefício!</i></span>
+									<span class="estoque" style="margin-top: 4px; display: block;">🔥 Apenas <b style="background: red; color: white; border-radius: 8px; padding: 0px 4px;"><span id="estoqueCombo">8</span> combos</b> com esse preço especial</span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/11.png" width="110px" height="110px" loading="lazy" alt="Barril Heineken">
+									</figure>
+								</div>
+							</a>
+						</div>
+						
+						<div class="alert alert-success" style="color: red;outline: 2px solid red; background-color: rgb(255, 217, 217);">
+							<b>A promoção vai acabar em:</b>
+							<div class="countdown" style="display: flex; gap: 15px; margin-top: 10px;">
+								<div class="box">
+									<span id="minutes">00</span>
+									<p>Minutos</p>
+								</div>
+								<div class="box">
+									<span id="seconds">00</span>
+									<p>Segundos</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="item">
+							<a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMB2">
+								<div class="texto">
+									<h3>Barril 5L - Chopp Budweiser</h3>
+									<span>Barril 5L - Chopp Budweiser </span>
+									de <span class="precoPromocao">R$ 88,54</span> por
+									<span class="preco"> R$ 59,99 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/13.png" width="110px" height="110px" loading="lazy" alt="Barril Budweiser">
+									</figure>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				
+				<div id="pague-1-leve-2-zero" class="categoria">
+					<h2>Produtos Gerais</h2>
+					<div class="produtos">
+						<div class="item">
+							<a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMB3">
+								<div class="texto">
+									<h3>Combo Red label</h3>
+									<span>1 Red Label 1L, 4 gelos saborizados e 4 energéticos!</span>
+									de <span class="precoPromocao">R$ 159,99</span> por
+									<span class="preco"> R$ 74,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/3.png" width="110px" height="110px" loading="lazy" alt="Combo Red Label">
+									</figure>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMB4">
+								<div class="texto">
+									<h3>Combo Beefeater</h3>
+									<span>1 Beefeater 750ml, 4 gelos saborizados e 4 energéticos!</span>
+									de <span class="precoPromocao">R$ 133,50</span> por
+									<span class="preco"> R$ 67,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/5.png" width="110px" height="110px" loading="lazy" alt="Combo Beefeater">
+									</figure>
+								</div>
+							</a>
+						</div>
+					</div>
+					
+					<div class="produtos">
+						<div class="item">
+							<a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SD66C">
+								<div class="texto">
+									<h3>Combo Smirnoff</h3>
+									<span>1 Smirnoff 998ml, 4 gelos saborizados e 4 energéticos!</span>
+									de <span class="precoPromocao">R$ 85,90</span> por
+									<span class="preco"> R$ 49,99 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/7.png" width="110px" height="110px" loading="lazy" alt="Combo Smirnoff">
+									</figure>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SD66D">
+								<div class="texto">
+									<h3>Combo Ballena</h3>
+									<span>1 Ballena 750ml, 4 gelos saborizados e 4 energéticos!</span>
+									de <span class="precoPromocao">R$ 229,99</span> por
+									<span class="preco"> R$ 129,90 </span>
+								</div>
+								<div class="fotoProduto">
+									<figure>
+										<img src="images/8.png" width="110px" height="110px" loading="lazy" alt="Combo Ballena">
+									</figure>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		
+		<main id="lista">
+			<div class="container">
+				<div class="alert">
+					<b style="font-size: 20px;">4,8</b><br>
+					<i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
+					<i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
+					<i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
+					<i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
+					<i class="fa fa-star-half-alt" aria-hidden="true" style="color: goldenrod;"></i>
+					<br>
+					<b>537 avaliações</b> • últimos 90 dias
+					<br>
+					<label style="color:gray">2.226 avaliações no total</label>
+				</div>
+				<div class="categoria">
+					<div class="produtos">
+						<!-- Avaliação 1 -->
+						<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
+							<div class="avaliacao" style="flex-grow: 1;">
+								<h3 style="margin: 0; font-size: 16px; color: #333;">Thales</h3>
+								<div style="display: flex; align-items: center;">
+									<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
+									<span class="estrelas" style="display: flex;">
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+									</span>
+									<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
+								</div>
+								<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Não demorou muito para chegar, veio muito bem embalado e protegido cada garrafa. Acabaram vazando um pouco, mas não é culpa do vendedor mas por causa como o produto foi transportado mas não afetou o produto. Estão lacradas com os lacres originais, produto original podem comprar. </p>
+							</div>
+							<div class="fotoProduto" style="margin-left: 15px;">
+								<figure style="margin: 0;">
+									<img src="images/PHOTO-2025-04-15-01-57-52.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+								</figure>
+							</div>
+						</div>
+						<!-- Avaliação 2 -->
+						<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
+							<div class="avaliacao" style="flex-grow: 1;">
+								<h3 style="margin: 0; font-size: 16px; color: #333;">Fernando</h3>
+								<div style="display: flex; align-items: center;">
+									<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
+									<span class="estrelas" style="display: flex;">
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+									</span>
+									<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
+								</div>
+								<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Sempre muito bem embalado e a entrega muito rápida. Produto original, podem comprar! Zé Delivery é confiança e qualidade!</p>
+							</div>
+							<div class="fotoProduto" style="margin-left: 15px;">
+								<figure style="margin: 0;">
+									<img src="images/PHOTO-2025-04-15-01-58-38.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+								</figure>
+							</div>
+						</div>
+						<!-- Avaliação 3 -->
+						<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
+							<div class="avaliacao" style="flex-grow: 1;">
+								<h3 style="margin: 0; font-size: 16px; color: #333;">Ricardo</h3>
+								<div style="display: flex; align-items: center;">
+									<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
+									<span class="estrelas" style="display: flex;">
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+									</span>
+									<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
+								</div>
+								<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Gostei muito entrega rápida ameiii de mas voltarei a compra sem dúvidas! Recomendo muito!!! Chegou em menos de 20 min aqui em casa</p>
+							</div>
+							<div class="fotoProduto" style="margin-left: 15px;">
+								<figure style="margin: 0;">
+									<img src="images/PHOTO-2025-04-15-01-59-15.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+								</figure>
+							</div>
+						</div>
+						<!-- Avaliação 4 -->
+						<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
+							<div class="avaliacao" style="flex-grow: 1;">
+								<h3 style="margin: 0; font-size: 16px; color: #333;">Gustavo</h3>
+								<div style="display: flex; align-items: center;">
+									<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
+									<span class="estrelas" style="display: flex;">
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+									</span>
+									<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
+								</div>
+								<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Já comprei outras vezes com o Zé Delivery. Super recomendo! Preço fantástico! Envio rápido! Caixa super bem embalada e protegida! Uma ressalva tb para o entregador (ao menos esse), super cuidadoso, entrega em mãos, sem dano nenhum na caixa! Recomendo!</p>
+							</div>
+							<div class="fotoProduto" style="margin-left: 15px;">
+								<figure style="margin: 0;">
+									<img src="images/PHOTO-2025-04-15-02-01-36.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+								</figure>
+							</div>
+						</div>
+						<!-- Avaliação 5 -->
+						<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
+							<div class="avaliacao" style="flex-grow: 1;">
+								<h3 style="margin: 0; font-size: 16px; color: #333;">Karol</h3>
+								<div style="display: flex; align-items: center;">
+									<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
+									<span class="estrelas" style="display: flex;">
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+									</span>
+									<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
+								</div>
+								<p style="margin: 5px 0 0; font-size: 14px; color: #555;">dSempre produtos originais, com selo e lacrados. Zé Delivery a melhor loja de bebidas da internet!!! Já comprei diversas vezes e garanto que os preços com os cupons ficam imbatíveis!!!</p>
+							</div>
+							<div class="fotoProduto" style="margin-left: 15px;">
+								<figure style="margin: 0;">
+									<img src="images/PHOTO-2025-04-15-02-03-00.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+								</figure>
+							</div>
+						</div>
+						<!-- Avaliação 6 -->
+						<div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd;">
+							<div class="avaliacao" style="flex-grow: 1;">
+								<h3 style="margin: 0; font-size: 16px; color: #333;">Marcos</h3>
+								<div style="display: flex; align-items: center;">
+									<span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
+									<span class="estrelas" style="display: flex;">
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+										<i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+									</span>
+									<span class="data" style="margin-left: auto; font-size: 12px; color: #888;"></span>
+								</div>
+								<p style="margin: 5px 0 0; font-size: 14px; color: #555;">Maravilhoso e original, gostei bastante do produto e da entrega rápida do zé delivery!!</p>
+							</div>
+							<div class="fotoProduto" style="margin-left: 15px;">
+								<figure style="margin: 0;">
+									<img src="images/PHOTO-2025-04-15-02-04-34.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+								</figure>
+							</div>
+						</div>
+						<!-- Modal da Imagem -->
+						<div id="modalImagem" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); justify-content: center; align-items: center;">
+							<img id="imagemExpandida" style="max-width: 90%; max-height: 90%; border-radius: 10px;">
+						</div>
+						<script>
+							function formatarDataHoje() {
+								let hoje = new Date();
+								let dia = String(hoje.getDate()).padStart(2, '0');
+								let mes = String(hoje.getMonth() + 1).padStart(2, '0');
+								let ano = hoje.getFullYear();
+								return `${dia}/${mes}/${ano}`;
+							}
+							document.querySelectorAll('.data-atual').forEach(el => {
+								el.innerText = formatarDataHoje();
+							});
+							function expandirImagem(img) {
+								let modal = document.getElementById("modalImagem");
+								let imagemExpandida = document.getElementById("imagemExpandida");
+								imagemExpandida.src = img.src;
+								modal.style.display = "flex";
+								modal.onclick = function() {
+									modal.style.display = "none";
+								}
+							}
+						</script>
+					</div>
+				</div>
+			</div>
+		</main>
+		
+		<!-- NOVO RODAPÉ ADICIONADO AQUI, DENTRO DA DIV PRINCIPAL -->
+		<footer style="background-color: #ffcc01; padding: 25px 15px; text-align: center; margin-top: 40px; border-top: 2px solid #e0b400;">
+			<div style="max-width: 1200px; margin: 0 auto; color: #333; font-family: Arial, sans-serif;">
+				<h3 style="margin: 0 0 10px 0; color: #333; font-size: 18px;">Zé Delivery</h3>
+				<p style="margin: 0; font-weight: bold; font-size: 14px;">Todos os direitos reservados &copy; 2026</p>
+				<p style="margin: 8px 0 0; font-size: 13px;">Beba com moderação. Venda e consumo proibidos para menores de 18 anos.</p>
+				<div style="margin-top: 15px; font-size: 13px;">
+					<a href="#" style="color: #333; text-decoration: none; margin: 0 8px;">Termos de Uso</a> |
+					<a href="#" style="color: #333; text-decoration: none; margin: 0 8px;">Política de Privacidade</a> |
+					<a href="#" style="color: #333; text-decoration: none; margin: 0 8px;">Trabalhe Conosco</a>
+				</div>
+			</div>
+		</footer>
 
-                        <div class="item">
-                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMAT">
-                                <div class="texto">
-                                    <h3>Combo Absolut</h3>
-                                    <span>1 garrafa de Absolut 750ml, 4 gelos saborizados e 4 energéticos!</span>
-                                    de <span class="precoPromocao">R$ 136,67</span> por <span class="preco">R$ 79,99</span>
-                                </div>
-                                <div class="fotoProduto">
-                                    <figure><img src="images/2.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="item">
-                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SD6PA">
-                                <div class="texto">
-                                    <h3>Fardo de Heineken</h3>
-                                    <span>Fardo com 12 unidades de 474ml</span>
-                                    de <span class="precoPromocao">R$ 94,99</span> por <span class="preco">R$ 44,99</span>
-                                </div>
-                                <div class="fotoProduto">
-                                    <figure><img src="images/9.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="item">
-                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMAX">
-                                <div class="texto">
-                                    <h3>Fardo de budweiser</h3>
-                                    <span>Fardo com 12 unidades de 474ml</span>
-                                    de <span class="precoPromocao">R$ 74,76</span> por <span class="preco">R$ 39,99</span>
-                                </div>
-                                <div class="fotoProduto">
-                                    <figure><img src="images/10.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="item">
-                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMB0">
-                                <div class="texto">
-                                    <h3>Fardo de Corona</h3>
-                                    <span>Fardo com 24 unidades de 330ml</span>
-                                    de <span class="precoPromocao">R$ 160,43</span> por <span class="preco">R$ 69,99</span>
-                                </div>
-                                <div class="fotoProduto">
-                                    <figure><img src="images/14.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="item">
-                            <a class="disponivel pulsar" href="https://checkout.comprereceba.store/VCCL1O8SCMB1" style="border: 2px solid #077c22;">
-                                <div class="texto">
-                                    <span style="color: #ffffff; background: #ffcc01; padding: 2px; margin-bottom: 2px; border-radius: 8px; text-align: center;"><b>MAIS VENDIDO 🧡</b></span>
-                                    <h3>Barril 5L - Chopp Heineken</h3>
-                                    <span>Barril 5L - Chopp Heineken para você poder aproveitar com a galera!</span>
-                                    <span style="color: #474747; background: #e8e8e8; padding: 10px; margin: 2px 0; border-radius: 8px; text-align: left; display:block;">Promoção valida enquanto durar o estoque! <b>Oferta ilimitada</b>!</span>
-                                    de <span class="precoPromocao">R$ 98,32</span> por <span class="preco" style="font-size: 20px;"> <b style="background: #077c22; color: white; border-radius: 8px; padding: 0 4px;">R$ 69,99</b> </span>
-                                    <span class="estoque" style="margin-top: 4px; display:block;">🔥 Apenas <b style="background: red; color: white; border-radius: 8px; padding: 0 4px;"><span id="estoqueCombo">8</span> combos</b> com esse preço especial</span>
-                                </div>
-                                <div class="fotoProduto">
-                                    <figure><img src="images/11.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- ALERTA DE COUNTDOWN -->
-                        <div class="alert alert-success" style="color: red; outline: 2px solid red; background-color: rgb(255, 217, 217); width: 100%;">
-                            <b>A promoção vai acabar em:</b>
-                            <div class="countdown" style="display: flex; gap: 10px; margin-top: 10px;">
-                                <div class="box">
-                                    <span id="minutes">00</span>
-                                    <p>Minutos</p>
-                                </div>
-                                <div class="box">
-                                    <span id="seconds">00</span>
-                                    <p>Segundos</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMB2">
-                                <div class="texto">
-                                    <h3>Barril 5L - Chopp Budweiser</h3>
-                                    <span>Barril 5L - Chopp Budweiser</span>
-                                    de <span class="precoPromocao">R$ 88,54</span> por <span class="preco">R$ 59,99</span>
-                                </div>
-                                <div class="fotoProduto">
-                                    <figure><img src="images/13.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CATEGORIA: PRODUTOS GERAIS -->
-                <div id="pague-1-leve-2-zero" class="categoria">
-                    <h2>Produtos Gerais</h2>
-                    <div class="produtos">
-                        <div class="item">
-                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMB3">
-                                <div class="texto">
-                                    <h3>Combo Red label</h3>
-                                    <span>1 Red Label 1L, 4 gelos saborizados e 4 energéticos!</span>
-                                    de <span class="precoPromocao">R$ 159,99</span> por <span class="preco">R$ 74,90</span>
-                                </div>
-                                <div class="fotoProduto">
-                                    <figure><img src="images/3.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="item">
-                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMB4">
-                                <div class="texto">
-                                    <h3>Combo Beefeater</h3>
-                                    <span>1 Beefeater 750ml, 4 gelos saborizados e 4 energéticos!</span>
-                                    de <span class="precoPromocao">R$ 133,50</span> por <span class="preco">R$ 67,90</span>
-                                </div>
-                                <div class="fotoProduto">
-                                    <figure><img src="images/5.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="item">
-                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SD66C">
-                                <div class="texto">
-                                    <h3>Combo Smirnoff</h3>
-                                    <span>1 Smirnoff 998ml, 4 gelos saborizados e 4 energéticos!</span>
-                                    de <span class="precoPromocao">R$ 85,90</span> por <span class="preco">R$ 49,99</span>
-                                </div>
-                                <div class="fotoProduto">
-                                    <figure><img src="images/7.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="item">
-                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SD66D">
-                                <div class="texto">
-                                    <h3>Combo Ballena</h3>
-                                    <span>1 Ballena 750ml, 4 gelos saborizados e 4 energéticos!</span>
-                                    de <span class="precoPromocao">R$ 229,99</span> por <span class="preco">R$ 129,90</span>
-                                </div>
-                                <div class="fotoProduto">
-                                    <figure><img src="images/8.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!-- AVALIAÇÕES -->
-        <main id="avaliacoes">
-            <div class="container">
-                <div class="alert">
-                    <b style="font-size: 20px;">4,8</b><br>
-                    <i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
-                    <i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
-                    <i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
-                    <i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
-                    <i class="fa fa-star-half-alt" aria-hidden="true" style="color: goldenrod;"></i>
-                    <br>
-                    <b>537 avaliações</b> • últimos 90 dias
-                    <br>
-                    <label style="color:gray">2.226 avaliações no total</label>
-                </div>
-                
-                <div class="categoria">
-                    <div class="produtos">
-                        
-                        <!-- Avaliação 1 -->
-                        <div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd; width: 100%;">
-                            <div class="avaliacao" style="flex-grow: 1;">
-                                <h3 style="margin: 0; font-size: 16px; color: #333;">Thales</h3>
-                                <div style="display: flex; align-items: center;">
-                                    <span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
-                                    <span class="estrelas" style="display: flex;">
-                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
-                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
-                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
-                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
-                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
-                                    </span>
-                                </div>
-                                <p style="margin: 5px 0 0; font-size: 14px; color: #555;">Não demorou muito para chegar, veio muito bem embalado e protegido cada garrafa...</p>
-                            </div>
-                            <div class="fotoProduto" style="margin-left: 15px;">
-                                <figure style="margin: 0;">
-                                    <img src="images/PHOTO-2025-04-15-01-57-52.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
-                                </figure>
-                            </div>
-                        </div>
-
-                        <!-- Avaliação 2 -->
-                        <div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd; width: 100%;">
-                            <div class="avaliacao" style="flex-grow: 1;">
-                                <h3 style="margin: 0; font-size: 16px; color: #333;">Fernando</h3>
-                                <div style="display: flex; align-items: center;">
-                                    <span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
-                                    <span class="estrelas" style="display: flex;">
-                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
-                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
-                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
-                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
-                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
-                                    </span>
-                                </div>
-                                <p style="margin: 5px 0 0; font-size: 14px; color: #555;">Sempre muito bem embalado e a entrega muito rápida. Produto original, podem comprar!</p>
-                            </div>
-                            <div class="fotoProduto" style="margin-left: 15px;">
-                                <figure style="margin: 0;">
-                                    <img src="images/PHOTO-2025-04-15-01-58-38.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!-- RODAPÉ ADICIONADO -->
-        <footer>
-            <div class="footer-content">
-                <p><strong>Zé Delivery</strong> - Todos os direitos reservados &copy; 2026</p>
-                <div style="margin-top: 15px;">
-                    <a href="#">Termos de Uso</a> |
-                    <a href="#">Política de Privacidade</a> |
-                    <a href="#">Trabalhe Conosco</a>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Modal de Informações -->
-        <div id="info">
-            <a class="fechar" href="#fechar"><i class="far fa-times-circle fa-2x"></i></a>
-            <h2>Tipos de Entrega</h2>
-            <i class="fa-solid fa-motorcycle"></i> Entrega Motoboy<br>
-            <i class="fa-solid fa-box"></i> Retirada<br><br>
-            
-            <h2>Formas de Pagamento</h2>
-            <i class="fa-regular fa-circle-check"></i> Pix<br><br>
-            
-            <h2>Endereço</h2>
-            <span id="localCidade">cidade</span> - <span id="localEstado">UF</span><br><br>
-            
-            <h2>Áreas de Entrega</h2>
-            <h3><span id="localCidade">cidade</span> - <span id="localEstado">UF</span></h3>
-            GRÁTIS (hoje)<br><br>
-        </div>
-    </div>
-
-    <!-- SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script>if (window.jQuery && !jQuery.fn.mask) { jQuery.fn.mask = function () { return this; };}</script>
-
-    <script>
-        // Status Loja
-        function atualizarStatusLoja() {
-            const agora = new Date();
-            const horas = agora.getHours();
-            const statusLoja = document.getElementById("status-loja");
-            const iconeRelogio = document.getElementById("icone-relogio");
-            const horarioFechamento = document.getElementById("horario-fechamento");
-
-            if (horas >= 0 && horas < 2) {
-                statusLoja.textContent = "ABERTO";
-                horarioFechamento.textContent = "até 02:00";
-                iconeRelogio.style.display = "inline";
-                horarioFechamento.style.display = "inline";
-            } else {
-                statusLoja.textContent = "ABERTO";
-                iconeRelogio.style.display = "none";
-                horarioFechamento.style.display = "none";
-            }
-        }
-        atualizarStatusLoja();
-
-        // Contagem Regressiva
-        function updateCountdown() {
-            const now = new Date();
-            const nextMidnight = new Date();
-            nextMidnight.setHours(24, 0, 0, 0); 
-            const diff = nextMidnight - now;
-            
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            document.querySelectorAll("#minutes").forEach(el => el.textContent = String(minutes).padStart(2, "0"));
-            document.querySelectorAll("#seconds").forEach(el => el.textContent = String(seconds).padStart(2, "0"));
-        }
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-
-        // Notificações Aleatórias
-        function escolherFraseAleatoria() {
-            const frases = [
-                "🎉 <b>Lucas</b> acabou de comprar o Combo de whisky com gelo de coco!",
-                "🚀 <b>Ana</b> garantiu o Combo Zero álcool há 2 minutos!",
-                "🔥 <b>Fernando</b> comprou o Combo de 2 fardos de Brahma há poucos instantes!"
-            ];
-            return frases[Math.floor(Math.random() * frases.length)];
-        }
-        function mostrarNotificacao(frase) {
-            if (!Swal.isVisible()) {
-                Swal.mixin({ toast: true, position: "bottom-end", showConfirmButton: false, timer: 6500, timerProgressBar: true })
-                    .fire({ icon: "success", title: frase });
-            }
-        }
-        setInterval(() => mostrarNotificacao(escolherFraseAleatoria()), 25000);
-
-        // Diminuir Estoque
-        function diminuirEstoque() {
-            document.querySelectorAll("#estoqueCombo").forEach(elemento => {
-                let estoqueAtual = parseInt(elemento.textContent, 10);
-                if (estoqueAtual > 1) {
-                    elemento.textContent = estoqueAtual - 1;
-                }
-            });
-        }
-        setInterval(diminuirEstoque, 15000);
-
-        // Sistema de Localização Simples
-        function setCookie(name, value, days) {
-            let expires = new Date(Date.now() + days * 864e5).toUTCString();
-            document.cookie = `${name}=${value}; expires=${expires}; path=/`;
-        }
-        function getCookie(name) {
-            return document.cookie.split('; ').reduce((acc, cookie) => {
-                let [key, val] = cookie.split('=');
-                return key === name ? val : acc;
-            }, "");
-        }
-        async function fetchLocation() {
-            try {
-                let response = await fetch('https://get.geojs.io/v1/ip/geo.json');
-                let data = await response.json();
-                return { city: data.city || "Sua Cidade", region: data.region || "UF" };
-            } catch (error) { return { city: "Local Desconhecido", region: "Local Desconhecido" }; }
-        }
-        async function atualizarLocalizacao() {
-            let cidade = getCookie("localCidade");
-            let estado = getCookie("localEstado");
-            if (!cidade || !estado) { ({ city: cidade, region: estado } = await fetchLocation()); }
-            document.querySelectorAll("#localCidade").forEach(el => el.textContent = cidade);
-            document.querySelectorAll("#localEstado").forEach(el => el.textContent = estado);
-        }
-        atualizarLocalizacao();
-    </script>
+		<div id="produto"></div>
+		<div id="info">
+			<a class="fechar" href="#fechar"><i class="far fa-times-circle fa-2x"></i></a>
+			<h2>Tipos de Entrega</h2>
+			<i class="fa-solid fa-motorcycle"></i> Entrega Motoboy<br>
+			<i class="fa-solid fa-box"></i> Retirada<br>
+			<br>
+			<h2>Formas de Pagamento</h2>
+			<i class="fa-regular fa-circle-check"></i> Pix<br>
+			<br>
+			<h2>Endereço</h2>
+			<span id="localCidade">cidade</span> - <span id="localEstado">UF</span><br>
+			<br>
+			<h2>Áreas de Entrega</h2>
+			<h3><span id="localCidade">cidade</span> - <span id="localEstado">UF</span></h3>
+			GRÁTIS (hoje)<br>
+			<br>
+		</div>
+	</div>
+	
+	<!-- SCRIPTS MANTIDOS DO ORIGINAL -->
+	<script src="js/kdZDShiBfMEM.js"></script>
+	<script type="text/javascript" src="js/9VzmrKoyngwA.js"></script>
+	<script type="text/javascript">
+		$('.mostrarHorario').on('click', function () {
+			$('.horarios').toggle('slow');
+		});
+	</script>
+	<script type="text/javascript">
+		function updateCountdown() {
+			const now = new Date();
+			const nextMidnight = new Date();
+			nextMidnight.setHours(24, 0, 0, 0); 
+			const diff = nextMidnight - now;
+			const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+			const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+			const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+			document.querySelectorAll("#minutes").forEach(el => el.textContent = String(minutes).padStart(2, "0"));
+			document.querySelectorAll("#seconds").forEach(el => el.textContent = String(seconds).padStart(2, "0"));
+		}
+		setInterval(updateCountdown, 1000);
+		updateCountdown();
+	</script>
+	<script src="js/w4feoOc7si5s.js" data-auto-replace-svg="nest" defer="" type="text/javascript"></script>
+	<script src="js/Ls7fW4JrkfJG.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		function escolherFraseAleatoria() {
+			const frases = [
+				"🎉 <b>Lucas</b> acabou de comprar o Combo de whisky com gelo de coco!",
+				"🚀 <b>Ana</b> garantiu o Combo Zero álcool há 2 minutos!",
+				"🍨 <b>Rafaela</b> finalizou a compra do Kit churrasco agora!",
+				"🔥 <b>Fernando</b> comprou o Combo de 2 fardos de Brahma há poucos instantes!",
+				"😋 <b>Isabela</b> adicionou um Combo de 2 garrafas ao carrinho!",
+				"⏳ <b>Bruno</b> comprou o Combo 3! Restam poucas unidades!",
+				"📦 <b>João</b> pediu 1 fardo de Corona agora mesmo!",
+				"🏆 <b>Mirella</b> garantiu o Combo Mais Vendido – 2 combos de Tanqueray com gelinho!",
+				"🚨 <b>Atenção</b>! Mais de <b>15 pedidos</b> nos últimos 10 minutos!",
+				"🔥 Nas últimas 2 horas, 37 pessoas compraram nossos combos de Tanqueray!",
+				"⚡ Acabamos de bater 100 pedidos só hoje!",
+				"⏳ Apenas 4 unidades do Combo 3 restantes! Corra antes que acabe!",
+				"🚀 +20 pedidos feitos nos últimos 30 minutos! Zé bombando!",
+				"🍨 Os combos de Corona estão esgotando rápido! Aproveite agora!",
+				"🎯 Mais de 250 clientes satisfeitos nos últimos 7 dias!",
+				"💛 Obrigado! Mais de 500 pedidos já saíram esse mês!",
+				"🚀 Só hoje, 73 clientes garantiram seu combo de Tanqueray!",
+				"⏳ O estoque do Combo 3 está quase esgotando! Últimas unidades!",
+				"🎉 Promoção Pague 1 Leve 2 está fazendo sucesso! +40 pedidos só hoje!"
+			];
+			const indiceAleatorio = Math.floor(Math.random() * frases.length);
+			return frases[indiceAleatorio];
+		}
+		function mostrarNotificacao(frase) {
+			if (!Swal.isVisible()) {
+				const Toast = Swal.mixin({
+					toast: true,
+					position: "bottom-end",
+					showConfirmButton: false,
+					timer: 6500,
+					timerProgressBar: true,
+				});
+				Toast.fire({
+					icon: "success",
+					title: frase
+				});
+			}
+		}
+		setInterval(() => {
+			const fraseAleatoria = escolherFraseAleatoria();
+			mostrarNotificacao(fraseAleatoria);
+		}, 25000);
+	</script>
+	<script>
+		function diminuirEstoque() {
+			document.querySelectorAll("#estoqueCombo").forEach(elemento => {
+				let estoqueAtual = parseInt(elemento.textContent, 10);
+				if (estoqueAtual > 1) {
+					elemento.textContent = estoqueAtual - 1;
+				}
+			});
+		}
+		setInterval(diminuirEstoque, 15000);
+	</script>
+	<script>
+		function setCookie(name, value, days) {
+			let expires = new Date(Date.now() + days * 864e5).toUTCString();
+			document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+		}
+		function getCookie(name) {
+			return document.cookie.split('; ').reduce((acc, cookie) => {
+				let [key, val] = cookie.split('=');
+				return key === name ? val : acc;
+			}, "");
+		}
+		function checkCookie(nome) {
+			return getCookie(nome) !== "";
+		}
+		async function fetchLocation() {
+			try {
+				let response = await fetch('https://get.geojs.io/v1/ip/geo.json');
+				let { city = "Local Desconhecido", region = "Local Desconhecido" } = await response.json();
+				return { city, region };
+			} catch (error) {
+				console.error('Erro ao obter a localização:', error);
+				return { city: "Local Desconhecido", region: "Local Desconhecido" };
+			}
+		}
+		const estados = {
+			"Rondônia": "RO", "Acre": "AC", "Amazonas": "AM", "Roraima": "RR", "Pará": "PA",
+			"Amapá": "AP", "Tocantins": "TO", "Maranhão": "MA", "Piauí": "PI", "Ceará": "CE",
+			"Rio Grande do Norte": "RN", "Paraíba": "PB", "Pernambuco": "PE", "Alagoas": "AL", "Sergipe": "SE",
+			"Bahia": "BA", "Minas Gerais": "MG", "Espírito Santo": "ES", "Rio de Janeiro": "RJ", "São Paulo": "SP",
+			"Paraná": "PR", "Santa Catarina": "SC", "Rio Grande do Sul": "RS", "Mato Grosso do Sul": "MS", "Mato Grosso": "MT",
+			"Goiás": "GO", "Distrito Federal": "DF"
+		};
+		const estados_input = {
+			RO: "Rondônia", AC: "Acre", AM: "Amazonas", RR: "Roraima", PA: "Pará", AP: "Amapá", TO: "Tocantins",
+			MA: "Maranhão", PI: "Piauí", CE: "Ceará", RN: "Rio Grande do Norte", PB: "Paraíba", PE: "Pernambuco",
+			AL: "Alagoas", SE: "Sergipe", BA: "Bahia", MG: "Minas Gerais", ES: "Espírito Santo", RJ: "Rio de Janeiro",
+			SP: "São Paulo", PR: "Paraná", SC: "Santa Catarina", RS: "Rio Grande do Sul", MS: "Mato Grosso do Sul",
+			MT: "Mato Grosso", GO: "Goiás", DF: "Distrito Federal",
+		}
+		const cidades_por_estados = [
+			["RO", "Alta Floresta D'oeste"], ["RO", "Ariquemes"], ["RO", "Porto Velho"],
+			["AC", "Rio Branco"], ["AM", "Manaus"], ["RR", "Boa Vista"], ["PA", "Belém"],
+			["AP", "Macapá"], ["TO", "Palmas"], ["MA", "São Luís"], ["PI", "Teresina"],
+			["CE", "Fortaleza"], ["RN", "Natal"], ["PB", "João Pessoa"], ["PE", "Recife"],
+			["AL", "Maceió"], ["SE", "Aracaju"], ["BA", "Salvador"], ["MG", "Belo Horizonte"],
+			["ES", "Vitória"], ["RJ", "Rio de Janeiro"], ["SP", "São Paulo"], ["PR", "Curitiba"],
+			["SC", "Florianópolis"], ["RS", "Porto Alegre"], ["MS", "Campo Grande"], ["MT", "Cuiabá"],
+			["GO", "Goiânia"], ["DF", "Brasília"]
+		]
+		async function atualizarLocalizacao() {
+			let cidade = getCookie("localCidade");
+			let estado = getCookie("localEstado");
+			if (!cidade || !estado) {
+				({ city: cidade, region: estado } = await fetchLocation());
+			}
+			document.querySelectorAll("#localCidade").forEach(el => el.textContent = cidade);
+			document.querySelectorAll("#localEstado").forEach(el => el.textContent = estado);
+		}
+		async function escolherLocalizacao() {
+			await atualizarLocalizacao();
+			if (checkCookie("localCidade") && checkCookie("localEstado")) {
+				return;
+			}
+			let buscarLocalizacao = (await fetchLocation());
+			let estado = buscarLocalizacao.region;
+			let cidadeTemp = buscarLocalizacao.city;
+			let uf = estados[estado] || "";
+			let { value: estadoEscolhido } = await Swal.fire({
+				title: "Procure a loja mais próxima de você!",
+				text: "Escolha seu estado:",
+				input: "select",
+				inputOptions: estados_input,
+				inputPlaceholder: "Escolha seu estado",
+				inputValue: uf,
+				confirmButtonText: "Próximo",
+				confirmButtonColor: "green",
+				allowOutsideClick: false,
+				allowEscapeKey: false,
+				inputValidator: value => value ? undefined : "Por favor, escolha seu estado."
+			});
+			setCookie("localEstado", estadoEscolhido, 365);
+			var quais_opt_de_cidade = []
+			cidades_por_estados.forEach((item, index) => {
+				if (item[0] == estadoEscolhido) {
+					quais_opt_de_cidade.push(item[1])
+				}
+			});
+			let { value: cidadeEscolhida } = await Swal.fire({
+				title: "Estamos quase lá...",
+				text: "Agora, selecione sua cidade:",
+				input: "select",
+				inputOptions: quais_opt_de_cidade,
+				inputValue: quais_opt_de_cidade.indexOf(cidadeTemp),
+				confirmButtonText: "Procurar loja mais próxima!",
+				confirmButtonColor: "green",
+				allowOutsideClick: false,
+				allowEscapeKey: false,
+				inputValidator: value => value ? undefined : "Por favor, escolha sua cidade.",
+				didOpen: () => {
+					document.querySelector('.swal2-html-container').innerHTML =
+						"Agora, <b style='font-size: 18px; color: red;'>selecione sua cidade:</b>";
+				}
+			});
+			cidadeEscolhida = quais_opt_de_cidade[cidadeEscolhida];
+			setCookie("localCidade", cidadeEscolhida, 365);
+			Swal.fire({
+				title: "Procurando a loja mais próxima...",
+				html: `Procurando a loja mais próxima de você em <b>${cidadeEscolhida}</b>...`,
+				timer: 5000,
+				timerProgressBar: true,
+				allowOutsideClick: false,
+				didOpen: () => Swal.showLoading(),
+			}).then(() => {
+				Swal.fire({
+					html: `A loja mais próxima fica a <b>1,6km</b> de você! Seu pedido chegará entre 30 a 50 minutos.`,
+					icon: "success",
+					confirmButtonText: "Olhar cardápio de ofertas!",
+					confirmButtonColor: "green",
+					allowOutsideClick: false,
+				}).then(atualizarLocalizacao);
+			});
+		}
+		escolherLocalizacao();
+	</script>
+	<!-- jQuery (obrigatório) -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- jQuery Mask (evita o crash do JS) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+	<!-- SweetAlert2 (garante que o Swal existe) -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<!-- Fallback de segurança (caso mask falhe) -->
+	<script>if (window.jQuery && !jQuery.fn.mask) {  jQuery.fn.mask = function () { return this; };}</script>
 </body>
 </html>
