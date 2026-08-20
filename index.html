@@ -1,398 +1,277 @@
 <!DOCTYPE html>
-<html data-dpl-id="dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh" lang="pt-BR" class="inter_786c1081-module__J60SBq__variable h-full scroll-smooth antialiased">
+<html lang="pt-BR" class="h-full scroll-smooth antialiased">
 <head>
-  <meta charSet="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link rel="preload" as="image" imageSrcSet="/_next/image?url=%2Flogo-compacta-escura.png&amp;w=1080&amp;q=75&amp;dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh 1x, /_next/image?url=%2Flogo-compacta-escura.png&amp;w=2048&amp;q=75&amp;dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh 2x"/>
-  <link rel="stylesheet" href="/_next/static/chunks/2dumt--oibn1d.css?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh" data-precedence="next"/>
-  <link rel="stylesheet" href="/_next/static/chunks/1k0tchnhdonwr.css?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh" data-precedence="next"/>
-  <link rel="stylesheet" href="/_next/static/chunks/3piepmm47cc3f.css?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh" data-precedence="next"/>
-  <link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/2iho8jepmwwua.js?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh"/>
-  <script src="/_next/static/chunks/1fi-06v_gunu5.js?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh" async=""></script>
-  <script src="/_next/static/chunks/1_zmgipypuk59.js?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh" async=""></script>
-  <script src="/_next/static/chunks/turbopack-3voc00yfmj2gs.js?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh" async=""></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zé Delivery - Whiskies</title>
-  <meta name="description" content="Whiskies importados com entrega grátis e pagamento no Pix."/>
-  <link rel="icon" href="/icon.png?icon.43g-cu77dgj2v.png" sizes="512x512" type="image/png"/>
+  <meta name="description" content="Whiskies importados com entrega grátis e pagamento no Pix." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
 </head>
 
-<body class="min-h-full flex flex-col">
-  <div hidden=""><!--$--><!--/$--></div>
-  <main class="flex flex-1 flex-col">
+<body class="min-h-full flex flex-col bg-zinc-50 text-zinc-900">
+
+  <!-- Header / Barra de Busca -->
+  <header class="sticky top-0 z-40 border-b border-zinc-200 bg-white/95 px-4 py-2.5 backdrop-blur shadow-sm">
+    <div class="mx-auto max-w-5xl flex items-center justify-between gap-3">
+      <div class="relative flex-1 max-w-2xl">
+        <i data-lucide="search" class="pointer-events-none absolute left-3.5 top-2.5 size-4 text-zinc-400"></i>
+        <input 
+          type="text" 
+          placeholder="Buscar bebidas, marcas…" 
+          class="w-full h-9 rounded-full bg-zinc-100 pl-10 pr-4 text-sm text-zinc-800 placeholder:text-zinc-400 outline-none focus:ring-2 focus:ring-amber-400 transition"
+        />
+      </div>
+      <button class="flex items-center gap-1.5 bg-amber-400 hover:bg-amber-500 font-bold text-xs sm:text-sm px-4 py-2 rounded-full transition shrink-0">
+        <i data-lucide="shopping-cart" class="size-4"></i>
+        <span>Sacola</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-1 w-full max-w-5xl mx-auto pb-16">
     
-    <!-- Barra de busca no topo -->
-    <div aria-hidden="true" class="fixed inset-x-0 top-0 z-40 border-b bg-background/90 px-4 py-2 backdrop-blur transition-all duration-300 ease-out sm:px-8 pointer-events-none -translate-y-full opacity-0">
-      <a aria-label="Buscar produtos" class="relative flex h-9 w-full items-center rounded-full bg-muted pr-4 pl-9 text-sm text-muted-foreground transition-colors hover:bg-muted/70 mx-auto max-w-2xl" href="/busca">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search pointer-events-none absolute left-3 size-4" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
-        Buscar whiskies, marcas…
-      </a>
+    <!-- Banner de Capa e Avatar -->
+    <div class="relative">
+      <div class="relative h-40 w-full overflow-hidden bg-zinc-900 sm:h-48 md:h-56">
+        <img 
+          alt="Banner Zé Delivery" 
+          class="w-full h-full object-cover opacity-80" 
+          src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1200&auto=format&fit=crop&q=80"
+        />
+      </div>
+      <div class="absolute -bottom-10 left-4 sm:-bottom-12 sm:left-8">
+        <div class="flex size-24 sm:size-28 items-center justify-center overflow-hidden rounded-full border-4 border-white bg-amber-400 p-2 shadow-md">
+          <span class="text-2xl sm:text-3xl font-black tracking-tighter text-zinc-950">ZÉ</span>
+        </div>
+      </div>
     </div>
 
-    <div class="mx-auto w-full max-w-5xl">
-      
-      <!-- Cabeçalho / Banner e Logo -->
-      <header class="relative">
-        <div class="relative h-40 w-full overflow-hidden bg-muted sm:h-48 md:h-56">
-          <img alt="Banner Zé Delivery" decoding="async" data-nimg="fill" class="object-cover" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/banner.gif?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh"/>
+    <!-- Informações da Loja -->
+    <section class="mt-14 px-4 sm:px-8">
+      <div class="flex items-center gap-1.5">
+        <h1 class="text-xl sm:text-2xl font-bold tracking-tight">Zé Delivery</h1>
+        <svg viewBox="0 0 24 24" role="img" class="size-5 shrink-0 text-blue-500 fill-current">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-zinc-600 mt-2">
+        <span class="font-semibold text-zinc-900">4,8 ★ <span class="font-normal text-zinc-500">(2.345 avaliações)</span></span>
+        <span class="flex items-center gap-1"><i data-lucide="clock" class="size-4 text-amber-500"></i> 20-40 min</span>
+        <span class="inline-flex items-center gap-1 rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-semibold text-green-700">
+          <i data-lucide="truck" class="size-3.5"></i> Entrega grátis
+        </span>
+        <span class="flex items-center gap-1"><i data-lucide="shopping-bag" class="size-4 text-purple-500"></i> Pedido mín. R$ 30</span>
+      </div>
+    </section>
+
+    <!-- Navegação de Categorias -->
+    <section class="mt-6">
+      <div class="flex gap-3 overflow-x-auto px-4 sm:px-8 pb-1 no-scrollbar">
+        <a href="#cat-combos" class="flex flex-col items-center gap-1.5 shrink-0 group">
+          <div class="size-16 rounded-2xl border border-zinc-200 bg-white shadow-sm flex items-center justify-center group-hover:border-amber-400 transition">
+            <i data-lucide="gift" class="size-6 text-amber-500"></i>
+          </div>
+          <span class="text-xs font-bold">Combos</span>
+        </a>
+        <a href="#cat-whiskies" class="flex flex-col items-center gap-1.5 shrink-0 group">
+          <div class="size-16 rounded-2xl border border-zinc-200 bg-white shadow-sm flex items-center justify-center group-hover:border-amber-400 transition">
+            <i data-lucide="glass-water" class="size-6 text-amber-500"></i>
+          </div>
+          <span class="text-xs font-bold">Whiskies</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 1: COMBOS DE WHISKY -->
+    <section id="cat-combos" class="mt-8 px-4 sm:px-8">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-bold tracking-tight">Combos de Whisky</h2>
+      </div>
+
+      <div class="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
+        
+        <!-- Card 1 -->
+        <div class="flex w-40 shrink-0 flex-col justify-between bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm">
+          <div class="relative aspect-square rounded-xl bg-zinc-50 flex items-center justify-center p-2 mb-2 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=300&q=80" alt="Jack Daniels Combo" class="max-h-full object-contain" />
+          </div>
+          <div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="font-bold text-green-600 text-sm">R$ 73,45</span>
+              <span class="text-xs text-red-500 line-through">R$ 146,90</span>
+            </div>
+            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Jack Daniel's 1L + 6x Red Bull</p>
+          </div>
+          <button class="mt-3 w-full bg-amber-400 hover:bg-amber-500 text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
+            <i data-lucide="shopping-cart" class="size-3.5"></i> Escolher
+          </button>
         </div>
-        <div class="absolute -bottom-14 left-4 sm:-bottom-16 sm:left-8">
-          <div class="flex size-28 items-center justify-center overflow-hidden rounded-full border-4 border-border bg-background p-3.5 sm:size-32">
-            <img alt="Zé Delivery" width="1024" height="1024" decoding="async" data-nimg="1" class="h-auto w-full" style="color:transparent" srcSet="/_next/image?url=%2Flogo-compacta-escura.png&amp;w=1080&amp;q=75&amp;dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh 1x, /_next/image?url=%2Flogo-compacta-escura.png&amp;w=2048&amp;q=75&amp;dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh 2x" src="/_next/image?url=%2Flogo-compacta-escura.png&amp;w=2048&amp;q=75&amp;dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh"/>
+
+        <!-- Card 2 -->
+        <div class="flex w-40 shrink-0 flex-col justify-between bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm">
+          <div class="relative aspect-square rounded-xl bg-zinc-50 flex items-center justify-center p-2 mb-2 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=300&q=80" alt="Red Label Combo" class="max-h-full object-contain" />
           </div>
+          <div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="font-bold text-green-600 text-sm">R$ 71,95</span>
+              <span class="text-xs text-red-500 line-through">R$ 143,90</span>
+            </div>
+            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Johnnie Walker Red Label 1L + 6x Red Bull</p>
+          </div>
+          <button class="mt-3 w-full bg-amber-400 hover:bg-amber-500 text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
+            <i data-lucide="shopping-cart" class="size-3.5"></i> Escolher
+          </button>
         </div>
-      </header>
 
-      <!-- Informações da Loja -->
-      <section class="mt-16 flex flex-col gap-4 px-4 sm:mt-20 sm:px-8">
-        <div class="space-y-1.5">
-          <div class="flex items-center gap-1.5">
-            <h1 class="text-xl font-bold tracking-tight sm:text-2xl">Zé Delivery</h1>
-            <svg viewBox="0 0 24 24" role="img" aria-label="Perfil verificado" class="size-5 shrink-0 sm:size-6"><path fill="#0095F6" d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="m9 12 2 2 4-4"></path></svg>
+        <!-- Card 3 -->
+        <div class="flex w-40 shrink-0 flex-col justify-between bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm">
+          <div class="relative aspect-square rounded-xl bg-zinc-50 flex items-center justify-center p-2 mb-2 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=300&q=80" alt="Ballantines Combo" class="max-h-full object-contain" />
           </div>
-          <div class="flex flex-wrap items-center gap-1.5 text-sm">
-            <span class="font-semibold">4,8</span>
-            <span class="flex items-center" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star size-4 fill-primary text-primary" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
-            </span>
-            <span class="text-muted-foreground">(2.345 avaliações)</span>
+          <div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="font-bold text-green-600 text-sm">R$ 70,45</span>
+              <span class="text-xs text-red-500 line-through">R$ 140,90</span>
+            </div>
+            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Ballantine's Finest 1L + 6x Red Bull</p>
           </div>
+          <button class="mt-3 w-full bg-amber-400 hover:bg-amber-500 text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
+            <i data-lucide="shopping-cart" class="size-3.5"></i> Escolher
+          </button>
         </div>
-        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-          <span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock size-4 text-amber-500" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>20-40 min</span>
-          <span class="inline-flex items-center gap-1.5 rounded-full bg-green-100 px-2.5 py-1 font-medium text-green-700 dark:bg-green-500/15 dark:text-green-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck size-4" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>Entrega grátis</span>
-          <span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag size-4 text-violet-500" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"></path><path d="M3.103 6.034h17.794"></path><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path></svg>Pedido mín. R$ 30</span>
-          <span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin size-4 text-rose-500" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>perto de você</span>
+
+        <!-- Card 4 -->
+        <div class="flex w-40 shrink-0 flex-col justify-between bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm">
+          <div class="relative aspect-square rounded-xl bg-zinc-50 flex items-center justify-center p-2 mb-2 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=300&q=80" alt="Buchanans Combo" class="max-h-full object-contain" />
+          </div>
+          <div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="font-bold text-green-600 text-sm">R$ 73,45</span>
+              <span class="text-xs text-red-500 line-through">R$ 146,90</span>
+            </div>
+            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Buchanan's 12 Anos + 6x Red Bull</p>
+          </div>
+          <button class="mt-3 w-full bg-amber-400 hover:bg-amber-500 text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
+            <i data-lucide="shopping-cart" class="size-3.5"></i> Escolher
+          </button>
         </div>
-      </section>
 
-      <!-- Categorias (Apenas Combos e Whiskies) -->
-      <section class="mt-6">
-        <div class="flex gap-3 overflow-x-auto px-4 pb-1 sm:px-8 [-ms-overflow-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
-          <a href="#cat-combos-whisky" class="flex w-20 shrink-0 flex-col items-center gap-2 transition-transform active:scale-95">
-            <div class="size-20 overflow-hidden rounded-2xl border bg-muted transition-colors hover:border-primary">
-              <img alt="Combos de Whisky" loading="lazy" width="128" height="128" decoding="async" class="size-full object-cover" src="/categorias/combos.png"/>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: GARRAFAS INDIVIDUAIS -->
+    <section id="cat-whiskies" class="mt-8 px-4 sm:px-8">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-bold tracking-tight">Garrafas Individuais</h2>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        
+        <!-- Black Label -->
+        <div class="bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm flex flex-col justify-between">
+          <div class="aspect-square bg-zinc-50 rounded-xl overflow-hidden mb-2 p-2 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=300&q=80" alt="Black Label" class="max-h-full object-contain" />
+          </div>
+          <div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="font-bold text-green-600 text-sm">R$ 88,42</span>
+              <span class="text-xs text-red-500 line-through">R$ 196,49</span>
             </div>
-            <span class="text-center text-xs font-bold leading-tight">Combos Whisky</span>
-          </a>
-          <a href="#cat-whiskies" class="flex w-20 shrink-0 flex-col items-center gap-2 transition-transform active:scale-95">
-            <div class="size-20 overflow-hidden rounded-2xl border bg-muted transition-colors hover:border-primary">
-              <img alt="Whiskies" loading="lazy" width="128" height="128" decoding="async" class="size-full object-cover" src="/categorias/destilados.png"/>
-            </div>
-            <span class="text-center text-xs font-bold leading-tight">Whiskies</span>
-          </a>
+            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Whisky Johnnie Walker Black Label 1L</p>
+          </div>
+          <button class="mt-3 w-full bg-amber-400 hover:bg-amber-500 text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
+            <i data-lucide="shopping-cart" class="size-3.5"></i> Adicionar
+          </button>
         </div>
-      </section>
 
-      <!-- SEÇÃO 1: COMBOS DE WHISKY -->
-      <section id="cat-combos-whisky" class="flex scroll-mt-20 flex-col gap-3 mt-4">
-        <div class="flex items-center justify-between gap-3 px-4 sm:px-8">
-          <h2 class="text-lg font-bold tracking-tight">Combos de Whisky</h2>
+        <!-- Red Label -->
+        <div class="bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm flex flex-col justify-between">
+          <div class="aspect-square bg-zinc-50 rounded-xl overflow-hidden mb-2 p-2 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=300&q=80" alt="Red Label" class="max-h-full object-contain" />
+          </div>
+          <div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="font-bold text-green-600 text-sm">R$ 55,10</span>
+              <span class="text-xs text-red-500 line-through">R$ 110,19</span>
+            </div>
+            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Whisky Johnnie Walker Red Label 1L</p>
+          </div>
+          <button class="mt-3 w-full bg-amber-400 hover:bg-amber-500 text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
+            <i data-lucide="shopping-cart" class="size-3.5"></i> Adicionar
+          </button>
         </div>
-        <div class="flex gap-3 overflow-x-auto px-4 pb-1 sm:px-8 [-ms-overflow-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden cursor-grab select-none">
-          
-          <!-- Jack Daniel's + Red Bull -->
-          <div class="flex w-40 shrink-0 flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Jack Daniel's 1L + 6x Red Bull" draggable="false" loading="lazy" decoding="async" class="object-cover size-full" src="/combos/01.png?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 73,45</span>
-                <span class="text-xs text-red-500 line-through">R$ 146,90</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Jack Daniel's 1L + 6x Red Bull</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
-          </div>
 
-          <!-- Red Label + Red Bull -->
-          <div class="flex w-40 shrink-0 flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Johnnie Walker Red Label 1L + 6x Red Bull" draggable="false" loading="lazy" decoding="async" class="object-cover size-full" src="/combos/02.png?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 71,95</span>
-                <span class="text-xs text-red-500 line-through">R$ 143,90</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Johnnie Walker Red Label 1L + 6x Red Bull</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
+        <!-- Chivas Regal 12 -->
+        <div class="bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm flex flex-col justify-between">
+          <div class="aspect-square bg-zinc-50 rounded-xl overflow-hidden mb-2 p-2 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=300&q=80" alt="Chivas Regal 12" class="max-h-full object-contain" />
           </div>
-
-          <!-- Ballantine's + Red Bull -->
-          <div class="flex w-40 shrink-0 flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Ballantine's Finest 1L + 6x Red Bull" draggable="false" loading="lazy" decoding="async" class="object-cover size-full" src="/combos/03.png?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 70,45</span>
-                <span class="text-xs text-red-500 line-through">R$ 140,90</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Ballantine's Finest 1L + 6x Red Bull</p>
+          <div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="font-bold text-green-600 text-sm">R$ 71,41</span>
+              <span class="text-xs text-red-500 line-through">R$ 158,69</span>
             </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
+            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Whisky Chivas Regal 12 anos 1L</p>
           </div>
-
-          <!-- Buchanan's + Red Bull -->
-          <div class="flex w-40 shrink-0 flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Buchanan's 12 Anos + 6x Red Bull" draggable="false" loading="lazy" decoding="async" class="object-cover size-full" src="/combos/04.png?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 73,45</span>
-                <span class="text-xs text-red-500 line-through">R$ 146,90</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Buchanan's 12 Anos + 6x Red Bull</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
-          </div>
-
-          <!-- Chivas Regal + Red Bull -->
-          <div class="flex w-40 shrink-0 flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Chivas Regal 12 Anos + 6x Red Bull" draggable="false" loading="lazy" decoding="async" class="object-cover size-full" src="/combos/05.png?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 71,95</span>
-                <span class="text-xs text-red-500 line-through">R$ 143,90</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Chivas Regal 12 Anos + 6x Red Bull</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
-          </div>
-
-          <!-- Passport + Red Bull -->
-          <div class="flex w-40 shrink-0 flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Passport 1L + 6x Red Bull" draggable="false" loading="lazy" decoding="async" class="object-cover size-full" src="/combos/06.png?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 58,95</span>
-                <span class="text-xs text-red-500 line-through">R$ 117,90</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Passport 1L + 6x Red Bull</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
-          </div>
-
-          <!-- White Horse + Red Bull -->
-          <div class="flex w-40 shrink-0 flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="White Horse 1L + 6x Red Bull" draggable="false" loading="lazy" decoding="async" class="object-cover size-full" src="/combos/07.png?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 62,45</span>
-                <span class="text-xs text-red-500 line-through">R$ 124,90</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">White Horse 1L + 6x Red Bull</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
-          </div>
-
-          <!-- Jack Daniel's + Coca-Cola -->
-          <div class="flex w-40 shrink-0 flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Jack Daniel's 1L + Coca-Cola" draggable="false" loading="lazy" decoding="async" class="object-cover size-full" src="/combos/08.png?dpl=dpl_J7HAfTTJeWsbQffhwqyRteuCk1Hh"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 65,95</span>
-                <span class="text-xs text-red-500 line-through">R$ 131,90</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Jack Daniel's 1L + Coca-Cola</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
-          </div>
-
+          <button class="mt-3 w-full bg-amber-400 hover:bg-amber-500 text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
+            <i data-lucide="shopping-cart" class="size-3.5"></i> Adicionar
+          </button>
         </div>
-      </section>
 
-      <!-- SEÇÃO 2: GARRAFAS INDIVIDUAIS DE WHISKY -->
-      <section id="cat-whiskies" class="flex scroll-mt-20 flex-col gap-3 mt-8">
-        <div class="flex items-center justify-between gap-3 px-4 sm:px-8">
-          <h2 class="text-lg font-bold tracking-tight">Garrafas de Whisky</h2>
+        <!-- Old Parr 12 -->
+        <div class="bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm flex flex-col justify-between">
+          <div class="aspect-square bg-zinc-50 rounded-xl overflow-hidden mb-2 p-2 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=300&q=80" alt="Old Parr 12" class="max-h-full object-contain" />
+          </div>
+          <div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="font-bold text-green-600 text-sm">R$ 72,13</span>
+              <span class="text-xs text-red-500 line-through">R$ 160,29</span>
+            </div>
+            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Whisky Old Parr Grand 12 Anos 1L</p>
+          </div>
+          <button class="mt-3 w-full bg-amber-400 hover:bg-amber-500 text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
+            <i data-lucide="shopping-cart" class="size-3.5"></i> Adicionar
+          </button>
         </div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 px-4 sm:px-8">
-          
-          <!-- Black Label 1L -->
-          <div class="flex flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Whisky Johnnie Walker Black Label 1L" class="object-cover size-full" src="https://courier-images-prod.imgix.net/image/Product/8577/Product_8577_e0f49149-12ee-4c7f-b0c3-3ecb7448bc8f.jpg"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 88,42</span>
-                <span class="text-xs text-red-500 line-through">R$ 196,49</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Whisky Johnnie Walker Black Label 1L</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
-          </div>
 
-          <!-- Red Label 1L -->
-          <div class="flex flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Whisky Johnnie Walker Red Label 1L" class="object-cover size-full" src="https://courier-images-prod.imgix.net/image/Product/8577/Product_8577_e0f49149-12ee-4c7f-b0c3-3ecb7448bc8f.jpg"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 55,10</span>
-                <span class="text-xs text-red-500 line-through">R$ 110,19</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Whisky Johnnie Walker Red Label 1L</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
+        <!-- Buchanan's Deluxe 12 -->
+        <div class="bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm flex flex-col justify-between">
+          <div class="aspect-square bg-zinc-50 rounded-xl overflow-hidden mb-2 p-2 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=300&q=80" alt="Buchanan's 12" class="max-h-full object-contain" />
           </div>
-
-          <!-- Chivas Regal 12 Anos 1L -->
-          <div class="flex flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Whisky Chivas Regal 12 anos 1L" class="object-cover size-full" src="https://courier-images-prod.imgix.net/image/Product/8577/Product_8577_e0f49149-12ee-4c7f-b0c3-3ecb7448bc8f.jpg"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 71,41</span>
-                <span class="text-xs text-red-500 line-through">R$ 158,69</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Whisky Chivas Regal 12 anos 1L</p>
+          <div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="font-bold text-green-600 text-sm">R$ 104,71</span>
+              <span class="text-xs text-red-500 line-through">R$ 232,69</span>
             </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
+            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Whisky Buchanan's Deluxe 12 Anos 1L</p>
           </div>
-
-          <!-- Ballantine's Finest 1L -->
-          <div class="flex flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Whisky Ballantine's Finest 1L" class="object-cover size-full" src="https://courier-images-prod.imgix.net/image/Product/8577/Product_8577_e0f49149-12ee-4c7f-b0c3-3ecb7448bc8f.jpg"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 50,20</span>
-                <span class="text-xs text-red-500 line-through">R$ 100,39</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Whisky Ballantine's Finest 1L</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
-          </div>
-
-          <!-- Old Parr 12 Anos 1L -->
-          <div class="flex flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Whisky Old Parr Grand 12 Anos 1L" class="object-cover size-full" src="https://courier-images-prod.imgix.net/image/Product/8577/Product_8577_e0f49149-12ee-4c7f-b0c3-3ecb7448bc8f.jpg"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 72,13</span>
-                <span class="text-xs text-red-500 line-through">R$ 160,29</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Whisky Old Parr Grand 12 Anos 1L</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
-          </div>
-
-          <!-- Buchanan's Deluxe 12 Anos 1L -->
-          <div class="flex flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Whisky Buchanan's Deluxe 12 Anos 1L" class="object-cover size-full" src="https://courier-images-prod.imgix.net/image/Product/8577/Product_8577_e0f49149-12ee-4c7f-b0c3-3ecb7448bc8f.jpg"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 104,71</span>
-                <span class="text-xs text-red-500 line-through">R$ 232,69</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Whisky Buchanan's Deluxe 12 Anos 1L</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
-          </div>
-
-          <!-- White Horse 1L -->
-          <div class="flex flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Whisky White Horse 1L" class="object-cover size-full" src="https://courier-images-prod.imgix.net/image/Product/8577/Product_8577_e0f49149-12ee-4c7f-b0c3-3ecb7448bc8f.jpg"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 43,05</span>
-                <span class="text-xs text-red-500 line-through">R$ 86,09</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Whisky White Horse 1L</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
-          </div>
-
-          <!-- Passport Scotch 1L -->
-          <div class="flex flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Whisky Passport Scotch 1L" class="object-cover size-full" src="https://courier-images-prod.imgix.net/image/Product/8577/Product_8577_e0f49149-12ee-4c7f-b0c3-3ecb7448bc8f.jpg"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 28,30</span>
-                <span class="text-xs text-red-500 line-through">R$ 56,59</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Whisky Passport Scotch 1L</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
-          </div>
-
-          <!-- Jim Beam White 1L -->
-          <div class="flex flex-col gap-2">
-            <button type="button" class="relative aspect-square overflow-hidden rounded-xl border bg-muted transition-transform active:scale-[0.98]">
-              <img alt="Whisky Jim Beam White 1L" class="object-cover size-full" src="https://courier-images-prod.imgix.net/image/Product/8577/Product_8577_e0f49149-12ee-4c7f-b0c3-3ecb7448bc8f.jpg"/>
-            </button>
-            <div class="space-y-0.5 text-left">
-              <div class="flex items-baseline gap-1.5">
-                <span class="font-bold text-green-600">R$ 59,10</span>
-                <span class="text-xs text-red-500 line-through">R$ 118,19</span>
-              </div>
-              <p class="line-clamp-2 text-sm leading-tight text-muted-foreground">Whisky Jim Beam White 1L</p>
-            </div>
-            <button type="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-primary text-primary-foreground hover:bg-primary/80 gap-1 rounded-xl px-2.5 text-[0.8rem] mt-auto h-9 w-full font-semibold">
-              Adicionar
-            </button>
-          </div>
-
+          <button class="mt-3 w-full bg-amber-400 hover:bg-amber-500 text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
+            <i data-lucide="shopping-cart" class="size-3.5"></i> Adicionar
+          </button>
         </div>
-      </section>
 
-    </div>
+      </div>
+    </section>
+
   </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
