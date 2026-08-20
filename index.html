@@ -1,249 +1,534 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="h-full scroll-smooth antialiased">
+<html lang="pt-br" translate="no">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Libera o carregamento de imagens externas -->
-  <meta name="referrer" content="no-referrer" />
-  <title>Zé Delivery - Destilados</title>
-  <meta name="description" content="Destilados, Gins, Whiskies, Vodkas e Licores com entrega grátis e pagamento no Pix." />
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <style>
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-  </style>
-</head>
-
-<body class="min-h-full flex flex-col bg-[#f7f7f7] text-zinc-900">
-
-  <!-- Header Fixo / Barra de Busca -->
-  <header class="sticky top-0 z-40 border-b border-zinc-200 bg-white/95 px-4 py-2.5 backdrop-blur shadow-sm">
-    <div class="mx-auto max-w-5xl flex items-center justify-between gap-3">
-      <div class="relative flex-1 max-w-2xl">
-        <i data-lucide="search" class="pointer-events-none absolute left-3.5 top-2.5 size-4 text-zinc-400"></i>
-        <input 
-          type="text" 
-          placeholder="Buscar vodkas, gins, whiskies, tequilas…" 
-          class="w-full h-9 rounded-full bg-zinc-100 pl-10 pr-4 text-sm text-zinc-800 placeholder:text-zinc-400 outline-none focus:ring-2 focus:ring-[#ffc500] transition"
-        />
-      </div>
-      <button class="flex items-center gap-1.5 bg-[#ffc500] hover:bg-[#e6b200] font-bold text-xs sm:text-sm px-4 py-2 rounded-full transition shrink-0">
-        <i data-lucide="shopping-cart" class="size-4"></i>
-        <span>Sacola</span>
-      </button>
-    </div>
-  </header>
-
-  <main class="flex-1 w-full max-w-5xl mx-auto pb-16">
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zé Delivery - Faça seu pedido!</title>
+    <meta name="description" content="Faça seu pedido online no Zé Delivery. Acesse e peça agora pelo delivery food!">
+    <meta name="theme-color" content="#ffcc01">
+    <meta name="apple-mobile-web-app-capacity" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar" content="#ffcc01">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffcc01">
+    <meta name="apple-mobile-web-app-title" content="Zé Delivery">
     
-    <!-- Banner de Capa e Logo Zé Delivery -->
-    <div class="relative">
-      <div class="relative h-40 w-full overflow-hidden bg-zinc-900 sm:h-48 md:h-56">
-        <!-- Imagem de fundo do banner (Unsplash - Bebidas) -->
-        <img 
-          alt="Banner Bebidas" 
-          class="w-full h-full object-cover opacity-80" 
-          src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1200&h=400"
-        />
-      </div>
-      <div class="absolute -bottom-10 left-4 sm:-bottom-12 sm:left-8">
-        <!-- Logo do Zé Delivery (Google Play Store - Link Estável) -->
-        <div class="flex size-24 sm:size-28 items-center justify-center overflow-hidden rounded-full border-4 border-white bg-white shadow-md">
-          <img 
-            src="https://play-lh.googleusercontent.com/2s4R6dK6O7O-9ZpTDBX1wMvO12_iB-n1u8H53JmK11mN-MhG9Y0Oq9xY-2_S-_A7G-U=w240-h480-rw" 
-            alt="Logo Zé Delivery" 
-            class="w-full h-full object-contain"
-          />
+    <link rel="shortcut icon" type="image/jpg" href="images/Ze%cc%81_Delivery.jpg">
+    <link type="text/css" href="css/DWTy1hlbbW56.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1556112729223844');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1556112729223844&ev=PageView&noscript=1"/>
+    </noscript>
+
+    <!-- UTMify Pixel -->
+    <script>
+        window.pixelId = "6a55a89513c562d5a1b8934f";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+    </script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style type="text/css">
+        h1, h2 { color: #ffcc01; }
+        header#topo .cover { background-color: #ffcc01; }
+        header#topo .info h1 { color: #ffcc01; }
+        header#topo .info .icones a { color: #ffcc01; border-color: #ffcc01; }
+        header#topo .cover .logo { background: #ffcc01; }
+        header#topo #menuCategorias { background: #ffcc01; }
+        header#topo .categorias a { border-top-color: #ffcc01; }
+        footer { background: #ffcc01; padding: 20px 0; text-align: center; margin-top: 30px;}
+        .footer-content { max-width: 1200px; margin: 0 auto; padding: 0 15px; color: #333; font-size: 14px; }
+        .footer-content a { color: #333; text-decoration: none; font-weight: bold; margin: 0 10px; }
+        .footer-content a:hover { text-decoration: underline; }
+        footer#carrinho .container .icone span { color: #ffcc01; }
+        .btn, a.voltar, .btnSair, .btnFidelidade, .btnGoogle, .btnEmail, .btnSemCadastro { background: #ffcc01; }
+        .qtdeProduto i:hover { color: #ffcc01; }
+        .lista .item .col .nomeProduto { color: #ffcc01; }
+        main#lista .produtos .item a:hover { border: 2px solid #ffcc01; }
+        #pedido .entrega .radio label input[type="radio"]:checked, 
+        #pedido .entrega .radio label:hover { background: #ffcc01; }
+        #pedido .pagamentos input[type="radio"]:checked+label::before, 
+        #detalhesProduto .info2 .opcoes input[type="checkbox"]:checked+label::before, 
+        #pedido .trocarPontos input[type="checkbox"]:checked+label::before { background-color: #ffcc01; border: 2px solid #ffcc01; }
+        .selecionado { border: 2px solid #ffcc01; }
+        #meuCarrinho button.fechar, #rastreamento .registro span.passou { background: #ffcc01; }
+        span.estoque i { color: #ffcc01; }
+    </style>
+</head>
+<body>
+    <div id="opacidade" class="fechar"></div>
+    <div>
+        <!-- CABEÇALHO -->
+        <header id="topo">
+            <div class="cover main" style="background-image: url('images/unnamed-62-2940803311-e1726255279197.jpg');">
+                <div class="logo">
+                    <figure>
+                        <img src="images/Ze%cc%81_Delivery.jpg" alt="Zé Delivery" title="Zé Delivery">
+                    </figure>
+                </div>
+                <div class="borda"></div>
+            </div>
+            
+            <div class="container">
+                <div class="info">
+                    <h1>Zé Delivery</h1>
+                    <div class="icones">
+                        <a href="https://www.instagram.com/" title="Instagram" target="_blank">
+                            <i class="fab fa-instagram"></i> 
+                        </a>
+                        <a class="informacoes" href="#info" title="Info">
+                            <i class="fa-solid fa-info"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="detalhe">
+                        <span><i class="fa-solid fa-coins"></i> Pedido Mínimo <b>R$ 10,00</b></span>
+                        <div>
+                            <span><i class="fa-solid fa-motorcycle"></i> <b>30-50</b> min</span> • <span style="color: #077c22">Grátis</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detalhe" style="gap: 3px;">
+                        <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                        <span id="localCidade">Cidade</span> - <span id="localEstado">UF</span> • 1,6km de você
+                    </div>
+                    
+                    <div class="detalhe">
+                        <i class="fa fa-star" aria-hidden="true"></i><b>4,8</b> (2.226 avaliações)
+                    </div>
+                    
+                    <div class="aberto">
+                        <i class="fa-solid fa-circle btn-pisca"></i> 
+                        <span id="status-loja">ABERTO</span> 
+                        <i class="fa-regular fa-clock horario" id="icone-relogio" style="display: none;"></i> 
+                        <span class="horario" id="horario-fechamento" style="display: none;"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="menuCategorias">
+                <div class="container">
+                    <div class="categorias">
+                        <a href="#pague-1-leve-2" title="Mais Vendidos"> Promoções apenas aqui no Site! 💛 </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- PRODUTOS -->
+        <main id="lista" style="padding-bottom: 0;">
+            <div class="container">
+                <div class="alert alert-success">
+                    <b>Entrega Grátis</b> para <b id="localCidade">sua região</b>!
+                </div>
+                <div class="alert alert-success" style="color: #ffcc01; outline: 2px solid #ffcc01;">
+                    Aproveite nossa <b>promoção com preços irresistíveis</b> igual cerveja gelada 🍻💛
+                </div>
+
+                <!-- CATEGORIA: MAIS VENDIDOS -->
+                <div id="Mais Vendidos" class="categoria">
+                    <h2>Combos Mais Vendidos</h2>
+                    <div class="produtos">
+                        <div class="item">
+                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SD6KW">
+                                <div class="texto">
+                                    <h3>Combo Tanqueray</h3>
+                                    <span>1 garrafa de tanqueray 750ml, 4 gelos saborizados e 4 energéticos!</span>
+                                    de <span class="precoPromocao">R$ 207,86</span> por <span class="preco">R$ 89,90</span>
+                                </div>
+                                <div class="fotoProduto">
+                                    <figure><img src="images/6.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="item">
+                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMAS">
+                                <div class="texto">
+                                    <h3>Combo Jack Daniels</h3>
+                                    <span>1 garrafa de Jack Daniels 700ml, 4 gelos saborizados e 4 energéticos!</span>
+                                    de <span class="precoPromocao">R$ 198,69</span> por <span class="preco">R$ 98,90</span>
+                                </div>
+                                <div class="fotoProduto">
+                                    <figure><img src="images/1.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMAT">
+                                <div class="texto">
+                                    <h3>Combo Absolut</h3>
+                                    <span>1 garrafa de Absolut 750ml, 4 gelos saborizados e 4 energéticos!</span>
+                                    de <span class="precoPromocao">R$ 136,67</span> por <span class="preco">R$ 79,99</span>
+                                </div>
+                                <div class="fotoProduto">
+                                    <figure><img src="images/2.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SD6PA">
+                                <div class="texto">
+                                    <h3>Fardo de Heineken</h3>
+                                    <span>Fardo com 12 unidades de 474ml</span>
+                                    de <span class="precoPromocao">R$ 94,99</span> por <span class="preco">R$ 44,99</span>
+                                </div>
+                                <div class="fotoProduto">
+                                    <figure><img src="images/9.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMAX">
+                                <div class="texto">
+                                    <h3>Fardo de budweiser</h3>
+                                    <span>Fardo com 12 unidades de 474ml</span>
+                                    de <span class="precoPromocao">R$ 74,76</span> por <span class="preco">R$ 39,99</span>
+                                </div>
+                                <div class="fotoProduto">
+                                    <figure><img src="images/10.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMB0">
+                                <div class="texto">
+                                    <h3>Fardo de Corona</h3>
+                                    <span>Fardo com 24 unidades de 330ml</span>
+                                    de <span class="precoPromocao">R$ 160,43</span> por <span class="preco">R$ 69,99</span>
+                                </div>
+                                <div class="fotoProduto">
+                                    <figure><img src="images/14.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a class="disponivel pulsar" href="https://checkout.comprereceba.store/VCCL1O8SCMB1" style="border: 2px solid #077c22;">
+                                <div class="texto">
+                                    <span style="color: #ffffff; background: #ffcc01; padding: 2px; margin-bottom: 2px; border-radius: 8px; text-align: center;"><b>MAIS VENDIDO 🧡</b></span>
+                                    <h3>Barril 5L - Chopp Heineken</h3>
+                                    <span>Barril 5L - Chopp Heineken para você poder aproveitar com a galera!</span>
+                                    <span style="color: #474747; background: #e8e8e8; padding: 10px; margin: 2px 0; border-radius: 8px; text-align: left; display:block;">Promoção valida enquanto durar o estoque! <b>Oferta ilimitada</b>!</span>
+                                    de <span class="precoPromocao">R$ 98,32</span> por <span class="preco" style="font-size: 20px;"> <b style="background: #077c22; color: white; border-radius: 8px; padding: 0 4px;">R$ 69,99</b> </span>
+                                    <span class="estoque" style="margin-top: 4px; display:block;">🔥 Apenas <b style="background: red; color: white; border-radius: 8px; padding: 0 4px;"><span id="estoqueCombo">8</span> combos</b> com esse preço especial</span>
+                                </div>
+                                <div class="fotoProduto">
+                                    <figure><img src="images/11.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- ALERTA DE COUNTDOWN -->
+                        <div class="alert alert-success" style="color: red; outline: 2px solid red; background-color: rgb(255, 217, 217); width: 100%;">
+                            <b>A promoção vai acabar em:</b>
+                            <div class="countdown" style="display: flex; gap: 10px; margin-top: 10px;">
+                                <div class="box">
+                                    <span id="minutes">00</span>
+                                    <p>Minutos</p>
+                                </div>
+                                <div class="box">
+                                    <span id="seconds">00</span>
+                                    <p>Segundos</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMB2">
+                                <div class="texto">
+                                    <h3>Barril 5L - Chopp Budweiser</h3>
+                                    <span>Barril 5L - Chopp Budweiser</span>
+                                    de <span class="precoPromocao">R$ 88,54</span> por <span class="preco">R$ 59,99</span>
+                                </div>
+                                <div class="fotoProduto">
+                                    <figure><img src="images/13.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORIA: PRODUTOS GERAIS -->
+                <div id="pague-1-leve-2-zero" class="categoria">
+                    <h2>Produtos Gerais</h2>
+                    <div class="produtos">
+                        <div class="item">
+                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMB3">
+                                <div class="texto">
+                                    <h3>Combo Red label</h3>
+                                    <span>1 Red Label 1L, 4 gelos saborizados e 4 energéticos!</span>
+                                    de <span class="precoPromocao">R$ 159,99</span> por <span class="preco">R$ 74,90</span>
+                                </div>
+                                <div class="fotoProduto">
+                                    <figure><img src="images/3.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="item">
+                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SCMB4">
+                                <div class="texto">
+                                    <h3>Combo Beefeater</h3>
+                                    <span>1 Beefeater 750ml, 4 gelos saborizados e 4 energéticos!</span>
+                                    de <span class="precoPromocao">R$ 133,50</span> por <span class="preco">R$ 67,90</span>
+                                </div>
+                                <div class="fotoProduto">
+                                    <figure><img src="images/5.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SD66C">
+                                <div class="texto">
+                                    <h3>Combo Smirnoff</h3>
+                                    <span>1 Smirnoff 998ml, 4 gelos saborizados e 4 energéticos!</span>
+                                    de <span class="precoPromocao">R$ 85,90</span> por <span class="preco">R$ 49,99</span>
+                                </div>
+                                <div class="fotoProduto">
+                                    <figure><img src="images/7.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a class="disponivel" href="https://checkout.comprereceba.store/VCCL1O8SD66D">
+                                <div class="texto">
+                                    <h3>Combo Ballena</h3>
+                                    <span>1 Ballena 750ml, 4 gelos saborizados e 4 energéticos!</span>
+                                    de <span class="precoPromocao">R$ 229,99</span> por <span class="preco">R$ 129,90</span>
+                                </div>
+                                <div class="fotoProduto">
+                                    <figure><img src="images/8.png" width="110px" height="110px" loading="lazy" alt="Combo"></figure>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- AVALIAÇÕES -->
+        <main id="avaliacoes">
+            <div class="container">
+                <div class="alert">
+                    <b style="font-size: 20px;">4,8</b><br>
+                    <i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="color: goldenrod;"></i>
+                    <i class="fa fa-star-half-alt" aria-hidden="true" style="color: goldenrod;"></i>
+                    <br>
+                    <b>537 avaliações</b> • últimos 90 dias
+                    <br>
+                    <label style="color:gray">2.226 avaliações no total</label>
+                </div>
+                
+                <div class="categoria">
+                    <div class="produtos">
+                        
+                        <!-- Avaliação 1 -->
+                        <div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd; width: 100%;">
+                            <div class="avaliacao" style="flex-grow: 1;">
+                                <h3 style="margin: 0; font-size: 16px; color: #333;">Thales</h3>
+                                <div style="display: flex; align-items: center;">
+                                    <span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
+                                    <span class="estrelas" style="display: flex;">
+                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+                                    </span>
+                                </div>
+                                <p style="margin: 5px 0 0; font-size: 14px; color: #555;">Não demorou muito para chegar, veio muito bem embalado e protegido cada garrafa...</p>
+                            </div>
+                            <div class="fotoProduto" style="margin-left: 15px;">
+                                <figure style="margin: 0;">
+                                    <img src="images/PHOTO-2025-04-15-01-57-52.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <!-- Avaliação 2 -->
+                        <div class="item" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd; width: 100%;">
+                            <div class="avaliacao" style="flex-grow: 1;">
+                                <h3 style="margin: 0; font-size: 16px; color: #333;">Fernando</h3>
+                                <div style="display: flex; align-items: center;">
+                                    <span style="font-weight: bold; font-size: 14px; margin-right: 5px;">5,0</span>
+                                    <span class="estrelas" style="display: flex;">
+                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+                                        <i class="fa fa-star" style="color: goldenrod; font-size: 14px;"></i>
+                                    </span>
+                                </div>
+                                <p style="margin: 5px 0 0; font-size: 14px; color: #555;">Sempre muito bem embalado e a entrega muito rápida. Produto original, podem comprar!</p>
+                            </div>
+                            <div class="fotoProduto" style="margin-left: 15px;">
+                                <figure style="margin: 0;">
+                                    <img src="images/PHOTO-2025-04-15-01-58-38.jpg" width="70px" height="70px" loading="lazy" style="border-radius: 8px;">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- RODAPÉ ADICIONADO -->
+        <footer>
+            <div class="footer-content">
+                <p><strong>Zé Delivery</strong> - Todos os direitos reservados &copy; 2026</p>
+                <div style="margin-top: 15px;">
+                    <a href="#">Termos de Uso</a> |
+                    <a href="#">Política de Privacidade</a> |
+                    <a href="#">Trabalhe Conosco</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal de Informações -->
+        <div id="info">
+            <a class="fechar" href="#fechar"><i class="far fa-times-circle fa-2x"></i></a>
+            <h2>Tipos de Entrega</h2>
+            <i class="fa-solid fa-motorcycle"></i> Entrega Motoboy<br>
+            <i class="fa-solid fa-box"></i> Retirada<br><br>
+            
+            <h2>Formas de Pagamento</h2>
+            <i class="fa-regular fa-circle-check"></i> Pix<br><br>
+            
+            <h2>Endereço</h2>
+            <span id="localCidade">cidade</span> - <span id="localEstado">UF</span><br><br>
+            
+            <h2>Áreas de Entrega</h2>
+            <h3><span id="localCidade">cidade</span> - <span id="localEstado">UF</span></h3>
+            GRÁTIS (hoje)<br><br>
         </div>
-      </div>
     </div>
 
-    <!-- Informações da Loja -->
-    <section class="mt-14 px-4 sm:px-8">
-      <div class="flex items-center gap-1.5">
-        <h1 class="text-xl sm:text-2xl font-bold tracking-tight">Zé Delivery</h1>
-        <svg viewBox="0 0 24 24" role="img" class="size-5 shrink-0 text-[#0095F6] fill-current">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-        </svg>
-      </div>
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>if (window.jQuery && !jQuery.fn.mask) { jQuery.fn.mask = function () { return this; };}</script>
 
-      <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-zinc-600 mt-2">
-        <span class="font-semibold text-zinc-900">4,8 ★ <span class="font-normal text-zinc-500">(2.345 avaliações)</span></span>
-        <span class="flex items-center gap-1"><i data-lucide="clock" class="size-4 text-amber-500"></i> 20-40 min</span>
-        <span class="inline-flex items-center gap-1 rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-semibold text-green-700">
-          <i data-lucide="truck" class="size-3.5"></i> Entrega grátis
-        </span>
-        <span class="flex items-center gap-1"><i data-lucide="shopping-bag" class="size-4 text-purple-500"></i> Pedido mín. R$ 30</span>
-      </div>
-    </section>
+    <script>
+        // Status Loja
+        function atualizarStatusLoja() {
+            const agora = new Date();
+            const horas = agora.getHours();
+            const statusLoja = document.getElementById("status-loja");
+            const iconeRelogio = document.getElementById("icone-relogio");
+            const horarioFechamento = document.getElementById("horario-fechamento");
 
-    <!-- Sub-Filtros de Destilados -->
-    <section class="mt-6">
-      <div class="flex gap-2 overflow-x-auto px-4 sm:px-8 pb-1 no-scrollbar">
-        <a href="#cat-destilados" class="px-4 py-1.5 rounded-full bg-[#ffc500] text-zinc-950 font-bold text-xs shrink-0 flex items-center gap-1.5">
-          <i data-lucide="sparkles" class="size-3.5"></i> Todos os Destilados
-        </a>
-      </div>
-    </section>
+            if (horas >= 0 && horas < 2) {
+                statusLoja.textContent = "ABERTO";
+                horarioFechamento.textContent = "até 02:00";
+                iconeRelogio.style.display = "inline";
+                horarioFechamento.style.display = "inline";
+            } else {
+                statusLoja.textContent = "ABERTO";
+                iconeRelogio.style.display = "none";
+                horarioFechamento.style.display = "none";
+            }
+        }
+        atualizarStatusLoja();
 
-    <!-- SEÇÃO DESTILADOS -->
-    <section id="cat-destilados" class="mt-8 px-4 sm:px-8">
-      <div class="flex items-center justify-between mb-4">
-        <h2 class="text-lg font-bold tracking-tight">Destilados</h2>
-        <span class="text-xs font-semibold text-zinc-400">Seleção Oficial</span>
-      </div>
+        // Contagem Regressiva
+        function updateCountdown() {
+            const now = new Date();
+            const nextMidnight = new Date();
+            nextMidnight.setHours(24, 0, 0, 0); 
+            const diff = nextMidnight - now;
+            
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.querySelectorAll("#minutes").forEach(el => el.textContent = String(minutes).padStart(2, "0"));
+            document.querySelectorAll("#seconds").forEach(el => el.textContent = String(seconds).padStart(2, "0"));
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
 
-      <!-- Usando imagens da Unsplash com parâmetros que forçam o carregamento em fundo claro/branco -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        // Notificações Aleatórias
+        function escolherFraseAleatoria() {
+            const frases = [
+                "🎉 <b>Lucas</b> acabou de comprar o Combo de whisky com gelo de coco!",
+                "🚀 <b>Ana</b> garantiu o Combo Zero álcool há 2 minutos!",
+                "🔥 <b>Fernando</b> comprou o Combo de 2 fardos de Brahma há poucos instantes!"
+            ];
+            return frases[Math.floor(Math.random() * frases.length)];
+        }
+        function mostrarNotificacao(frase) {
+            if (!Swal.isVisible()) {
+                Swal.mixin({ toast: true, position: "bottom-end", showConfirmButton: false, timer: 6500, timerProgressBar: true })
+                    .fire({ icon: "success", title: frase });
+            }
+        }
+        setInterval(() => mostrarNotificacao(escolherFraseAleatoria()), 25000);
 
-        <!-- Card Johnnie Walker Black Label 1L -->
-        <div class="bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm flex flex-col justify-between">
-          <div class="aspect-square bg-white border border-zinc-100 rounded-xl overflow-hidden mb-2 p-2 flex items-center justify-center">
-            <img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?auto=format&fit=crop&q=80&w=256&h=256" alt="Whisky Black Label 1L" class="max-h-full object-contain rounded-lg" />
-          </div>
-          <div>
-            <div class="flex items-baseline gap-1.5">
-              <span class="font-bold text-green-600 text-sm">R$ 88,42</span>
-              <span class="text-xs text-red-500 line-through">R$ 196,49</span>
-            </div>
-            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Whisky Johnnie Walker Black Label 1L</p>
-          </div>
-          <button class="mt-3 w-full bg-[#ffc500] hover:bg-[#e6b200] text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
-            <i data-lucide="shopping-cart" class="size-3.5"></i> Adicionar
-          </button>
-        </div>
+        // Diminuir Estoque
+        function diminuirEstoque() {
+            document.querySelectorAll("#estoqueCombo").forEach(elemento => {
+                let estoqueAtual = parseInt(elemento.textContent, 10);
+                if (estoqueAtual > 1) {
+                    elemento.textContent = estoqueAtual - 1;
+                }
+            });
+        }
+        setInterval(diminuirEstoque, 15000);
 
-        <!-- Card Johnnie Walker Red Label 1L -->
-        <div class="bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm flex flex-col justify-between">
-          <div class="aspect-square bg-white border border-zinc-100 rounded-xl overflow-hidden mb-2 p-2 flex items-center justify-center">
-            <img src="https://images.unsplash.com/photo-1582819509237-d5b75f20ff7a?auto=format&fit=crop&q=80&w=256&h=256" alt="Whisky Red Label 1L" class="max-h-full object-contain rounded-lg" />
-          </div>
-          <div>
-            <div class="flex items-baseline gap-1.5">
-              <span class="font-bold text-green-600 text-sm">R$ 55,10</span>
-              <span class="text-xs text-red-500 line-through">R$ 110,19</span>
-            </div>
-            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Whisky Johnnie Walker Red Label 1L</p>
-          </div>
-          <button class="mt-3 w-full bg-[#ffc500] hover:bg-[#e6b200] text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
-            <i data-lucide="shopping-cart" class="size-3.5"></i> Adicionar
-          </button>
-        </div>
-
-        <!-- Card Chivas Regal 12 Anos 1L -->
-        <div class="bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm flex flex-col justify-between">
-          <div class="aspect-square bg-white border border-zinc-100 rounded-xl overflow-hidden mb-2 p-2 flex items-center justify-center">
-            <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&q=80&w=256&h=256" alt="Whisky Chivas Regal 12 anos 1L" class="max-h-full object-contain rounded-lg" />
-          </div>
-          <div>
-            <div class="flex items-baseline gap-1.5">
-              <span class="font-bold text-green-600 text-sm">R$ 71,41</span>
-              <span class="text-xs text-red-500 line-through">R$ 158,69</span>
-            </div>
-            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Whisky Chivas Regal 12 anos Blended 1L</p>
-          </div>
-          <button class="mt-3 w-full bg-[#ffc500] hover:bg-[#e6b200] text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
-            <i data-lucide="shopping-cart" class="size-3.5"></i> Adicionar
-          </button>
-        </div>
-
-        <!-- Card Ballantine's Finest 1L -->
-        <div class="bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm flex flex-col justify-between">
-          <div class="aspect-square bg-white border border-zinc-100 rounded-xl overflow-hidden mb-2 p-2 flex items-center justify-center">
-            <img src="https://images.unsplash.com/photo-1597075687490-8f673c6c17f6?auto=format&fit=crop&q=80&w=256&h=256" alt="Whisky Ballantine's Finest 1L" class="max-h-full object-contain rounded-lg" />
-          </div>
-          <div>
-            <div class="flex items-baseline gap-1.5">
-              <span class="font-bold text-green-600 text-sm">R$ 50,20</span>
-              <span class="text-xs text-red-500 line-through">R$ 100,39</span>
-            </div>
-            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Whisky Ballantine's Finest 1L</p>
-          </div>
-          <button class="mt-3 w-full bg-[#ffc500] hover:bg-[#e6b200] text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
-            <i data-lucide="shopping-cart" class="size-3.5"></i> Adicionar
-          </button>
-        </div>
-
-        <!-- Card Vodka Absolut 1L -->
-        <div class="bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm flex flex-col justify-between">
-          <div class="aspect-square bg-white border border-zinc-100 rounded-xl overflow-hidden mb-2 p-2 flex items-center justify-center">
-            <img src="https://images.unsplash.com/photo-1613243555988-441166d4d6fd?auto=format&fit=crop&q=80&w=256&h=256" alt="Vodka Absolut Original 1L" class="max-h-full object-contain rounded-lg" />
-          </div>
-          <div>
-            <div class="flex items-baseline gap-1.5">
-              <span class="font-bold text-green-600 text-sm">R$ 63,30</span>
-              <span class="text-xs text-red-500 line-through">R$ 126,59</span>
-            </div>
-            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Vodka Absolut Original 1L</p>
-          </div>
-          <button class="mt-3 w-full bg-[#ffc500] hover:bg-[#e6b200] text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
-            <i data-lucide="shopping-cart" class="size-3.5"></i> Adicionar
-          </button>
-        </div>
-
-        <!-- Card Vodka Smirnoff 998ml -->
-        <div class="bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm flex flex-col justify-between">
-          <div class="aspect-square bg-white border border-zinc-100 rounded-xl overflow-hidden mb-2 p-2 flex items-center justify-center">
-            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&q=80&w=256&h=256" alt="Vodka Smirnoff 998ml" class="max-h-full object-contain rounded-lg" />
-          </div>
-          <div>
-            <div class="flex items-baseline gap-1.5">
-              <span class="font-bold text-green-600 text-sm">R$ 22,71</span>
-              <span class="text-xs text-red-500 line-through">R$ 41,29</span>
-            </div>
-            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Vodka Smirnoff 998ml</p>
-          </div>
-          <button class="mt-3 w-full bg-[#ffc500] hover:bg-[#e6b200] text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
-            <i data-lucide="shopping-cart" class="size-3.5"></i> Adicionar
-          </button>
-        </div>
-
-        <!-- Card Gin Tanqueray 750ml -->
-        <div class="bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm flex flex-col justify-between">
-          <div class="aspect-square bg-white border border-zinc-100 rounded-xl overflow-hidden mb-2 p-2 flex items-center justify-center">
-            <img src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=256&h=256" alt="Gin Tanqueray London Dry 750ml" class="max-h-full object-contain rounded-lg" />
-          </div>
-          <div>
-            <div class="flex items-baseline gap-1.5">
-              <span class="font-bold text-green-600 text-sm">R$ 68,05</span>
-              <span class="text-xs text-red-500 line-through">R$ 136,09</span>
-            </div>
-            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Gin Tanqueray London Dry 750ml</p>
-          </div>
-          <button class="mt-3 w-full bg-[#ffc500] hover:bg-[#e6b200] text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
-            <i data-lucide="shopping-cart" class="size-3.5"></i> Adicionar
-          </button>
-        </div>
-
-        <!-- Card Tequila Jose Cuervo Gold 750ml -->
-        <div class="bg-white border border-zinc-200 rounded-2xl p-3 shadow-sm flex flex-col justify-between">
-          <div class="aspect-square bg-white border border-zinc-100 rounded-xl overflow-hidden mb-2 p-2 flex items-center justify-center">
-            <img src="https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=256&h=256" alt="Tequila Jose Cuervo Gold 750ml" class="max-h-full object-contain rounded-lg" />
-          </div>
-          <div>
-            <div class="flex items-baseline gap-1.5">
-              <span class="font-bold text-green-600 text-sm">R$ 71,10</span>
-              <span class="text-xs text-red-500 line-through">R$ 157,99</span>
-            </div>
-            <p class="line-clamp-2 text-xs font-medium text-zinc-700 mt-1">Tequila Jose Cuervo Especial Gold 750ml</p>
-          </div>
-          <button class="mt-3 w-full bg-[#ffc500] hover:bg-[#e6b200] text-zinc-950 font-bold text-xs py-2 rounded-xl flex items-center justify-center gap-1 transition">
-            <i data-lucide="shopping-cart" class="size-3.5"></i> Adicionar
-          </button>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <script>
-    lucide.createIcons();
-  </script>
+        // Sistema de Localização Simples
+        function setCookie(name, value, days) {
+            let expires = new Date(Date.now() + days * 864e5).toUTCString();
+            document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+        }
+        function getCookie(name) {
+            return document.cookie.split('; ').reduce((acc, cookie) => {
+                let [key, val] = cookie.split('=');
+                return key === name ? val : acc;
+            }, "");
+        }
+        async function fetchLocation() {
+            try {
+                let response = await fetch('https://get.geojs.io/v1/ip/geo.json');
+                let data = await response.json();
+                return { city: data.city || "Sua Cidade", region: data.region || "UF" };
+            } catch (error) { return { city: "Local Desconhecido", region: "Local Desconhecido" }; }
+        }
+        async function atualizarLocalizacao() {
+            let cidade = getCookie("localCidade");
+            let estado = getCookie("localEstado");
+            if (!cidade || !estado) { ({ city: cidade, region: estado } = await fetchLocation()); }
+            document.querySelectorAll("#localCidade").forEach(el => el.textContent = cidade);
+            document.querySelectorAll("#localEstado").forEach(el => el.textContent = estado);
+        }
+        atualizarLocalizacao();
+    </script>
 </body>
 </html>
