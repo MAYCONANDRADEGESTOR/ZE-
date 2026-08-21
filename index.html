@@ -36,6 +36,12 @@ h1{font-size:clamp(32px,7.4vw,58px)}h2{font-size:clamp(26px,5vw,42px);margin-bot
 .hero h1{margin-bottom:16px}.hero .lead{margin:0 auto 26px;max-width:490px;font-size:15px}
 .vsl{position:relative;max-width:700px;margin:0 auto 20px;aspect-ratio:16/9;background:#000;border:5px solid var(--black);border-radius:14px;overflow:hidden}
 .vsl video{width:100%;height:100%;display:block;object-fit:contain;background:#000}
+/* Esconde o botão play nativo do iOS/Android que fica vazando por trás */
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
 .vsl-ov{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:rgba(0,0,0,.45);cursor:pointer;transition:opacity .3s;padding:16px;text-align:center}
 .vsl-ov.hide{opacity:0;pointer-events:none}
 .play{width:74px;height:74px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;animation:p2 2s infinite}
@@ -153,7 +159,8 @@ footer a{text-decoration:underline;margin:0 7px}
     <p class="lead">Sem depender de iFood, sorte ou indicação. Estrutura pronta para qualquer delivery que queira parar de depender de aplicativo e começar a vender direto.</p>
 
     <div class="vsl" id="vsl">
-      <video id="vid" playsinline webkit-playsinline preload="metadata" controls>
+      <!-- Removi o 'controls' daqui para não vazar botão no início -->
+      <video id="vid" playsinline webkit-playsinline preload="metadata">
         <source src="/VLS.mp4" type="video/mp4">
       </video>
       <div class="vsl-ov" id="ov">
@@ -220,7 +227,6 @@ footer a{text-decoration:underline;margin:0 7px}
     <div class="wrap">
       <div class="center"><span class="eyebrow">O que você recebe</span><h2>Tudo que seu delivery precisa<br>em um <span class="hl">único lugar</span></h2></div>
       
-      <!-- Fim da parte onde o seu código cortou. Aqui começa o completado! -->
       <div class="grid">
         <div class="mod"><div class="emo">🎯</div><h3>Gerador de Clientes</h3><p>Traga gente nova da sua região todo dia.</p><ul><li>Campanha pronta</li><li>Segmentação por bairro</li><li>Orçamento baixo</li><li>Passo a passo</li></ul></div>
         <div class="mod"><div class="emo">🤖</div><h3>Robô de Pedidos</h3><p>Atendimento 100% no automático.</p><ul><li>Mensagens prontas</li><li>Cardápio digital</li><li>Sem mensalidades extras</li><li>Atendimento 24h</li></ul></div>
@@ -264,7 +270,6 @@ footer a{text-decoration:underline;margin:0 7px}
           <li>✅ Direito aos Bônus VIP</li>
         </ul>
         
-        <!-- PRIMEIRO BOTÃO DE COMPRA COM O LINK DA SYNC PAY -->
         <a href="https://link.syncpayments.com.br/zPedln" class="btn buy" target="_blank" style="margin-top: 20px;">
           💳 QUERO GARANTIR MINHA MÁQUINA
         </a>
@@ -299,7 +304,6 @@ footer a{text-decoration:underline;margin:0 7px}
 
 </div> <!-- Fim do conteúdo oculto (Gated) -->
 
-<!-- SEGUNDO BOTÃO DE COMPRA COM O LINK DA SYNC PAY (Barra Inferior Fixa) -->
 <div class="sticky" id="barraFixa">
   <div class="info">
     <b>Acesso Imediato</b>
@@ -311,13 +315,11 @@ footer a{text-decoration:underline;margin:0 7px}
 </div>
 
 <script>
-  // Script para remover a capa do vídeo e liberar o conteúdo
   const btnPlay = document.getElementById('playBtn');
   const overlay = document.getElementById('ov');
   const video = document.getElementById('vid');
   const btnSkip = document.getElementById('skip');
 
-  // Mostra botão de pular após alguns segundos
   setTimeout(() => {
     btnSkip.classList.add('on');
   }, 3000); 
@@ -325,7 +327,11 @@ footer a{text-decoration:underline;margin:0 7px}
   function iniciarVideo() {
     overlay.classList.add('hide');
     btnPlay.style.display = 'none';
-    if(video) video.play();
+    if(video) {
+        // Adiciona a barra de tempo do celular SÓ DEPOIS que o cliente clicar no Play amarelo
+        video.setAttribute('controls', 'controls'); 
+        video.play();
+    }
   }
 
   function liberarConteudo() {
@@ -338,7 +344,6 @@ footer a{text-decoration:underline;margin:0 7px}
   if(overlay) overlay.addEventListener('click', iniciarVideo);
   if(btnPlay) btnPlay.addEventListener('click', iniciarVideo);
 
-  // Mostrar barra fixa ao rolar a página
   window.addEventListener('scroll', () => {
     if (document.getElementById('gated').classList.contains('on')) {
        const barra = document.getElementById('barraFixa');
