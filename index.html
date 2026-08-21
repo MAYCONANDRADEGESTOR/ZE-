@@ -2,150 +2,73 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Receba de 30 a 100 pedidos por dia no WhatsApp</title>
 <meta name="description" content="Estrutura pronta para seu delivery gerar pedidos todos os dias. Copie, adapte e ative.">
 <meta property="og:title" content="Máquina de Pedidos — Mais pedidos no WhatsApp">
 <meta property="og:description" content="Estrutura pronta para seu delivery gerar pedidos todos os dias.">
-<meta property="og:image" content="/og.jpg">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#ffffff;
-  --bg2:#f7f7f8;
-  --txt:#0a0a0a;
-  --muted:#6b7280;
-  --line:#e5e7eb;
-  --black:#0a0a0a;
-  --yellow:#ffe500;
-  --yellow2:#ffd60a;
-  --green:#16a34a;
-  --green-l:#dcfce7;
-  --red:#dc2626;
-  --red-l:#fee2e2;
-  --radius:16px;
-  --max:960px;
-}
+:root{--bg:#fff;--bg2:#f7f7f8;--txt:#0a0a0a;--muted:#6b7280;--line:#e5e7eb;--black:#0a0a0a;--yellow:#ffe500;--yellow2:#ffd60a;--green:#16a34a;--green-l:#dcfce7;--red:#dc2626;--red-l:#fee2e2;--r:16px}
 *{margin:0;padding:0;box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{
-  background:var(--bg);color:var(--txt);
-  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-  line-height:1.55;overflow-x:hidden;
-}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.55;overflow-x:hidden;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:960px;margin:0 auto;padding:0 20px}
 section{padding:62px 0}
 h1,h2,h3{line-height:1.1;letter-spacing:-.03em;font-weight:900}
-h1{font-size:clamp(32px,7.4vw,58px)}
-h2{font-size:clamp(26px,5vw,42px);margin-bottom:14px}
-h3{font-size:19px;font-weight:800;letter-spacing:-.02em}
+h1{font-size:clamp(32px,7.4vw,58px)}h2{font-size:clamp(26px,5vw,42px);margin-bottom:14px}h3{font-size:19px;font-weight:800;letter-spacing:-.02em}
 .lead{color:var(--muted);font-size:clamp(14.5px,2.1vw,17px);max-width:600px;font-weight:500}
-.center{text-align:center}
-.center .lead{margin-left:auto;margin-right:auto}
-.hl{background:var(--yellow);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.eyebrow{
-  display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.14em;
-  text-transform:uppercase;color:#000;background:var(--yellow);
-  padding:6px 13px;border-radius:100px;margin-bottom:16px;
-}
-
-/* ---------- BOTÕES ---------- */
-.btn{
-  display:flex;align-items:center;justify-content:center;gap:9px;
-  background:var(--black);color:var(--yellow);
-  font-weight:800;font-size:15px;letter-spacing:.04em;text-transform:uppercase;
-  padding:19px 28px;border-radius:100px;border:0;cursor:pointer;
-  width:100%;max-width:470px;margin:0 auto;text-align:center;line-height:1.3;
-  transition:transform .16s ease,box-shadow .16s ease;
-}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+.hl{background:var(--yellow);padding:0 .12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.eyebrow{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:var(--yellow);padding:6px 13px;border-radius:100px;margin-bottom:16px}
+.btn{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--black);color:var(--yellow);font-weight:800;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:19px 28px;border-radius:100px;border:0;cursor:pointer;width:100%;max-width:470px;margin:0 auto;line-height:1.3;font-family:inherit;transition:transform .16s,box-shadow .16s}
 .btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.22)}
-.btn:active{transform:translateY(0)}
 .btn.buy{background:var(--green);color:#fff;animation:pulse 2.4s infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(22,163,74,.42)}70%{box-shadow:0 0 0 16px rgba(22,163,74,0)}}
 .btn-sub{font-size:12.5px;color:var(--muted);margin-top:11px;text-align:center;font-weight:500}
-.pill{
-  display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);
-  border-radius:100px;padding:11px 20px;font-size:12.5px;font-weight:800;
-  letter-spacing:.06em;text-transform:uppercase;margin-top:14px;transition:.2s;
-}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:100px;padding:11px 20px;font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-top:14px}
 .pill:hover{border-color:var(--black)}
-
-/* ---------- HERO ---------- */
+/* HERO / VSL */
 .hero{padding:52px 0 46px;text-align:center}
-.hero h1{margin-bottom:16px}
-.hero .lead{margin:0 auto 26px;max-width:490px;font-size:15px}
-.vsl{
-  position:relative;max-width:700px;margin:0 auto 20px;aspect-ratio:16/9;
-  background:#000;border:5px solid var(--black);border-radius:14px;overflow:hidden;
-}
-.vsl video{width:100%;height:100%;display:block;object-fit:cover;background:#000}
-.vsl-ov{
-  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;gap:12px;background:rgba(0,0,0,.35);cursor:pointer;transition:opacity .3s;
-}
+.hero h1{margin-bottom:16px}.hero .lead{margin:0 auto 26px;max-width:490px;font-size:15px}
+.vsl{position:relative;max-width:700px;margin:0 auto 20px;aspect-ratio:16/9;background:#000;border:5px solid var(--black);border-radius:14px;overflow:hidden}
+.vsl video{width:100%;height:100%;display:block;object-fit:contain;background:#000}
+.vsl-ov{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:rgba(0,0,0,.45);cursor:pointer;transition:opacity .3s;padding:16px;text-align:center}
 .vsl-ov.hide{opacity:0;pointer-events:none}
-.play{
-  width:74px;height:74px;border-radius:50%;background:var(--yellow);
-  display:grid;place-items:center;animation:p2 2s infinite;
-}
+.play{width:74px;height:74px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;animation:p2 2s infinite}
 @keyframes p2{0%,100%{box-shadow:0 0 0 0 rgba(255,229,0,.5)}70%{box-shadow:0 0 0 20px rgba(255,229,0,0)}}
-.vsl-ov span{color:#fff;font-size:13.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
-.micro{font-size:11.5px;color:var(--muted);letter-spacing:.03em;margin-top:12px;font-weight:600}
-
-/* ---------- GATE ---------- */
-#gated{display:none}
-#gated.on{display:block;animation:fadeUp .7s ease}
+.vsl-ov span{color:#fff;font-size:13.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+.vsl-ov small{color:#d4d4d8;font-size:12px;font-weight:600}
+.micro{font-size:11.5px;color:var(--muted);margin-top:12px;font-weight:600}
+/* GATE */
+#gated{display:none}#gated.on{display:block;animation:fadeUp .7s ease}
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
-#skip{
-  display:none;margin:18px auto 0;font-size:12.5px;color:var(--muted);
-  text-decoration:underline;cursor:pointer;background:none;border:0;font-family:inherit;
-}
+#skip{display:none;margin:18px auto 0;font-size:12.5px;color:var(--muted);text-decoration:underline;cursor:pointer;background:none;border:0;font-family:inherit}
 #skip.on{display:block;animation:fadeUp .5s ease}
-#progWrap{max-width:700px;margin:0 auto 18px;display:none}
-#progWrap.on{display:block}
+#progWrap{max-width:700px;margin:0 auto 18px;display:none}#progWrap.on{display:block}
 #progBar{height:5px;background:var(--line);border-radius:100px;overflow:hidden}
-#progFill{height:100%;width:0;background:var(--yellow2);transition:width .3s linear}
-#progTxt{font-size:11.5px;color:var(--muted);margin-top:7px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
-
-/* ---------- DOR ---------- */
+#progFill{height:100%;width:0;background:var(--yellow2);transition:width .35s linear}
+#progTxt{font-size:11.5px;color:var(--muted);margin-top:7px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+/* DOR */
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
-.col{border:1.5px solid var(--line);border-radius:var(--radius);padding:24px}
-.col.bad{background:#fff8f8;border-color:#fecaca}
-.col.good{background:#f6fdf8;border-color:#bbf7d0}
+.col{border:1.5px solid var(--line);border-radius:var(--r);padding:24px}
+.col.bad{background:#fff8f8;border-color:#fecaca}.col.good{background:#f6fdf8;border-color:#bbf7d0}
 .col h4{font-size:11.5px;text-transform:uppercase;letter-spacing:.11em;margin-bottom:16px;font-weight:800}
-.col.bad h4{color:var(--red)}
-.col.good h4{color:var(--green)}
+.col.bad h4{color:var(--red)}.col.good h4{color:var(--green)}
 .col ul{list-style:none;display:flex;flex-direction:column;gap:13px}
 .col li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;font-weight:500}
 .ico{flex:0 0 21px;width:21px;height:21px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:900;margin-top:1px}
-.ico.x{background:var(--red-l);color:var(--red)}
-.ico.v{background:var(--green-l);color:var(--green)}
-
-/* ---------- PASSOS ---------- */
+.ico.x{background:var(--red-l);color:var(--red)}.ico.v{background:var(--green-l);color:var(--green)}
+/* PASSOS */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
-.step{border:1.5px solid var(--line);border-radius:var(--radius);padding:28px 22px;text-align:center;transition:.22s}
+.step{border:1.5px solid var(--line);border-radius:var(--r);padding:28px 22px;text-align:center;transition:.22s}
 .step:hover{border-color:var(--black);transform:translateY(-3px)}
 .step .n{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--yellow);font-size:15px;font-weight:900;margin:0 auto 14px}
 .step p{color:var(--muted);font-size:14px;margin-top:7px;font-weight:500}
-
-/* ---------- DEPOIMENTOS ---------- */
-.depos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
-.depo{border:1.5px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
-.depo .vid{aspect-ratio:16/9;background:#000}
-.depo .vid iframe{width:100%;height:100%;border:0;display:block}
-.depo .txt{padding:20px}
-.stars{color:#f59e0b;font-size:14px;letter-spacing:2px;margin-bottom:9px}
-.depo blockquote{font-size:14.5px;font-style:italic;color:#27272a;font-weight:500}
-.who{display:flex;align-items:center;gap:10px;margin-top:14px}
-.av{width:34px;height:34px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:900;font-size:14px}
-.who b{font-size:13.5px;display:block}
-.who small{color:var(--muted);font-size:12px}
-
-/* ---------- WHATSAPP ---------- */
+/* WHATSAPP */
 .phone{max-width:330px;margin:34px auto 0;background:#0b141a;border:8px solid #111;border-radius:32px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
 .ph-top{background:#1f2c34;padding:11px 13px;display:flex;align-items:center;gap:10px}
 .ph-av{width:36px;height:36px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-size:18px}
@@ -153,16 +76,15 @@ h3{font-size:19px;font-weight:800;letter-spacing:-.02em}
 .ph-top small{font-size:11px;color:#7fd97f;display:flex;align-items:center;gap:5px}
 .dot{width:6px;height:6px;border-radius:50%;background:#7fd97f;display:inline-block;animation:blink 1.6s infinite}
 @keyframes blink{50%{opacity:.25}}
-.ph-body{padding:15px 11px;min-height:310px;display:flex;flex-direction:column;gap:9px;background:#0b141a}
+.ph-body{padding:15px 11px;min-height:310px;display:flex;flex-direction:column;gap:9px}
 .msg{max-width:83%;background:#1f2c34;padding:9px 12px;border-radius:10px;font-size:13px;color:#e9edef;opacity:0;transform:translateY(10px);animation:pop .45s forwards;line-height:1.45}
 .msg.me{background:#005c4b;align-self:flex-end}
 .msg .nm{display:block;font-size:11px;color:#ffd60a;font-weight:800;margin-bottom:3px}
 .msg .pr{display:block;margin-top:5px;font-size:12px;color:#7fd97f;font-weight:800}
 @keyframes pop{to{opacity:1;transform:none}}
-
-/* ---------- MÓDULOS ---------- */
+/* MÓDULOS */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
-.mod{border:1.5px solid var(--line);border-radius:var(--radius);padding:24px 20px;transition:.22s;background:#fff}
+.mod{border:1.5px solid var(--line);border-radius:var(--r);padding:24px 20px;transition:.22s}
 .mod:hover{border-color:var(--black);transform:translateY(-3px)}
 .mod .emo{width:44px;height:44px;border-radius:11px;background:var(--yellow);display:grid;place-items:center;font-size:21px;margin-bottom:14px}
 .mod h3{margin-bottom:7px;font-size:17px}
@@ -170,159 +92,117 @@ h3{font-size:19px;font-weight:800;letter-spacing:-.02em}
 .mod ul{list-style:none;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line);padding-top:13px}
 .mod li{font-size:13px;display:flex;gap:8px;align-items:center;font-weight:500}
 .mod li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--black);flex:0 0 auto}
-
-/* ---------- BÔNUS ---------- */
+/* BÔNUS */
 .bonus-box{background:var(--bg2);border:1.5px solid var(--line);border-radius:22px;padding:34px 26px;margin-top:34px}
 .bonus-list{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:26px 0}
 .bonus-item{display:flex;gap:9px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:11px;padding:13px 14px;font-size:13.5px;font-weight:600}
 .bonus-item span{color:var(--green);font-weight:900}
 .warn{background:#fffbe6;border:1.5px solid #fde68a;border-radius:13px;padding:16px 18px;font-size:14px;display:flex;gap:11px;align-items:flex-start;font-weight:500}
-
-/* ---------- ANCORAGEM ---------- */
-.stack{max-width:520px;margin:34px auto 0;border:1.5px solid var(--line);border-radius:var(--radius);padding:8px 22px}
+/* ANCORAGEM */
+.stack{max-width:520px;margin:34px auto 0;border:1.5px solid var(--line);border-radius:var(--r);padding:8px 22px}
 .stack .row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:14.5px;font-weight:500}
 .stack .row:last-child{border-bottom:0}
 .stack .row span:last-child{color:var(--muted);text-decoration:line-through;flex:0 0 auto}
 .stack .row.total{font-weight:900;font-size:17px}
-.stack .row.total span:last-child{color:var(--red);text-decoration:line-through;font-size:19px}
+.stack .row.total span:last-child{color:var(--red);font-size:19px}
 .drop{text-align:center;margin-top:26px}
 .drop p{font-size:clamp(17px,3.2vw,22px);font-weight:800;color:var(--muted);margin:7px 0;text-decoration:line-through;opacity:.5}
 .drop p:last-child{color:var(--txt);text-decoration:none;opacity:1}
-
-/* ---------- OFERTA ---------- */
+/* OFERTA */
 .offer{max-width:490px;margin:36px auto 0;background:#fff;border:3px solid var(--black);border-radius:24px;padding:32px 26px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.1)}
 .offer .tag{display:inline-block;background:var(--yellow);font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:6px 13px;border-radius:100px;margin-bottom:16px}
 .offer ul{list-style:none;text-align:left;display:flex;flex-direction:column;gap:10px;margin:20px 0 24px}
 .offer li{display:flex;gap:10px;align-items:center;font-size:14.5px;font-weight:600}
-.offer li svg{flex:0 0 auto}
 .price-lbl{font-size:13.5px;color:var(--muted);font-weight:600}
 .price{font-size:clamp(54px,12vw,74px);font-weight:900;line-height:1;letter-spacing:-.05em;margin:4px 0 6px}
 .price small{font-size:26px;font-weight:800;vertical-align:super;margin-right:3px}
 .price-note{font-size:12.5px;color:var(--muted);margin-bottom:22px;font-weight:600}
-
-/* ---------- GARANTIA ---------- */
-.guar{display:flex;gap:22px;align-items:center;border:1.5px solid var(--line);border-radius:var(--radius);padding:28px;margin-top:36px;background:var(--bg2)}
+/* GARANTIA / CHIPS / FAQ / STICKY */
+.guar{display:flex;gap:22px;align-items:center;border:1.5px solid var(--line);border-radius:var(--r);padding:28px;margin-top:36px;background:var(--bg2)}
 .seal{flex:0 0 104px;width:104px;height:104px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;text-align:center;font-weight:900;line-height:1.05}
-.seal b{font-size:12px;display:block}
-.seal i{font-size:28px;font-style:normal;display:block}
+.seal b{font-size:12px;display:block}.seal i{font-size:28px;font-style:normal;display:block}
 .guar p{color:var(--muted);font-size:14.5px;margin-top:7px;font-weight:500}
-
-/* ---------- CHIPS ---------- */
 .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px}
-.chip{border:1.5px solid var(--line);border-radius:100px;padding:11px 20px;font-size:14.5px;font-weight:700;transition:.2s}
+.chip{border:1.5px solid var(--line);border-radius:100px;padding:11px 20px;font-size:14.5px;font-weight:700}
 .chip:hover{border-color:var(--black)}
-
-/* ---------- FAQ ---------- */
 .faq{max-width:680px;margin:32px auto 0;display:flex;flex-direction:column;gap:10px}
-.q{border:1.5px solid var(--line);border-radius:13px;overflow:hidden;background:#fff}
+.q{border:1.5px solid var(--line);border-radius:13px;overflow:hidden}
 .q button{width:100%;background:none;border:0;text-align:left;cursor:pointer;padding:18px 20px;font-size:15px;font-weight:700;font-family:inherit;display:flex;justify-content:space-between;gap:14px;align-items:center;color:var(--txt)}
-.q button i{font-style:normal;font-size:21px;transition:.25s;flex:0 0 auto}
+.q button i{font-style:normal;font-size:21px;transition:.25s}
 .q.open button i{transform:rotate(45deg)}
-.q .a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.q .a{max-height:0;overflow:hidden;transition:max-height .3s}
 .q .a p{padding:0 20px 18px;color:var(--muted);font-size:14px;font-weight:500}
-
-/* ---------- STICKY ---------- */
-.sticky{position:fixed;bottom:0;left:0;right:0;z-index:99;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:1.5px solid var(--line);padding:11px 16px;display:flex;align-items:center;justify-content:center;gap:14px;transform:translateY(120%);transition:transform .35s ease}
+.sticky{position:fixed;bottom:0;left:0;right:0;z-index:99;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:1.5px solid var(--line);padding:11px 16px;display:flex;align-items:center;justify-content:center;gap:14px;transform:translateY(120%);transition:transform .35s}
 .sticky.show{transform:none}
 .sticky .info{text-align:right;line-height:1.15}
 .sticky .info b{font-size:19px;display:block;font-weight:900}
 .sticky .info small{font-size:11px;color:var(--muted);font-weight:600}
 .sticky .btn{width:auto;padding:14px 24px;font-size:13.5px;margin:0}
-
-/* ---------- FOOTER ---------- */
 footer{border-top:1.5px solid var(--line);padding:30px 0;text-align:center;color:#9ca3af;font-size:12px;font-weight:500}
 footer a{text-decoration:underline;margin:0 7px}
-
-/* ---------- REVEAL ---------- */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
-.rv.in{opacity:1;transform:none}
-
-@media(max-width:860px){
-  .grid,.bonus-list{grid-template-columns:1fr 1fr}
-  .steps,.depos{grid-template-columns:1fr}
-}
-@media(max-width:600px){
-  section{padding:48px 0}
-  .cols,.grid,.bonus-list{grid-template-columns:1fr}
-  .guar{flex-direction:column;text-align:center;padding:26px 20px}
-  .sticky .info{display:none}
-  .sticky .btn{width:100%}
-  body.gated-on{padding-bottom:76px}
-}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+@media(max-width:860px){.grid,.bonus-list{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}}
+@media(max-width:600px){section{padding:48px 0}.cols,.grid,.bonus-list{grid-template-columns:1fr}.guar{flex-direction:column;text-align:center;padding:26px 20px}.sticky .info{display:none}.sticky .btn{width:100%}body.gated-on{padding-bottom:76px}}
 </style>
 </head>
 <body>
 
-<!-- ===================== HERO (sempre visível) ===================== -->
 <header class="hero">
   <div class="wrap">
     <h1>Receba de <span class="hl">30 a 100 pedidos</span> por dia no WhatsApp</h1>
     <p class="lead">Sem depender de iFood, sorte ou indicação. Estrutura pronta para qualquer delivery que queira parar de depender de aplicativo e começar a vender direto.</p>
 
-    <!-- VSL -->
     <div class="vsl" id="vsl">
-      <video id="vid" playsinline preload="metadata" poster="/capa-vsl.jpg">
-        <source src="/vsl.mp4" type="video/mp4">
+      <video id="vid" playsinline webkit-playsinline preload="metadata">
+        <source src="/VLS.mp4" type="video/mp4">
       </video>
       <div class="vsl-ov" id="ov">
-        <div class="play">
-          <svg width="25" height="29" viewBox="0 0 26 30" fill="#0a0a0a"><path d="M25 13.27a2 2 0 0 1 0 3.46L3 29.46A2 2 0 0 1 0 27.73V2.27A2 2 0 0 1 3 .54l22 12.73Z"/></svg>
-        </div>
-        <span>Toque para iniciar</span>
+        <div class="play"><svg width="25" height="29" viewBox="0 0 26 30" fill="#0a0a0a"><path d="M25 13.27a2 2 0 0 1 0 3.46L3 29.46A2 2 0 0 1 0 27.73V2.27A2 2 0 0 1 3 .54l22 12.73Z"/></svg></div>
+        <span id="ovTxt">Toque para iniciar</span>
+        <small id="ovSub">Ative o som 🔊</small>
       </div>
     </div>
 
-    <!-- Barra de progresso do gate -->
     <div id="progWrap">
       <div id="progBar"><div id="progFill"></div></div>
       <div id="progTxt">Assista até o fim para liberar a oferta</div>
     </div>
 
-    <div class="btn" id="playBtn">▶ Toque no vídeo para iniciar</div>
+    <button class="btn" id="playBtn">▶ Toque no vídeo para iniciar</button>
     <div class="micro">Acesso imediato · Garantia de 7 dias</div>
     <a class="pill" href="#bonus">🎁 + 11 bônus inclusos hoje</a>
-
     <button id="skip">Já assisti ao vídeo — liberar conteúdo</button>
   </div>
 </header>
 
-<!-- ===================== CONTEÚDO BLOQUEADO ===================== -->
 <div id="gated">
 
-  <!-- DOR -->
   <section class="rv">
     <div class="wrap">
       <div class="center">
         <span class="eyebrow">Por que você estagnou</span>
         <h2>Não é falta de esforço.<br>É falta de <span class="hl">sistema</span>.</h2>
-        <p class="lead">Você já fez promoção, já impulsionou post, já baixou preço. O movimento sobe e cai de novo na semana seguinte — porque nada disso é estrutura, é tentativa.</p>
+        <p class="lead">Você já fez promoção, já impulsionou post, já baixou preço. O movimento sobe e cai na semana seguinte — porque nada disso é estrutura, é tentativa.</p>
       </div>
       <div class="cols">
-        <div class="col bad">
-          <h4>Como está hoje</h4>
-          <ul>
-            <li><span class="ico x">✕</span> Comissão do app comendo a margem</li>
-            <li><span class="ico x">✕</span> Impulsionar post e não gerar pedido</li>
-            <li><span class="ico x">✕</span> Cliente compra uma vez e some</li>
-            <li><span class="ico x">✕</span> Responder tudo na mão, o dia inteiro</li>
-            <li><span class="ico x">✕</span> Terça e quarta com o salão vazio</li>
-          </ul>
-        </div>
-        <div class="col good">
-          <h4>Com a Máquina de Pedidos</h4>
-          <ul>
-            <li><span class="ico v">✓</span> Pedido direto no Zap, sem comissão</li>
-            <li><span class="ico v">✓</span> Anúncio validado, feito pra converter</li>
-            <li><span class="ico v">✓</span> Cliente reativado sozinho toda semana</li>
-            <li><span class="ico v">✓</span> Atendimento no automático 24h</li>
-            <li><span class="ico v">✓</span> Campanha pronta pros dias fracos</li>
-          </ul>
-        </div>
+        <div class="col bad"><h4>Como está hoje</h4><ul>
+          <li><span class="ico x">✕</span> Comissão do app comendo a margem</li>
+          <li><span class="ico x">✕</span> Impulsionar post e não gerar pedido</li>
+          <li><span class="ico x">✕</span> Cliente compra uma vez e some</li>
+          <li><span class="ico x">✕</span> Responder tudo na mão, o dia inteiro</li>
+          <li><span class="ico x">✕</span> Terça e quarta com o salão vazio</li>
+        </ul></div>
+        <div class="col good"><h4>Com a Máquina de Pedidos</h4><ul>
+          <li><span class="ico v">✓</span> Pedido direto no Zap, sem comissão</li>
+          <li><span class="ico v">✓</span> Anúncio validado, feito pra converter</li>
+          <li><span class="ico v">✓</span> Cliente reativado sozinho toda semana</li>
+          <li><span class="ico v">✓</span> Atendimento no automático 24h</li>
+          <li><span class="ico v">✓</span> Campanha pronta pros dias fracos</li>
+        </ul></div>
       </div>
     </div>
   </section>
 
-  <!-- MECANISMO -->
   <section class="rv" style="background:var(--bg2)">
     <div class="wrap center">
       <span class="eyebrow">Conheça</span>
@@ -336,49 +216,19 @@ footer a{text-decoration:underline;margin:0 7px}
     </div>
   </section>
 
-  <!-- DEPOIMENTOS -->
   <section class="rv">
-    <div class="wrap">
-      <div class="center"><span class="eyebrow">Resultados reais</span><h2>Quem já ativou</h2></div>
-      <div class="depos">
-        <div class="depo">
-          <div class="vid"><iframe src="https://www.youtube.com/embed/VIDEO_ID_1?rel=0&modestbranding=1" title="Depoimento 1" allowfullscreen loading="lazy"></iframe></div>
-          <div class="txt">
-            <div class="stars">★★★★★</div>
-            <blockquote>“Eu vivia refém do aplicativo. Hoje mais da metade dos pedidos entra direto no WhatsApp e a margem melhorou de verdade.”</blockquote>
-            <div class="who"><div class="av">R</div><div><b>Rafael M.</b><small>Hamburgueria · Uberlândia/MG</small></div></div>
-          </div>
-        </div>
-        <div class="depo">
-          <div class="vid"><iframe src="https://www.youtube.com/embed/VIDEO_ID_2?rel=0&modestbranding=1" title="Depoimento 2" allowfullscreen loading="lazy"></iframe></div>
-          <div class="txt">
-            <div class="stars">★★★★★</div>
-            <blockquote>“Coloquei o robô pra rodar numa sexta. No fim de semana a impressora não parou. Melhor mês desde que abri.”</blockquote>
-            <div class="who"><div class="av">C</div><div><b>Carla S.</b><small>Pizzaria · Goiânia/GO</small></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHATSAPP -->
-  <section class="rv" style="background:var(--bg2)">
     <div class="wrap center">
       <span class="eyebrow">Veja em ação</span>
       <h2>Assim fica o seu<br>WhatsApp <span class="hl">às 20h</span></h2>
       <div class="phone">
-        <div class="ph-top">
-          <div class="ph-av">🍔</div>
-          <div><b>Meu Delivery</b><small><i class="dot"></i> online · recebendo pedidos</small></div>
-        </div>
+        <div class="ph-top"><div class="ph-av">🍔</div><div><b>Meu Delivery</b><small><i class="dot"></i> online · recebendo pedidos</small></div></div>
         <div class="ph-body" id="chat"></div>
       </div>
       <p class="lead center" style="margin-top:24px">Imagine abrir o celular amanhã de manhã e encontrar essa fila de pedidos esperando por você.</p>
     </div>
   </section>
 
-  <!-- MÓDULOS -->
-  <section class="rv">
+  <section class="rv" style="background:var(--bg2)">
     <div class="wrap">
       <div class="center"><span class="eyebrow">O que você recebe</span><h2>Tudo que seu delivery precisa<br>em um <span class="hl">único lugar</span></h2></div>
       <div class="grid">
@@ -395,8 +245,7 @@ footer a{text-decoration:underline;margin:0 7px}
     </div>
   </section>
 
-  <!-- BÔNUS -->
-  <section class="rv" id="bonus" style="background:var(--bg2)">
+  <section class="rv" id="bonus">
     <div class="wrap">
       <div class="center"><span class="eyebrow">Bônus exclusivos</span><h2>Ative hoje e leve<br><span class="hl">+ 11 entregáveis</span></h2></div>
       <div class="bonus-box">
@@ -416,14 +265,13 @@ footer a{text-decoration:underline;margin:0 7px}
         <div class="warn"><span>⚠️</span><div><b>Atenção:</b> o pacote de bônus está liberado apenas para quem ativar nesta página. Vale mais que o próprio produto — e entra junto, sem custo extra.</div></div>
         <div style="margin-top:26px">
           <a class="btn buy" href="#CHECKOUT">Ativar com os 11 bônus</a>
-          <div class="btn-sub">Bônus liberados na hora da confirmação do pagamento</div>
+          <div class="btn-sub">Bônus liberados na confirmação do pagamento</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ANCORAGEM -->
-  <section class="rv">
+  <section class="rv" style="background:var(--bg2)">
     <div class="wrap">
       <div class="center"><span class="eyebrow">Valor real</span><h2>Quanto valeria montar<br>tudo isso do zero?</h2></div>
       <div class="stack">
@@ -441,22 +289,21 @@ footer a{text-decoration:underline;margin:0 7px}
     </div>
   </section>
 
-  <!-- OFERTA -->
-  <section class="rv" id="oferta" style="background:var(--bg2)">
-    <div class="wrap center">
+  <section class="rv center">
+    <div class="wrap">
       <span class="eyebrow">Oferta de lançamento</span>
       <h2>Ative sua máquina hoje</h2>
       <div class="offer">
         <span class="tag">Acesso vitalício</span>
         <ul>
-          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#16a34a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Gerador de Clientes</li>
-          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#16a34a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Robô de Pedidos</li>
-          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#16a34a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Cardápio Digital</li>
-          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#16a34a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Banco de Ofertas</li>
-          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#16a34a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Atendente Digital</li>
-          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#16a34a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Galeria de Anúncios</li>
-          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#16a34a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> Calendário de Vendas</li>
-          <li><svg width="17" height="17" viewBox="0 0 20 20" fill="#0a0a0a"><path d="M10 0a10 10 0 100 20A10 10 0 0010 0zm4.7 7.7l-5.6 5.6a1 1 0 01-1.4 0L5.3 10.9a1 1 0 111.4-1.4l1.7 1.7 4.9-4.9a1 1 0 011.4 1.4z"/></svg> <b>+ 11 bônus exclusivos</b></li>
+          <li>✅ Gerador de Clientes</li>
+          <li>✅ Robô de Pedidos</li>
+          <li>✅ Cardápio Digital</li>
+          <li>✅ Banco de Ofertas</li>
+          <li>✅ Atendente Digital</li>
+          <li>✅ Galeria de Anúncios</li>
+          <li>✅ Calendário de Vendas</li>
+          <li>🎁 <b>+ 11 bônus exclusivos</b></li>
         </ul>
         <div class="price-lbl">De <s>R$ 1.446</s> por apenas</div>
         <div class="price"><small>R$</small>37</div>
@@ -467,20 +314,15 @@ footer a{text-decoration:underline;margin:0 7px}
     </div>
   </section>
 
-  <!-- GARANTIA -->
   <section class="rv">
     <div class="wrap">
       <div class="guar">
         <div class="seal"><b>GARANTIA</b><i>7</i><b>DIAS</b></div>
-        <div>
-          <h3>Teste sem risco nenhum</h3>
-          <p>Entre, veja tudo por dentro, aplique no seu delivery. Se em 7 dias achar que não faz sentido, é só pedir o reembolso e você recebe 100% do valor de volta — sem precisar justificar nada.</p>
-        </div>
+        <div><h3>Teste sem risco nenhum</h3><p>Entre, veja tudo por dentro, aplique no seu delivery. Se em 7 dias achar que não faz sentido, é só pedir o reembolso e você recebe 100% do valor de volta — sem precisar justificar nada.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- PARA QUEM -->
   <section class="rv" style="background:var(--bg2)">
     <div class="wrap center">
       <span class="eyebrow">Para quem é</span>
@@ -494,7 +336,6 @@ footer a{text-decoration:underline;margin:0 7px}
     </div>
   </section>
 
-  <!-- FAQ -->
   <section class="rv">
     <div class="wrap">
       <div class="center"><span class="eyebrow">Dúvidas</span><h2>Perguntas frequentes</h2></div>
@@ -508,7 +349,6 @@ footer a{text-decoration:underline;margin:0 7px}
     </div>
   </section>
 
-  <!-- CTA FINAL -->
   <section class="rv center">
     <div class="wrap">
       <h2>Pare de esperar o WhatsApp tocar.<br><span class="hl">Faça ele tocar.</span></h2>
@@ -518,166 +358,117 @@ footer a{text-decoration:underline;margin:0 7px}
     </div>
   </section>
 
-  <!-- STICKY -->
   <div class="sticky" id="sticky">
     <div class="info"><b>R$ 37</b><small>pagamento único</small></div>
     <a class="btn buy" href="#CHECKOUT">Quero ativar agora</a>
   </div>
-
-</div><!-- /#gated -->
+</div>
 
 <footer>
   <div class="wrap">
     <p>© 2026 Máquina de Pedidos · Todos os direitos reservados</p>
-    <p style="margin-top:9px"><a href="/termos">Termos de uso</a>·<a href="/privacidade">Privacidade</a>·<a href="/suporte">Suporte</a></p>
-    <p style="margin-top:12px;max-width:620px;margin-left:auto;margin-right:auto;font-size:11px;line-height:1.5">
-      Este site não é afiliado ao Facebook, Meta, Google ou a qualquer aplicativo de delivery. Resultados são individuais e dependem de aplicação, região e investimento — não representam promessa de faturamento.
-    </p>
+    <p style="margin-top:9px"><a href="/termos">Termos</a>·<a href="/privacidade">Privacidade</a>·<a href="/suporte">Suporte</a></p>
+    <p style="margin-top:12px;max-width:620px;margin:12px auto 0;font-size:11px;line-height:1.5">Este site não é afiliado ao Facebook, Meta, Google ou a qualquer aplicativo de delivery. Resultados são individuais e dependem de aplicação, região e investimento — não representam promessa de faturamento.</p>
   </div>
 </footer>
 
 <script>
-/* =========================================================
-   CONFIG DO GATE — mexa só aqui
-   ========================================================= */
+/* ============ CONFIG — mexa só aqui ============ */
 var CONFIG = {
-  liberarAos: null,      // null = só no FIM do vídeo. Ou número em segundos (ex: 420 = 7 min)
-  mostrarProgresso: true,// barra "assista até o fim para liberar"
-  botaoPular: true,      // link de escape (RECOMENDADO deixar true)
-  pularApos: 90,         // segundos até o link "já assisti" aparecer
-  bloquearAvanco: true,  // impede arrastar o vídeo pra frente
-  lembrarSessao: true,   // não obriga rever o vídeo após F5
-  rolarAoLiberar: true   // desce a tela suavemente quando libera
+  videoUrl:    '/VLS.mp4',  // nome EXATO do arquivo no repo
+  liberarAos:  null,        // null = libera no fim | ou segundos (ex: 420)
+  botaoPular:  true,        // link de escape (deixe true)
+  pularApos:   90,          // segundos até aparecer o link
+  bloquearAvanco: true,     // impede arrastar o vídeo pra frente
+  lembrarSessao:  true      // não obriga rever após F5
 };
-/* ========================================================= */
+/* =============================================== */
 
 (function(){
-  var vid=document.getElementById('vid'),
-      ov=document.getElementById('ov'),
-      box=document.getElementById('vsl'),
-      playBtn=document.getElementById('playBtn'),
-      gated=document.getElementById('gated'),
-      skip=document.getElementById('skip'),
-      progWrap=document.getElementById('progWrap'),
-      progFill=document.getElementById('progFill'),
-      liberado=false, maxTime=0;
+  var vid=document.getElementById('vid'),ov=document.getElementById('ov'),
+      box=document.getElementById('vsl'),playBtn=document.getElementById('playBtn'),
+      gated=document.getElementById('gated'),skip=document.getElementById('skip'),
+      progWrap=document.getElementById('progWrap'),progFill=document.getElementById('progFill'),
+      liberado=false,maxT=0,chatOn=false;
 
-  function store(k,v){ try{ if(CONFIG.lembrarSessao) sessionStorage.setItem(k,v); }catch(e){} }
-  function read(k){ try{ return CONFIG.lembrarSessao ? sessionStorage.getItem(k) : null; }catch(e){ return null; } }
+  vid.querySelector('source').src=CONFIG.videoUrl; vid.load();
+
+  function read(k){try{return CONFIG.lembrarSessao?sessionStorage.getItem(k):null}catch(e){return null}}
+  function store(k,v){try{if(CONFIG.lembrarSessao)sessionStorage.setItem(k,v)}catch(e){}}
 
   function liberar(rolar){
-    if(liberado) return;
-    liberado=true;
-    gated.classList.add('on');
-    document.body.classList.add('gated-on');
-    if(progWrap) progWrap.classList.remove('on');
-    if(skip) skip.classList.remove('on');
-    store('vsl_ok','1');
-    observarReveal();
-    if(rolar && CONFIG.rolarAoLiberar){
-      setTimeout(function(){ gated.scrollIntoView({behavior:'smooth',block:'start'}); },350);
-    }
-    if(window.fbq) fbq('trackCustom','VSL_Completa');
+    if(liberado)return; liberado=true;
+    gated.classList.add('on'); document.body.classList.add('gated-on');
+    progWrap.classList.remove('on'); skip.classList.remove('on');
+    store('vsl_ok','1'); reveal();
+    if(rolar)setTimeout(function(){gated.scrollIntoView({behavior:'smooth',block:'start'})},350);
+    if(window.fbq)fbq('trackCustom','VSL_Completa');
   }
+  if(read('vsl_ok')==='1')liberar(false);
 
-  // já liberado nesta sessão
-  if(read('vsl_ok')==='1'){ liberar(false); }
-
-  // --- play ---
   function play(){
-    if(!vid) return;
-    vid.play();
-    vid.controls=true;
-    ov.classList.add('hide');
-    if(CONFIG.mostrarProgresso && !liberado) progWrap.classList.add('on');
-    playBtn.textContent='▶ Assistindo…';
+    vid.play().then(function(){
+      vid.controls=true; ov.classList.add('hide');
+      if(!liberado)progWrap.classList.add('on');
+      playBtn.textContent='▶ Assistindo…';
+    }).catch(function(){ document.getElementById('ovSub').textContent='Toque novamente para iniciar'; });
   }
-  box.addEventListener('click',function(){ if(vid.paused) play(); });
+  box.addEventListener('click',function(){if(vid.paused)play()});
   playBtn.addEventListener('click',play);
 
-  // --- progresso + gatilho ---
   vid.addEventListener('timeupdate',function(){
-    var d=vid.duration||0, t=vid.currentTime;
-
-    if(CONFIG.bloquearAvanco){
-      if(t>maxTime+1.6){ vid.currentTime=maxTime; return; }
-      if(t>maxTime) maxTime=t;
-    }
-
-    var alvo = (CONFIG.liberarAos!==null) ? CONFIG.liberarAos : (d?d-0.6:99999);
-    if(progFill && d) progFill.style.width=Math.min(100,(t/(CONFIG.liberarAos||d))*100)+'%';
-    if(t>=alvo) liberar(true);
+    var d=vid.duration||0,t=vid.currentTime;
+    if(CONFIG.bloquearAvanco){ if(t>maxT+1.6){vid.currentTime=maxT;return} if(t>maxT)maxT=t; }
+    var alvo=CONFIG.liberarAos!==null?CONFIG.liberarAos:(d?d-0.6:1e9);
+    if(d)progFill.style.width=Math.min(100,(t/(CONFIG.liberarAos||d))*100)+'%';
+    if(t>=alvo)liberar(true);
   });
+  vid.addEventListener('ended',function(){progFill.style.width='100%';liberar(true)});
 
-  vid.addEventListener('ended',function(){ if(progFill) progFill.style.width='100%'; liberar(true); });
-
-  // --- botão pular ---
-  if(CONFIG.botaoPular && skip){
-    setTimeout(function(){ if(!liberado) skip.classList.add('on'); }, CONFIG.pularApos*1000);
-    skip.addEventListener('click',function(){ liberar(true); });
+  if(CONFIG.botaoPular){
+    setTimeout(function(){if(!liberado)skip.classList.add('on')},CONFIG.pularApos*1000);
+    skip.addEventListener('click',function(){liberar(true)});
   }
+  vid.addEventListener('error',function(){liberar(false)});
+  setTimeout(function(){if(!liberado&&vid.readyState===0)liberar(false)},12000);
 
-  // --- fallback: vídeo quebrado ---
-  vid.addEventListener('error',function(){ liberar(false); });
-  setTimeout(function(){ if(!liberado && vid.readyState===0) liberar(false); },12000);
-
-  // --- sticky ---
   window.addEventListener('scroll',function(){
-    var s=document.getElementById('sticky');
-    if(s) s.classList.toggle('show', liberado && window.scrollY>700);
+    document.getElementById('sticky').classList.toggle('show',liberado&&window.scrollY>700);
   },{passive:true});
 
-  // --- reveal ---
-  function observarReveal(){
+  function reveal(){
     var io=new IntersectionObserver(function(es){
-      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
     },{threshold:.1});
-    document.querySelectorAll('.rv:not(.in)').forEach(function(el){ io.observe(el); });
-    iniciarChat();
+    document.querySelectorAll('.rv:not(.in)').forEach(function(el){io.observe(el)});
+    chat();
+  }
+  function chat(){
+    var c=document.getElementById('chat'); if(!c||chatOn)return;
+    var m=[{n:'João',t:'Boa noite! Quero 1 artesanal duplo + fritas 🍔',p:'R$ 52,90'},
+           {n:'',t:'Fechado, João! Pedido confirmado ✅ Sai em 35 min.',me:1},
+           {n:'Maria',t:'Oi! Pizza calabresa grande e uma Coca 2L 🍕',p:'R$ 74,00'},
+           {n:'Pedro',t:'Açaí 500ml com granola e morango 🍓',p:'R$ 29,50'},
+           {n:'',t:'Anotado, Pedro! Já entrou na produção 🚀',me:1},
+           {n:'Bia',t:'Vocês têm combo pra 2 pessoas hoje?',p:''}];
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting&&!chatOn){chatOn=true;m.forEach(function(x,i){setTimeout(function(){
+        var d=document.createElement('div'); d.className='msg'+(x.me?' me':'');
+        d.innerHTML=(x.n?'<span class="nm">'+x.n+'</span>':'')+x.t+(x.p?'<span class="pr">'+x.p+'</span>':'');
+        c.appendChild(d); c.scrollTop=c.scrollHeight;
+      },i*750)})}
+    })},{threshold:.4});
+    io.observe(c);
   }
 
-  // --- chat WhatsApp ---
-  var chatOn=false;
-  function iniciarChat(){
-    var chat=document.getElementById('chat');
-    if(!chat||chatOn) return;
-    var msgs=[
-      {n:'João',t:'Boa noite! Quero 1 artesanal duplo + fritas 🍔',p:'R$ 52,90'},
-      {n:'',t:'Fechado, João! Pedido confirmado ✅ Sai em 35 min.',me:1},
-      {n:'Maria',t:'Oi! Pizza calabresa grande e uma Coca 2L 🍕',p:'R$ 74,00'},
-      {n:'Pedro',t:'Açaí 500ml com granola e morango 🍓',p:'R$ 29,50'},
-      {n:'',t:'Anotado, Pedro! Já entrou na produção 🚀',me:1},
-      {n:'Bia',t:'Vocês têm combo pra 2 pessoas hoje?',p:''}
-    ];
-    var io=new IntersectionObserver(function(es){
-      es.forEach(function(e){
-        if(e.isIntersecting&&!chatOn){
-          chatOn=true;
-          msgs.forEach(function(m,i){
-            setTimeout(function(){
-              var d=document.createElement('div');
-              d.className='msg'+(m.me?' me':'');
-              d.innerHTML=(m.n?'<span class="nm">'+m.n+'</span>':'')+m.t+(m.p?'<span class="pr">'+m.p+'</span>':'');
-              chat.appendChild(d); chat.scrollTop=chat.scrollHeight;
-            }, i*750);
-          });
-        }
-      });
-    },{threshold:.4});
-    io.observe(chat);
-  }
-
-  // --- FAQ ---
   document.addEventListener('click',function(ev){
-    var b=ev.target.closest('.q button'); if(!b) return;
+    var b=ev.target.closest('.q button'); if(!b)return;
     var q=b.parentElement,a=q.querySelector('.a'),open=q.classList.contains('open');
-    document.querySelectorAll('.q').forEach(function(o){o.classList.remove('open');o.querySelector('.a').style.maxHeight=null;});
-    if(!open){ q.classList.add('open'); a.style.maxHeight=a.scrollHeight+'px'; }
+    document.querySelectorAll('.q').forEach(function(o){o.classList.remove('open');o.querySelector('.a').style.maxHeight=null});
+    if(!open){q.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
   });
 })();
 </script>
-
-<!-- PIXEL — cole aqui o Meta Pixel / GA4 -->
-
+<!-- PIXEL: cole o Meta Pixel aqui -->
 </body>
 </html>
