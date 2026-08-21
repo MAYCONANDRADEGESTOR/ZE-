@@ -60,6 +60,16 @@ h1{font-size:clamp(32px,7.4vw,58px)}h2{font-size:clamp(26px,5vw,42px);margin-bot
 .step:hover{border-color:var(--black);transform:translateY(-3px)}
 .step .n{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--yellow);font-size:15px;font-weight:900;margin:0 auto 14px}
 .step p{color:var(--muted);font-size:14px;margin-top:7px;font-weight:500}
+.depos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+.depo{border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff}
+.vidbox{aspect-ratio:16/9;background:#000}
+.vidbox video{width:100%;height:100%;display:block;object-fit:cover}
+.depo .txt{padding:20px}
+.stars{color:#f59e0b;font-size:14px;letter-spacing:2px;margin-bottom:9px}
+.depo blockquote{font-size:14.5px;font-style:italic;color:#27272a;font-weight:500}
+.who{display:flex;align-items:center;gap:10px;margin-top:14px}
+.av{width:34px;height:34px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:900;font-size:14px}
+.who b{font-size:13.5px;display:block}.who small{color:var(--muted);font-size:12px}
 .phone{max-width:330px;margin:34px auto 0;background:#0b141a;border:8px solid #111;border-radius:32px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
 .ph-top{background:#1f2c34;padding:11px 13px;display:flex;align-items:center;gap:10px}
 .ph-av{width:36px;height:36px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-size:18px}
@@ -123,7 +133,7 @@ h1{font-size:clamp(32px,7.4vw,58px)}h2{font-size:clamp(26px,5vw,42px);margin-bot
 footer{border-top:1.5px solid var(--line);padding:30px 0;text-align:center;color:#9ca3af;font-size:12px;font-weight:500}
 footer a{text-decoration:underline;margin:0 7px}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
-@media(max-width:860px){.grid,.bonus-list{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}}
+@media(max-width:860px){.grid,.bonus-list{grid-template-columns:1fr 1fr}.steps,.depos{grid-template-columns:1fr}}
 @media(max-width:600px){section{padding:48px 0}.cols,.grid,.bonus-list{grid-template-columns:1fr}.guar{flex-direction:column;text-align:center;padding:26px 20px;gap:18px}.seal{flex:0 0 auto;width:160px;margin:0 auto}.sticky .info{display:none}.sticky .btn{width:100%}body.gated-on{padding-bottom:76px}}
 </style>
 </head>
@@ -173,6 +183,26 @@ footer a{text-decoration:underline;margin:0 7px}
 <div class="step"><div class="n">2</div><h3>Adapte</h3><p>Troque nome, cardápio e preço. Leva menos de uma hora.</p></div>
 <div class="step"><div class="n">3</div><h3>Ative</h3><p>Publique e comece a receber pedido direto no WhatsApp.</p></div>
 </div></div></section>
+
+<!-- ===== DEPOIMENTOS: suba depo1.mp4 e depo2.mp4 no repo e remova o <!- - e o - -> abaixo ===== -->
+<!--
+<section class="rv"><div class="wrap">
+<div class="center"><span class="eyebrow">Resultados reais</span><h2>Quem já ativou</h2></div>
+<div class="depos">
+<div class="depo">
+<div class="vidbox"><video src="/depo1.mp4" controls playsinline preload="metadata" poster="/depo1-capa.jpg"></video></div>
+<div class="txt"><div class="stars">★★★★★</div>
+<blockquote>COLE AQUI O QUE O CLIENTE FALOU</blockquote>
+<div class="who"><div class="av">?</div><div><b>Nome do cliente</b><small>Segmento · Cidade/UF</small></div></div>
+</div></div>
+<div class="depo">
+<div class="vidbox"><video src="/depo2.mp4" controls playsinline preload="metadata" poster="/depo2-capa.jpg"></video></div>
+<div class="txt"><div class="stars">★★★★★</div>
+<blockquote>COLE AQUI O QUE O CLIENTE FALOU</blockquote>
+<div class="who"><div class="av">?</div><div><b>Nome do cliente</b><small>Segmento · Cidade/UF</small></div></div>
+</div></div>
+</div></div></section>
+-->
 
 <section class="rv"><div class="wrap center">
 <span class="eyebrow">Veja em ação</span><h2>Assim fica o seu<br>WhatsApp <span class="hl">às 20h</span></h2>
