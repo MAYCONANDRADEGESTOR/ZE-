@@ -63,7 +63,7 @@ h1{font-size:clamp(32px,7.4vw,58px)}h2{font-size:clamp(26px,5vw,42px);margin-bot
 .depos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
 .depo{border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff}
 .vidbox{aspect-ratio:16/9;background:#000}
-.vidbox video{width:100%;height:100%;display:block;object-fit:cover}
+.vidbox video{width:100%;height:100%;display:block;object-fit:cover;background:#000}
 .depo .txt{padding:20px}
 .stars{color:#f59e0b;font-size:14px;letter-spacing:2px;margin-bottom:9px}
 .depo blockquote{font-size:14.5px;font-style:italic;color:#27272a;font-weight:500}
@@ -184,34 +184,35 @@ footer a{text-decoration:underline;margin:0 7px}
 <div class="step"><div class="n">3</div><h3>Ative</h3><p>Publique e comece a receber pedido direto no WhatsApp.</p></div>
 </div></div></section>
 
-<!-- ===== DEPOIMENTOS: suba depo1.mp4 e depo2.mp4 no repo e remova o <!- - e o - -> abaixo ===== -->
-<!--
+<!-- ===== DEPOIMENTOS ===== -->
 <section class="rv"><div class="wrap">
 <div class="center"><span class="eyebrow">Resultados reais</span><h2>Quem já ativou</h2></div>
 <div class="depos">
-<div class="depo">
-<div class="vidbox"><video src="/depo1.mp4" controls playsinline preload="metadata" poster="/depo1-capa.jpg"></video></div>
-<div class="txt"><div class="stars">★★★★★</div>
-<blockquote>COLE AQUI O QUE O CLIENTE FALOU</blockquote>
-<div class="who"><div class="av">?</div><div><b>Nome do cliente</b><small>Segmento · Cidade/UF</small></div></div>
-</div></div>
-<div class="depo">
-<div class="vidbox"><video src="/depo2.mp4" controls playsinline preload="metadata" poster="/depo2-capa.jpg"></video></div>
-<div class="txt"><div class="stars">★★★★★</div>
-<blockquote>COLE AQUI O QUE O CLIENTE FALOU</blockquote>
-<div class="who"><div class="av">?</div><div><b>Nome do cliente</b><small>Segmento · Cidade/UF</small></div></div>
-</div></div>
-</div></div></section>
--->
 
-<section class="rv"><div class="wrap center">
+<div class="depo">
+<div class="vidbox"><video src="/DEPOIMENTO%201.mp4" controls playsinline preload="metadata"></video></div>
+<div class="txt"><div class="stars">★★★★★</div>
+<blockquote>ESCREVA AQUI O QUE A PESSOA FALA NO VÍDEO</blockquote>
+<div class="who"><div class="av">R</div><div><b>Nome do cliente</b><small>Segmento · Cidade/UF</small></div></div>
+</div></div>
+
+<div class="depo">
+<div class="vidbox"><video src="/DEPOIMENTO%202.mp4" controls playsinline preload="metadata"></video></div>
+<div class="txt"><div class="stars">★★★★★</div>
+<blockquote>ESCREVA AQUI O QUE A PESSOA FALA NO VÍDEO</blockquote>
+<div class="who"><div class="av">C</div><div><b>Nome do cliente</b><small>Segmento · Cidade/UF</small></div></div>
+</div></div>
+
+</div></div></section>
+
+<section class="rv" style="background:var(--bg2)"><div class="wrap center">
 <span class="eyebrow">Veja em ação</span><h2>Assim fica o seu<br>WhatsApp <span class="hl">às 20h</span></h2>
 <div class="phone"><div class="ph-top"><div class="ph-av">🍔</div><div><b>Meu Delivery</b><small><i class="dot"></i> online · recebendo pedidos</small></div></div>
 <div class="ph-body" id="chat"></div></div>
 <p class="lead center" style="margin-top:24px">Imagine abrir o celular amanhã de manhã e encontrar essa fila de pedidos esperando por você.</p>
 </div></section>
 
-<section class="rv" style="background:var(--bg2)"><div class="wrap">
+<section class="rv"><div class="wrap">
 <div class="center"><span class="eyebrow">O que você recebe</span><h2>Tudo que seu delivery precisa<br>em um <span class="hl">único lugar</span></h2></div>
 <div class="grid">
 <div class="mod"><div class="emo">🎯</div><h3>Gerador de Clientes</h3><p>Traga gente nova da sua região todo dia.</p><ul><li>Campanha pronta</li><li>Segmentação por bairro</li><li>Orçamento baixo</li><li>Passo a passo</li></ul></div>
@@ -225,7 +226,7 @@ footer a{text-decoration:underline;margin:0 7px}
 <div class="mod"><div class="emo">🧮</div><h3>Calculadora de Preço</h3><p>Pare de vender no prejuízo sem perceber.</p><ul><li>Custo real</li><li>Margem alvo</li><li>Preço de combo</li><li>Pronta pra usar</li></ul></div>
 </div></div></section>
 
-<section class="rv" id="bonus"><div class="wrap">
+<section class="rv" id="bonus" style="background:var(--bg2)"><div class="wrap">
 <div class="center"><span class="eyebrow">Bônus exclusivos</span><h2>Ative hoje e leve<br><span class="hl">+ 11 entregáveis</span></h2></div>
 <div class="bonus-box"><div class="bonus-list">
 <div class="bonus-item"><span>✓</span> Copys prontas para anúncio</div>
@@ -245,7 +246,7 @@ footer a{text-decoration:underline;margin:0 7px}
 <div class="btn-sub">Bônus liberados na confirmação do pagamento</div></div>
 </div></div></section>
 
-<section class="rv" style="background:var(--bg2)"><div class="wrap">
+<section class="rv"><div class="wrap">
 <div class="center"><span class="eyebrow">Valor real</span><h2>Quanto valeria montar<br>tudo isso do zero?</h2></div>
 <div class="stack">
 <div class="row"><span>Gerador de Clientes</span><span>R$ 197</span></div>
@@ -261,7 +262,7 @@ footer a{text-decoration:underline;margin:0 7px}
 <div class="drop"><p>Você não vai investir R$ 1.446.</p><p>Nem R$ 497.</p><p>Nem R$ 97.</p></div>
 </div></section>
 
-<section class="rv center"><div class="wrap">
+<section class="rv center" style="background:var(--bg2)"><div class="wrap">
 <span class="eyebrow">Oferta de lançamento</span><h2>Ative sua máquina hoje</h2>
 <div class="offer"><span class="tag">Acesso vitalício</span>
 <ul><li>✅ Gerador de Clientes</li><li>✅ Robô de Pedidos</li><li>✅ Cardápio Digital</li><li>✅ Banco de Ofertas</li><li>✅ Atendente Digital</li><li>✅ Galeria de Anúncios</li><li>✅ Calendário de Vendas</li><li>🎁 <b>+ 11 bônus exclusivos</b></li></ul>
@@ -292,7 +293,7 @@ footer a{text-decoration:underline;margin:0 7px}
 <div class="q"><button>E se eu não gostar? <i>+</i></button><div class="a"><p>Você tem 7 dias para pedir reembolso integral, sem precisar explicar o motivo.</p></div></div>
 </div></div></section>
 
-<section class="rv center"><div class="wrap">
+<section class="rv center" style="background:var(--bg2)"><div class="wrap">
 <h2>Pare de esperar o WhatsApp tocar.<br><span class="hl">Faça ele tocar.</span></h2>
 <p class="lead center" style="margin:14px auto 28px">Copie, adapte e ative. Amanhã seu delivery pode estar recebendo pedido direto, sem comissão.</p>
 <a class="btn buy" href="#CHECKOUT">Ativar minha máquina — R$ 37</a>
